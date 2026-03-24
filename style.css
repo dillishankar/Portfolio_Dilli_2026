@@ -1,0 +1,552 @@
+:root {
+    --primary-orange: #f47b20;
+    --dark-bg: #1a1a1a;
+    --text-muted: #555;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #e0f2f7 0%, #ffffff 60%);
+    color: var(--dark-bg);
+    overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar-nav .nav-link {
+    color: var(--text-muted) !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--primary-orange) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 5px;
+    left: 15%;
+    background-color: var(--primary-orange);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 70%;
+}
+
+html {
+    scroll-padding-top: 80px;
+    scroll-behavior: smooth;
+}
+
+/* Buttons */
+.btn-dark-custom,
+.btn-dark-hero {
+    background: var(--dark-bg);
+    color: white;
+    border: none;
+    transition: transform 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-dark-custom {
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-size: 0.9rem;
+}
+
+.btn-dark-hero {
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+}
+
+.btn-dark-hero:hover {
+    transform: scale(1.05);
+    color: white;
+}
+
+.arrow-box-orange {
+    background: var(--primary-orange);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 0.8rem;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 160px 0 80px;
+}
+
+.main-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: -2px;
+    line-height: 1.1;
+}
+
+.hero-subtitle {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 25px auto 0;
+}
+
+/* Toggle Switch */
+.custom-switch input {
+    display: none;
+}
+
+.custom-switch label {
+    width: 50px;
+    height: 26px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.custom-switch label::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-orange);
+    border-radius: 50%;
+    top: 2px;
+    left: 3px;
+    transition: 0.3s;
+}
+
+.custom-switch input:checked+label::after {
+    left: calc(100% - 23px);
+}
+
+/* Badges */
+.badge-custom {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+.badge-custom i {
+    color: var(--primary-orange);
+}
+
+.badge-custom:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.ls-wide {
+    letter-spacing: 2px;
+}
+
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 3rem;
+    }
+
+    .hero-section {
+        padding: 120px 0 60px;
+    }
+}
+
+/*-----------------------------------------------------------*/
+
+/* Importing Modern Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@700&display=swap');
+
+/* Desktop-specific Nav Refinements */
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        /* Clean, professional small caps look */
+        letter-spacing: 1.5px;
+        color: #222 !important;
+        margin: 0 10px;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+/* Mobile Menu Fix for Background */
+@media (max-width: 991px) {
+    .navbar-collapse {
+        background: white;
+        padding: 20px;
+        border-radius: 15px;
+        margin-top: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+}
+
+
+/*-----------------------------------------------------------*/
+
+/* Minimalist Social Icons */
+.social-icon-only-setup {
+    padding: 10px 0;
+    justify-content: center;
+}
+
+.social-icon-link {
+    text-decoration: none;
+    color: #555;
+    /* Neutral Dark Gray */
+    font-size: 2rem;
+    /* Make the icons prominent */
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    /* Smooth Cubic Ease */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    /* Consistent spacing */
+    height: 60px;
+}
+
+/* Specific Hover for Each Brand */
+.social-icon-link:hover i.bi-github {
+    color: #333;
+    /* GitHub Gray-Black */
+    transform: translateY(-5px);
+}
+
+.social-icon-link:hover i.bi-linkedin {
+    color: #0077B5;
+    /* LinkedIn Blue */
+    transform: translateY(-5px);
+}
+
+.social-icon-link:hover i.bi-envelope-fill {
+    color: #D44638;
+    /* Email Red */
+    transform: translateY(-5px);
+}
+
+.social-icon-link:hover i.bi-whatsapp {
+    color: #25D366;
+    /* WhatsApp Green */
+    transform: translateY(-5px);
+}
+
+.social-icon-link:hover i.bi-instagram {
+    color: #E1306C;
+    /* Instagram Pink/Red */
+    transform: translateY(-5px);
+}
+
+/* Tablet & Mobile Adjustments */
+@media (max-width: 768px) {
+    .social-icon-link {
+        font-size: 1.75rem;
+        width: 50px;
+        height: 50px;
+    }
+
+    .social-icon-only-setup {
+        gap: 3 !important;
+        /* Slightly tighter mobile spacing */
+    }
+}
+
+/* Availability Tag */
+.availability-tag {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.pulse-dot {
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71;
+    /* Professional Green */
+    border-radius: 50%;
+    display: inline-block;
+    animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0px rgba(46, 204, 113, 0.4);
+    }
+
+    100% {
+        box-shadow: 0 0 0 10px rgba(46, 204, 113, 0);
+    }
+}
+
+/* Professional Button */
+.btn-professional {
+    display: inline-flex;
+    align-items: center;
+    background: #111;
+    /* Deep charcoal */
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 8px 8px 24px;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-icon-box {
+    background: var(--primary-orange);
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-left: 15px;
+    transition: transform 0.4s ease;
+}
+
+.btn-icon-box i {
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* Hover Effects */
+.btn-professional:hover {
+    background: #000;
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.btn-professional:hover .btn-icon-box {
+    transform: rotate(45deg);
+}
+
+.btn-professional:active {
+    transform: translateY(-1px);
+}
+
+
+/*icon scroll*/
+.skills-marquee-container {
+    width: 100%;
+    overflow: hidden;
+    background: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 25px 0;
+    margin: 50px 0;
+    white-space: nowrap;
+}
+
+.skills-marquee-inner {
+    display: flex;
+    width: max-content;
+    animation: scroll-loop 40s linear infinite;
+    /* Slower for readability */
+}
+
+.skills-content span {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    /* Space between icon and text */
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 50px;
+    transition: color 0.3s ease;
+}
+
+.skills-content span i {
+    font-size: 1.5rem;
+    /* Icon size */
+    color: var(--primary-orange);
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect: Text turns orange, icon pops up */
+.skills-content span:hover {
+    color: var(--primary-orange);
+    cursor: default;
+}
+
+.skills-content span:hover i {
+    transform: scale(1.2) translateY(-2px);
+}
+
+@keyframes scroll-loop {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* Hero Subtitle Fix animation */
+.hero-subtitle {
+    min-height: 3.5rem;
+    /* Prevents the page from jumping when text clears */
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 25px auto 0;
+}
+
+/* Typing Cursor Styling */
+.typed-cursor {
+    color: var(--primary-orange);
+    font-weight: 300;
+    margin-left: 2px;
+}
+
+
+/* Skills & Tools Section */
+/* --- Skills Section Refinement --- */
+.skills-section {
+    background-color: #ffffff;
+    padding: 100px 0;
+    color: #1a1a1a;
+}
+
+/* Main Titles - Using Playfair Display for that "Pinterest" feel */
+.skills-main-title,
+.group-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 10px;
+}
+
+.skills-main-title {
+    font-size: 2.8rem;
+}
+
+.group-title {
+    font-size: 2.2rem;
+    color: #1a1a1a;
+    margin-top: 50px;
+}
+
+/* Subtitles */
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: #666;
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+    letter-spacing: 0.2px;
+}
+
+/* Skills Flowing List */
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px 40px;
+    /* Increased horizontal gap for elegance */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skills-list span {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.skills-list span:hover {
+    color: var(--primary-orange);
+}
+
+/* --- The 3-Column Tools Grid --- */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tool-column h5 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #999;
+    /* Muted category header */
+    margin-bottom: 25px;
+}
+
+.tool-column p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.05rem;
+    line-height: 2.2;
+    /* Spaced out vertically to match image */
+    color: #333;
+    font-weight: 500;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 992px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+}
+
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #666;
+
+    /* This holds the space so the page doesn't jump when typing starts */
+    min-height: 60px;
+
+    max-width: 750px;
+    margin: 25px auto 60px auto;
+    text-align: center;
+}
+
+/* Optional: Make the cursor match your orange theme */
+.typed-cursor {
+    color: var(--primary-orange);
+}
