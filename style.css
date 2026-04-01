@@ -549,3 +549,538 @@ html {
 .typed-cursor {
     color: var(--primary-orange);
 }
+
+
+/*----------------Project -------------------------------------------*/
+/* --- Projects Section: Light & Premium Theme --- */
+.projects-section {
+    padding: 100px 0;
+    /* Matching your hero section background */
+    background: linear-gradient(180deg, #ffffff 0%, #e0f2f7 100%);
+}
+
+.projects-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--dark-bg);
+    /* Using your charcoal color */
+    letter-spacing: -1px;
+}
+
+.projects-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+/* Card Link Reset */
+.project-card-link {
+    text-decoration: none !important;
+    display: block;
+    color: inherit;
+}
+
+/* Light Mode Project Card */
+.project-card {
+    background: #ffffff;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Very subtle border */
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    height: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    border-color: var(--primary-orange);
+}
+
+.project-img-container {
+    position: relative;
+    height: 240px;
+    background: #f8f9fa;
+    overflow: hidden;
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+/* Small Badge instead of overlay */
+.project-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    padding: 5px 15px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    text-transform: uppercase;
+}
+
+/* Project Content */
+.project-info {
+    padding: 25px;
+}
+
+.project-category {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--primary-orange);
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.project-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+.project-desc {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+
+/*intership*/
+
+/* --- Experience Section --- */
+.experience-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.experience-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: var(--dark-bg);
+}
+
+.experience-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Internship Card */
+.internship-card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.internship-card:hover {
+    border-color: var(--primary-orange);
+    box-shadow: 0 20px 50px rgba(244, 123, 32, 0.08);
+}
+
+.internship-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.company-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+.location {
+    font-size: 0.85rem;
+    color: #999;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.duration-badge {
+    background: #f8f9fa;
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.role-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary-orange);
+    margin-bottom: 20px;
+}
+
+.contribution-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.contribution-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.contribution-list li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--primary-orange);
+    font-weight: bold;
+}
+
+.certificate-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+.status-tag {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2ecc71;
+    /* Success Green */
+}
+
+.btn-verify {
+    text-decoration: none;
+    color: var(--dark-bg);
+    font-weight: 700;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.btn-verify:hover {
+    color: var(--primary-orange);
+}
+
+@media (max-width: 991px) {
+    .experience-main-title {
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .internship-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/*workshop*/
+
+/* --- Workshop Section --- */
+.workshop-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%);
+}
+
+.workshop-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--dark-bg);
+}
+
+.workshop-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+/* Bento Grid Layout */
+.workshop-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.workshop-card {
+    display: flex;
+    gap: 20px;
+    padding: 35px;
+    background: #fff;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Make the AI/Stock card take full width for a unique look */
+.workshop-card:first-child {
+    grid-column: span 2;
+}
+
+.workshop-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+    border-color: var(--primary-orange);
+}
+
+.workshop-icon {
+    width: 60px;
+    height: 60px;
+    background: #fdf2e9;
+    color: var(--primary-orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 1.8rem;
+    flex-shrink: 0;
+}
+
+.workshop-tag {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--primary-orange);
+    margin-bottom: 10px;
+}
+
+.workshop-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: #222;
+}
+
+.workshop-subtitle-small {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.workshop-detail {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive Gaps */
+@media (max-width: 768px) {
+    .workshop-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .workshop-card:first-child {
+        grid-column: span 1;
+    }
+
+    .workshop-card {
+        padding: 25px;
+        flex-direction: column;
+    }
+}
+
+/* --- Certificates Section --- */
+.certificates-section {
+    padding: 100px 0;
+    background: #fff;
+}
+
+.cert-main-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: var(--dark-bg);
+}
+
+.cert-subtitle {
+    font-family: 'Inter', sans-serif;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+/* Certificate Card */
+.cert-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 30px 20px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-orange);
+    box-shadow: 0 15px 35px rgba(244, 123, 32, 0.1);
+}
+
+.cert-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    background: rgba(244, 123, 32, 0.05);
+    color: var(--primary-orange);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.5rem;
+}
+
+.cert-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: #222;
+}
+
+.cert-level {
+    font-size: 0.85rem;
+    color: #777;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.cert-divider {
+    width: 30px;
+    height: 2px;
+    background: var(--primary-orange);
+    margin: 0 auto 15px;
+    opacity: 0.3;
+}
+
+.cert-issuer {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #aaa;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .cert-card {
+        padding: 25px 15px;
+    }
+}
+
+/*footer*/
+
+/* --- Footer Section --- */
+.footer-section {
+    padding: 80px 0 30px;
+    background: linear-gradient(180deg, #ffffff 0%, #e0f2f7 100%);
+    /* Same as Hero */
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--dark-bg);
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.footer-tagline {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-top: 10px;
+}
+
+/* Footer Social Icons - Inheriting Hero Styles */
+.footer-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-social-links .social-icon-link {
+    font-size: 1.5rem;
+    /* Slightly smaller for footer */
+    width: 50px;
+    height: 50px;
+}
+
+/* Footer Connect Button */
+.btn-footer-connect {
+    background: var(--dark-bg);
+    color: #fff;
+    padding: 12px 28px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-footer-connect:hover {
+    background: var(--primary-orange);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(244, 123, 32, 0.2);
+}
+
+.footer-bottom {
+    margin-top: 60px;
+    padding-top: 25px;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 0.8rem;
+    color: #aaa;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+    .footer-section {
+        padding: 60px 0 30px;
+    }
+}
