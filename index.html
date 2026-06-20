@@ -9,17 +9,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
         rel="stylesheet">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <nav class="navbar navbar-expand-lg py-3 fixed-top bg-white border-bottom shadow-sm">
+    <nav class="navbar navbar-expand-lg py-3 fixed-top bg-white border-bottom shadow-sm" role="navigation">
         <div class="container">
             <a class="navbar-brand fw-bold" href="#"
                 style="font-family: 'Playfair Display', serif; letter-spacing: -1px;">Portfolio</a>
@@ -31,25 +29,20 @@
             </button>
 
             <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav mx-auto text-uppercase small fw-bold ls-wide">
-                    <li class="nav-item"><a class="nav-link px-3" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link px-3" href="#certificates">Certificates</a></li>
+                <ul class="navbar-nav mx-auto text-uppercase small fw-bold ls-wide" role="menubar">
                 </ul>
                 <button class="btn btn-dark-custom d-none d-lg-block">Let's Connect</button>
             </div>
         </div>
     </nav>
 
-    <section class="hero-section text-center">
+    <header id="home" class="hero-section text-center">
         <div class="container">
             <div class="d-flex justify-content-center align-items-center gap-3 mb-4">
                 <span class="small fw-medium text-muted">Day Mode</span>
                 <div class="custom-switch">
                     <input type="checkbox" id="toggle" checked>
-                    <label for="toggle"></label>
+                    <label for="toggle" aria-label="Toggle dark mode"></label>
                 </div>
                 <span class="small fw-bold">Night Mode</span>
             </div>
@@ -61,7 +54,7 @@
             </p>
 
             <div class="mt-5 d-flex flex-column align-items-center">
-                <a href="mailto:yourname@email.com" class="btn-professional">
+                <a href="mailto:ramyarams5143@gmail.com" class="btn-professional">
                     <span class="btn-text">Download CV</span>
                     <span class="btn-icon-box">
                         <i class="bi bi-arrow-up-right"></i>
@@ -69,288 +62,17 @@
                 </a>
             </div>
 
-            <div class="d-flex justify-content-center flex-wrap gap-4 mt-5 social-icon-only-setup">
-                <a href="#" target="_blank" class="social-icon-link"><i class="bi bi-github"></i></a>
-                <a href="https://www.linkedin.com/in/rammya-ramsa29347253" target="_blank" class="social-icon-link"><i
-                        class="bi bi-linkedin"></i></a>
-                <a href="mailto:ramyarams5143@gmail.com" class="social-icon-link"><i
-                        class="bi bi-envelope-fill"></i></a>
-                <a href="https://wa.me/918778547340" target="_blank" class="social-icon-link"><i
-                        class="bi bi-whatsapp"></i></a>
-                <a href="https://www.instagram.com/rammyakannan?igsh=cmNwcTczcTdyb2Z3" target="_blank"
-                    class="social-icon-link"><i class="bi bi-instagram"></i></a>
-            </div>
+            <div id="hero-social-links"
+                class="d-flex justify-content-center flex-wrap gap-4 mt-5 social-icon-only-setup"></div>
         </div>
-    </section>
+    </header>
 
-    <div class="skills-marquee-inner">
-        <div class="skills-content">
-            <span><i class="bi bi-graph-up-arrow"></i> SEO</span>
-            <span><i class="bi bi-megaphone"></i> Social Media Marketing</span>
-            <span><i class="bi bi-calculator"></i> Tally Prime 5.1</span>
-            <span><i class="bi bi-receipt"></i> Tally (GST, TDS)</span>
-            <span><i class="bi bi-file-earmark-spreadsheet"></i> Excel</span>
-            <span><i class="bi bi-file-earmark-slides"></i> PowerPoint</span>
-        </div>
-
-        <div class="skills-content" aria-hidden="true">
-            <span><i class="bi bi-graph-up-arrow"></i> SEO</span>
-            <span><i class="bi bi-megaphone"></i> Social Media Marketing</span>
-            <span><i class="bi bi-calculator"></i> Tally Prime 5.1</span>
-            <span><i class="bi bi-receipt"></i> Tally (GST, TDS)</span>
-            <span><i class="bi bi-file-earmark-spreadsheet"></i> Excel</span>
-            <span><i class="bi bi-file-earmark-slides"></i> PowerPoint</span>
+    <div class="skills-marquee-container">
+        <div class="skills-marquee-inner" id="skills-marquee">
         </div>
     </div>
 
-    <section id="skills" class="skills-section text-center">
-        <div class="container">
-            <h2 class="skills-main-title" style="color:#f47b20">What Powers Me</h2><br>
-            <p class="hero-subtitle">
-                <span id="typed-subtitle"></span>
-            </p>
-
-            <h3 class="group-title text-orange-400" style="color:#f47b20">Digital Marketing & Design Skills</h3><br>
-            <div class="skills-list">
-                <span>Search Engine Optimization</span>
-                <span>Social Media Marketing</span>
-                <span>Meta Ads</span>
-                <span>Google Ads</span>
-                <span>UX Research</span>
-                <span>Figma Mobile & Web Design</span>
-                <span>Python</span>
-            </div>
-
-            <h3 class="group-title text-orange-400" style="color:#f47b20">Tools I Use </h3>
-
-            <div class="tools-grid">
-                <div class="tool-column">
-                    <h5>Design & Social</h5>
-                    <p>Figma & Canva<br>Hashtagify<br>Google Analytics<br>Capcut</p>
-                </div>
-                <div class="tool-column">
-                    <h5>SEO & Growth</h5>
-                    <p>Google Search Console<br>Google Keyword Planner<br>Screaming Frog SEO Spider<br>SEMrush,
-                        Ahrefs
-                    </p>
-                </div>
-                <div class="tool-column">
-                    <h5>Ads & Strategy</h5>
-                    <p>Google Analytics<br>Meta Ads Manager<br>Google Ads Manager<br>Meta Pixels<br>Ad Library</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="projects" class="projects-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="projects-main-title">What I've Built</h2>
-                <p class="projects-subtitle">Every project is a chapter in my design journey.</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <a href="YOUR_PROJECT_URL_1" class="project-card-link">
-                        <div class="project-card">
-                            <div class="project-img-container">
-                                <img src="your-agency-image.jpg" alt="Digital Marketing Agency">
-                                <div class="project-badge">Case Study</div>
-                            </div>
-                            <div class="project-info">
-                                <span class="project-category">Search Engine Optimization</span>
-                                <h4 class="project-title">Digital Marketing Agency</h4>
-                                <p class="project-desc">SEO, PPC & online marketing services focused on high-conversion
-                                    results.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <a href="YOUR_PROJECT_URL_2" class="project-card-link">
-                        <div class="project-card">
-                            <div class="project-img-container">
-                                <img src="your-poster-image.jpg" alt="Poster Design">
-                                <div class="project-badge">Design</div>
-                            </div>
-                            <div class="project-info">
-                                <span class="project-category">Visual Arts</span>
-                                <h4 class="project-title">Thoughtful Poster Design</h4>
-                                <p class="project-desc">Creative storytelling through minimalist and impact-driven
-                                    visual design.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <a href="YOUR_PROJECT_URL_3" class="project-card-link">
-                        <div class="project-card">
-                            <div class="project-img-container">
-                                <img src="your-audit-image.jpg" alt="Social Media Audit">
-                                <div class="project-badge">Marketing</div>
-                            </div>
-                            <div class="project-info">
-                                <span class="project-category">Social Media Marketing</span>
-                                <h4 class="project-title">Social Media Audit</h4>
-                                <p class="project-desc">Data-driven Instagram presence improvements for local
-                                    businesses.</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="experience" class="experience-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-4">
-                    <h2 class="experience-main-title">Professional Journey</h2>
-                    <p class="experience-subtitle">Real-world experience building digital presence for industry leaders.
-                    </p>
-                </div>
-                <div class="col-lg-8">
-                    <div class="internship-card">
-                        <div class="internship-header">
-                            <div class="company-info">
-                                <h3 class="company-name">Bigspace Coworking</h3>
-                                <span class="location"><i class="bi bi-geo-alt"></i> Guindy, Chennai</span>
-                            </div>
-                            <div class="duration-badge">
-                                Feb 2026 — Mar 2026
-                            </div>
-                        </div>
-
-                        <div class="role-title">Digital Marketing Intern</div>
-
-                        <ul class="contribution-list">
-                            <li>Optimized official website content to improve search engine visibility.</li>
-                            <li>Developed and executed marketing strategies to enhance online presence.</li>
-                            <li>Contributed to digital marketing activities with a focus on data-driven growth.</li>
-                        </ul>
-
-                        <div class="certificate-footer">
-                            <span class="status-tag"><i class="bi bi-check-circle-fill"></i> Completed Successfully
-                            </span>
-                            <a href="path-to-your-certificate.pdf" target="_blank" class="btn-verify">
-                                Verify Certificate <i class="bi bi-arrow-right-short"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="workshops" class="workshop-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="workshop-main-title">Workshops & Learning</h2>
-                <p class="workshop-subtitle">Continuous growth through expert-led sessions and technical training.</p>
-            </div>
-
-            <div class="workshop-grid">
-                <div class="workshop-card premium-card">
-                    <div class="workshop-icon">
-                        <i class="bi bi-graph-up-arrow"></i>
-                    </div>
-                    <div class="workshop-content">
-                        <span class="workshop-tag">Finance & AI</span>
-                        <h4 class="workshop-title">Navigating Financial Waters</h4>
-                        <p class="workshop-detail">Explored the impact of Artificial Intelligence on Stock Market
-                            Dynamics and predictive modeling.</p>
-                    </div>
-                </div>
-
-                <div class="workshop-card orange-card">
-                    <div class="workshop-icon">
-                        <i class="bi bi-lightbulb"></i>
-                    </div>
-                    <div class="workshop-content">
-                        <span class="workshop-tag">Expert Talk</span>
-                        <h4 class="workshop-title">AI in Business Development</h4>
-                        <h5 class="workshop-subtitle-small">The Role of Artificial Intelligence</h5>
-                        <p class="workshop-detail">Participated in expert discussions on leveraging AI for scalable
-                            business growth strategies.</p>
-                    </div>
-                </div>
-
-                <div class="workshop-card premium-card">
-                    <div class="workshop-icon">
-                        <i class="bi bi-receipt"></i>
-                    </div>
-                    <div class="workshop-content">
-                        <span class="workshop-tag">Business Practices</span>
-                        <h4 class="workshop-title">GST & Business Practices</h4>
-                        <p class="workshop-detail">Hands-on training to enhance practical skills in GST filing and
-                            regulatory compliance.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="certificates" class="certificates-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="cert-main-title">Certifications</h2>
-                <p class="cert-subtitle">Professional credentials and technical validations.</p>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper">
-                            <i class="bi bi-calculator"></i>
-                        </div>
-                        <h5 class="cert-name">Tally Essential</h5>
-                        <p class="cert-level">Level 2 | Tally Prime</p>
-                        <div class="cert-divider"></div>
-                        <span class="cert-issuer">Tally Solutions</span>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper">
-                            <i class="bi bi-file-earmark-text"></i>
-                        </div>
-                        <h5 class="cert-name">GST Training</h5>
-                        <p class="cert-level">Level 1 Certification</p>
-                        <div class="cert-divider"></div>
-                        <span class="cert-issuer">Professional Training</span>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper">
-                            <i class="bi bi-code-slash"></i>
-                        </div>
-                        <h5 class="cert-name">C++ Programming</h5>
-                        <p class="cert-level">Technical Proficiency</p>
-                        <div class="cert-divider"></div>
-                        <span class="cert-issuer">Programming Credential</span>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <div class="cert-card">
-                        <div class="cert-icon-wrapper">
-                            <i class="bi bi-people"></i>
-                        </div>
-                        <h5 class="cert-name">Business Negotiations</h5>
-                        <p class="cert-level">Advanced Strategy</p>
-                        <div class="cert-divider"></div>
-                        <span class="cert-issuer">IIFT, New Delhi</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    <main id="content-root"></main>
 
     <footer class="footer-section">
         <div class="container">
@@ -361,17 +83,7 @@
                 </div>
 
                 <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <div class="footer-social-links">
-                        <a href="#" target="_blank" class="social-icon-link"><i class="bi bi-github"></i></a>
-                        <a href="https://www.linkedin.com/in/rammya-ramsa29347253" target="_blank"
-                            class="social-icon-link"><i class="bi bi-linkedin"></i></a>
-                        <a href="mailto:ramyarams5143@gmail.com" class="social-icon-link"><i
-                                class="bi bi-envelope-fill"></i></a>
-                        <a href="https://wa.me/918778547340" target="_blank" class="social-icon-link"><i
-                                class="bi bi-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/rammyakannan?igsh=cmNwcTczcTdyb2Z3" target="_blank"
-                            class="social-icon-link"><i class="bi bi-instagram"></i></a>
-                    </div>
+                    <div class="footer-social-links" id="footer-social-links"></div>
                 </div>
 
                 <div class="col-md-4 text-center text-md-end">
@@ -386,52 +98,305 @@
             </div>
         </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
-    <script>
-        // Typing Animation
-        var typed = new Typed('#typed-text', {
-            strings: [
-                'bala bala bala bala .',
-                'One clean, structured space your clients can rely on.',
-                'Data-driven insights and premium digital marketing.'
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
+
+    <script defer>
+        const appData = {
+            nav: [
+                { label: 'Home', href: '#home' },
+                { label: 'About', href: '#about' },
+                { label: 'Skills', href: '#skills' },
+                { label: 'Projects', href: '#projects' },
+                { label: 'Certificates', href: '#certificates' },
             ],
-            typeSpeed: 50,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true,
-            showCursor: true,
-            cursorChar: '|'
-        });
-
-        // Function to start typing
-        function startSubtitleTyping() {
-            new Typed('#typed-subtitle', {
-                strings: [
-                    'A snapshot of the skills and tools I use to build seamless, scalable and user-friendly digital experiences.'
+            socials: [
+                { href: '#', icon: 'bi-github', label: 'GitHub' },
+                { href: 'https://www.linkedin.com/in/rammya-ramsa29347253', icon: 'bi-linkedin', label: 'LinkedIn' },
+                { href: 'mailto:ramyarams5143@gmail.com', icon: 'bi-envelope-fill', label: 'Email' },
+                { href: 'https://wa.me/918778547340', icon: 'bi-whatsapp', label: 'WhatsApp' },
+                { href: 'https://www.instagram.com/rammyakannan?igsh=cmNwcTczcTdyb2Z3', icon: 'bi-instagram', label: 'Instagram' },
+            ],
+            skills: [
+                'SEO', 'Social Media Marketing', 'Meta Ads', 'Google Ads', 'UX Research', 'Figma Mobile & Web Design', 'Python'
+            ],
+            tools: [
+                { title: 'Design & Social', lines: ['Figma & Canva', 'Hashtagify', 'Google Analytics', 'Capcut'] },
+                { title: 'SEO & Growth', lines: ['Google Search Console', 'Google Keyword Planner', 'Screaming Frog SEO Spider', 'SEMrush, Ahrefs'] },
+                { title: 'Ads & Strategy', lines: ['Google Analytics', 'Meta Ads Manager', 'Google Ads Manager', 'Meta Pixels', 'Ad Library'] },
+            ],
+            projects: [
+                { title: 'Digital Marketing Agency', category: 'Search Engine Optimization', subtitle: 'SEO, PPC & online marketing services focused on high-conversion results.', badge: 'Case Study', image: 'your-agency-image.jpg', url: 'YOUR_PROJECT_URL_1' },
+                { title: 'Thoughtful Poster Design', category: 'Visual Arts', subtitle: 'Creative storytelling through minimalist and impact-driven visual design.', badge: 'Design', image: 'your-poster-image.jpg', url: 'YOUR_PROJECT_URL_2' },
+                { title: 'Social Media Audit', category: 'Social Media Marketing', subtitle: 'Data-driven Instagram presence improvements for local businesses.', badge: 'Marketing', image: 'your-audit-image.jpg', url: 'YOUR_PROJECT_URL_3' },
+            ],
+            experience: {
+                role: 'Digital Marketing Intern',
+                company: 'Bigspace Coworking',
+                location: 'Guindy, Chennai',
+                duration: 'Feb 2026 — Mar 2026',
+                contributions: [
+                    'Optimized official website content to improve search engine visibility.',
+                    'Developed and executed marketing strategies to enhance online presence.',
+                    'Contributed to digital marketing activities with a focus on data-driven growth.'
                 ],
-                typeSpeed: 30,
+                certificateLink: 'path-to-your-certificate.pdf',
+            },
+            workshops: [
+                { tag: 'Finance & AI', title: 'Navigating Financial Waters', details: 'Explored the impact of Artificial Intelligence on Stock Market Dynamics and predictive modeling.', icon: 'bi-graph-up-arrow', fullWidth: true },
+                { tag: 'Expert Talk', title: 'AI in Business Development', subtitle: 'The Role of Artificial Intelligence', details: 'Participated in expert discussions on leveraging AI for scalable business growth strategies.', icon: 'bi-lightbulb' },
+                { tag: 'Business Practices', title: 'GST & Business Practices', details: 'Hands-on training to enhance practical skills in GST filing and regulatory compliance.', icon: 'bi-receipt' },
+            ],
+            certificates: [
+                { icon: 'bi-calculator', title: 'Tally Essential', level: 'Level 2 | Tally Prime', issuer: 'Tally Solutions' },
+                { icon: 'bi-file-earmark-text', title: 'GST Training', level: 'Level 1 Certification', issuer: 'Professional Training' },
+                { icon: 'bi-code-slash', title: 'C++ Programming', level: 'Technical Proficiency', issuer: 'Programming Credential' },
+                { icon: 'bi-people', title: 'Business Negotiations', level: 'Advanced Strategy', issuer: 'IIFT, New Delhi' }
+            ]
+        };
+
+        const createEl = (tag, attrs = {}, ...children) => {
+            const el = document.createElement(tag);
+            Object.entries(attrs).forEach(([k, v]) => {
+                if (k === 'class') el.className = v;
+                else if (k === 'innerHTML') el.innerHTML = v;
+                else if (k === 'text') el.textContent = v;
+                else if (k === 'dataset') Object.assign(el.dataset, v);
+                else el.setAttribute(k, v);
+            });
+            children.flat().forEach(c => {
+                if (c == null) return;
+                if (typeof c === 'string') el.appendChild(document.createTextNode(c));
+                else el.appendChild(c);
+            });
+            return el;
+        };
+
+        const renderNav = () => {
+            const navLinks = document.querySelector('.navbar-nav');
+            if (!navLinks) return;
+            navLinks.innerHTML = '';
+            appData.nav.forEach(item => {
+                navLinks.appendChild(createEl('li', { class: 'nav-item' }, createEl('a', { class: 'nav-link px-3', href: item.href, text: item.label, role: 'menuitem' })));
+            });
+        };
+
+        const renderSocials = (containerId) => {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            container.innerHTML = '';
+            appData.socials.forEach(s => {
+                const link = createEl('a', { class: 'social-icon-link', href: s.href, target: '_blank', rel: 'noopener noreferrer', 'aria-label': s.label }, createEl('i', { class: `bi ${s.icon}` }));
+                container.appendChild(link);
+            });
+        };
+
+        const renderSkillsMarquee = () => {
+            const container = document.getElementById('skills-marquee');
+            if (!container) return;
+
+            // Map each specific skill string to its premium icon class
+            const skillIconMap = {
+                'SEO': 'bi bi-search',
+                'Social Media Marketing': 'bi bi-megaphone',
+                'Meta Ads': 'bi bi-meta',
+                'Google Ads': 'bi bi-google',
+                'UX Research': 'bi bi-eye',
+                'Figma Mobile & Web Design': 'devicon-figma-plain',
+                'Python': 'devicon-python-plain colored'
+            };
+
+            const line = [];
+            appData.skills.forEach((skill, index) => {
+                const iconClass = skillIconMap[skill] || 'bi bi-patch-check';
+
+                // 1. Add the Skill with its actual tech icon
+                line.push(
+                    createEl('span', { class: 'marquee-skill-item' },
+                        createEl('i', { class: iconClass }),
+                        ` ${skill}`
+                    )
+                );
+
+                // 2. Clear inline styling so your updated style.css rules can take control cleanly!
+                line.push(
+                    createEl('span', { class: 'marquee-sparkle' },
+                        createEl('i', { class: 'bi bi-sparkles' })
+                    )
+                );
+            });
+            const content = createEl('div', { class: 'skills-content' }, ...line);
+            const repeat = createEl('div', { class: 'skills-content', 'aria-hidden': 'true' }, ...line);
+
+            container.innerHTML = ''; // Clear previous static contents
+            container.append(content, repeat);
+        };
+
+        const renderSection = () => {
+            const root = document.getElementById('content-root');
+            if (!root) return;
+            root.innerHTML = '';
+
+            root.appendChild(createEl('section', { id: 'about', class: 'about-section text-center py-5' },
+                createEl('div', { class: 'container' },
+                    createEl('h2', { class: 'group-title', text: 'About Me' }),
+                    createEl('p', { class: 'hero-subtitle', text: 'I craft user-centric digital products with growth-minded marketing strategy and clean delivery. My focus is on measurable impact, efficient execution, and scalable systems.' })
+                )
+            ));
+
+            root.appendChild(createEl('section', { id: 'skills', class: 'skills-section text-center' },
+                createEl('div', { class: 'container' },
+                    createEl('h2', { class: 'skills-main-title', text: 'What Powers Me' }),
+                    createEl('p', { class: 'hero-subtitle', text: 'A snapshot of the skills and tools I use to build seamless, scalable and user-friendly digital experiences.' }),
+                    createEl('div', { class: 'skills-list' }, ...appData.skills.map(skill => createEl('span', { text: skill }))),
+                    createEl('div', { class: 'tools-grid' }, ...appData.tools.map(tool => createEl('div', { class: 'tool-column' }, createEl('h5', { text: tool.title }), createEl('p', { innerHTML: tool.lines.join('<br>') }))))
+                )
+            ));
+
+            root.appendChild(createEl('section', { id: 'projects', class: 'projects-section' },
+                createEl('div', { class: 'container' },
+                    createEl('div', { class: 'text-center mb-5' },
+                        createEl('h2', { class: 'projects-main-title', text: "What I've Built" }),
+                        createEl('p', { class: 'projects-subtitle', text: 'Every project is a chapter in my design journey.' })
+                    ),
+                    createEl('div', { class: 'row g-4' }, ...appData.projects.map(project =>
+                        createEl('div', { class: 'col-lg-4 col-md-6' },
+                            createEl('a', { class: 'project-card-link', href: project.url, target: '_blank', rel: 'noopener noreferrer' },
+                                createEl('div', { class: 'project-card' },
+                                    createEl('div', { class: 'project-img-container' },
+                                        createEl('img', { src: project.image, alt: project.title, loading: 'lazy' }),
+                                        createEl('div', { class: 'project-badge', text: project.badge })
+                                    ),
+                                    createEl('div', { class: 'project-info' },
+                                        createEl('span', { class: 'project-category', text: project.category }),
+                                        createEl('h4', { class: 'project-title', text: project.title }),
+                                        createEl('p', { class: 'project-desc', text: project.subtitle })
+                                    )
+                                )
+                            )
+                        )
+                    ))
+                )
+            ));
+
+            root.appendChild(createEl('section', { id: 'experience', class: 'experience-section' },
+                createEl('div', { class: 'container' },
+                    createEl('div', { class: 'row align-items-center' },
+                        createEl('div', { class: 'col-lg-4' },
+                            createEl('h2', { class: 'experience-main-title', text: 'Professional Journey' }),
+                            createEl('p', { class: 'experience-subtitle', text: 'Real-world experience building digital presence for industry leaders.' })
+                        ),
+                        createEl('div', { class: 'col-lg-8' },
+                            createEl('div', { class: 'internship-card' },
+                                createEl('div', { class: 'internship-header' },
+                                    createEl('div', { class: 'company-info' },
+                                        createEl('h3', { class: 'company-name', text: appData.experience.company }),
+                                        createEl('span', { class: 'location', innerHTML: `<i class="bi bi-geo-alt"></i> ${appData.experience.location}` })
+                                    ),
+                                    createEl('div', { class: 'duration-badge', text: appData.experience.duration })
+                                ),
+                                createEl('div', { class: 'role-title', text: appData.experience.role }),
+                                createEl('ul', { class: 'contribution-list' }, ...appData.experience.contributions.map(item => createEl('li', { text: item }))),
+                                createEl('div', { class: 'certificate-footer' },
+                                    createEl('span', { class: 'status-tag', innerHTML: '<i class="bi bi-check-circle-fill"></i> Completed Successfully' }),
+                                    createEl('a', { class: 'btn-verify', href: appData.experience.certificateLink, target: '_blank', rel: 'noopener noreferrer', text: 'Verify Certificate ' },
+                                        createEl('i', { class: 'bi bi-arrow-right-short' })
+                                    )
+                                )
+                            )
+                        )
+                    )
+                )
+            ));
+
+            root.appendChild(createEl('section', { id: 'workshops', class: 'workshop-section' },
+                createEl('div', { class: 'container' },
+                    createEl('div', { class: 'text-center mb-5' },
+                        createEl('h2', { class: 'workshop-main-title', text: 'Workshops & Learning' }),
+                        createEl('p', { class: 'workshop-subtitle', text: 'Continuous growth through expert-led sessions and technical training.' })
+                    ),
+                    createEl('div', { class: 'workshop-grid' }, ...appData.workshops.map((workshop, idx) =>
+                        createEl('div', { class: `workshop-card ${workshop.fullWidth ? 'premium-card' : workshop.tag === 'Expert Talk' ? 'orange-card' : 'premium-card'}` },
+                            createEl('div', { class: 'workshop-icon' }, createEl('i', { class: `bi ${workshop.icon}` })),
+                            createEl('div', { class: 'workshop-content' },
+                                createEl('span', { class: 'workshop-tag', text: workshop.tag }),
+                                createEl('h4', { class: 'workshop-title', text: workshop.title }),
+                                workshop.subtitle ? createEl('h5', { class: 'workshop-subtitle-small', text: workshop.subtitle }) : null,
+                                createEl('p', { class: 'workshop-detail', text: workshop.details })
+                            )
+                        )
+                    ))
+                )
+            ));
+
+            root.appendChild(createEl('section', { id: 'certificates', class: 'certificates-section' },
+                createEl('div', { class: 'container' },
+                    createEl('div', { class: 'text-center mb-5' },
+                        createEl('h2', { class: 'cert-main-title', text: 'Certifications' }),
+                        createEl('p', { class: 'cert-subtitle', text: 'Professional credentials and technical validations.' })
+                    ),
+                    createEl('div', { class: 'row g-4' }, ...appData.certificates.map(cert =>
+                        createEl('div', { class: 'col-md-6 col-lg-3' },
+                            createEl('div', { class: 'cert-card' },
+                                createEl('div', { class: 'cert-icon-wrapper' }, createEl('i', { class: `bi ${cert.icon}` })),
+                                createEl('div', { class: 'cert-name', text: cert.title }),
+                                createEl('p', { class: 'cert-level', text: cert.level }),
+                                createEl('div', { class: 'cert-divider' }),
+                                createEl('span', { class: 'cert-issuer', text: cert.issuer })
+                            )
+                        )
+                    ))
+                )
+            ));
+        };
+
+        const initTypography = () => {
+            new Typed('#typed-text', {
+                strings: ['One clean, structured space your clients can rely on.', 'Data-driven insights and premium digital marketing.', 'Customer-centric product strategy with measurable ROI.'],
+                typeSpeed: 45,
+                backSpeed: 25,
+                backDelay: 1900,
+                loop: true,
                 showCursor: true,
-                cursorChar: '|',
-                loop: false
+                cursorChar: '|'
             });
-        }
+        };
 
-        // Create the Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                // If the skills section is 20% visible
-                if (entry.isIntersecting) {
-                    startSubtitleTyping();
-                    observer.unobserve(entry.target); // Stop observing so it only types once
-                }
-            });
-        }, { threshold: 0.2 }); // 0.2 means 20% of the section must be visible
+        const initObservers = () => {
+            const skillsSection = document.querySelector('#skills');
+            if (!skillsSection) return;
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        skillsSection.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.18 });
+            observer.observe(skillsSection);
+        };
 
-        // Start watching the Skills section
-        const skillsSection = document.querySelector('#skills');
-        observer.observe(skillsSection);
+        document.addEventListener('DOMContentLoaded', () => {
+            renderNav();
+            renderSocials('footer-social-links');
+            renderSocials('hero-social-links');
+            renderSkillsMarquee();
+            renderSection();
+            initTypography();
+            initObservers();
+
+            const toggle = document.getElementById('toggle');
+            const rootEl = document.documentElement;
+            const savedMode = localStorage.getItem('theme') || 'light';
+            const applyMode = mode => {
+                rootEl.dataset.theme = mode;
+                toggle.checked = mode === 'dark';
+                localStorage.setItem('theme', mode);
+            };
+            applyMode(savedMode);
+            toggle.addEventListener('change', () => applyMode(toggle.checked ? 'dark' : 'light'));
+        });
     </script>
 </body>
 

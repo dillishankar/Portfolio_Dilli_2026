@@ -2,14 +2,42 @@
     --primary-orange: #f47b20;
     --dark-bg: #1a1a1a;
     --text-muted: #555;
+    --bg: #fff;
+    --surface: #f9fbfe;
+    --text: #1a1a1a;
+    --muted: #666;
+    --border: rgba(0,0,0,.08);
+}
+
+[data-theme='dark'] {
+    --bg: #111;
+    --surface: #1a1a1a;
+    --text: #eee;
+    --muted: #ccc;
+    --border: rgba(255,255,255,.12);
 }
 
 body {
     font-family: 'Inter', sans-serif;
     background: linear-gradient(180deg, #e0f2f7 0%, #ffffff 60%);
-    color: var(--dark-bg);
+    color: var(--text);
+    background-color: var(--bg);
     overflow-x: hidden;
+    transition: background-color .3s ease, color .3s ease;
 }
+
+img,
+picture,
+video,
+iframe {
+    max-width: 100%;
+    display: block;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 
 /* Navbar */
 .navbar-nav .nav-link {
@@ -1068,19 +1096,60 @@ html {
 .footer-bottom {
     margin-top: 60px;
     padding-top: 25px;
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid var(--border);
     text-align: center;
 }
 
 .footer-bottom p {
     font-size: 0.8rem;
-    color: #aaa;
+    color: var(--muted);
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
+/* Dark theme overrides */
+[data-theme='dark'] .navbar,
+[data-theme='dark'] .footer-section,
+[data-theme='dark'] .workshop-card,
+[data-theme='dark'] .project-card,
+[data-theme='dark'] .cert-card,
+[data-theme='dark'] .internship-card {
+    background: var(--surface);
+    color: var(--text);
+    border-color: var(--border);
+}
+
+[data-theme='dark'] .btn-professional,
+[data-theme='dark'] .btn-footer-connect,
+[data-theme='dark'] .status-tag,
+[data-theme='dark'] .project-category,
+[data-theme='dark'] .duration-badge {
+    background: #222;
+    color: #fff;
+}
+
+/* --- Footer Responsive Adjustments --- */
 @media (max-width: 768px) {
     .footer-section {
         padding: 60px 0 30px;
     }
+}
+
+/* --- Corrected Marquee Sparkle Custom Colors --- */
+.skills-content .marquee-sparkle {
+    margin: 0 35px;
+    display: inline-block;
+}
+
+/* Day Mode: Solid Black Star */
+.skills-content .marquee-sparkle i {
+    color: #000000 !important;
+    font-size: 1.1rem;
+    opacity: 1 !important;
+    transition: color 0.3s ease;
+}
+
+/* Night Mode: Switches to crisp white */
+[data-theme='dark'] .skills-content .marquee-sparkle i {
+    color: #ffffff !important;
 }
