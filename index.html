@@ -4,398 +4,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Rammya Kannan</title>
+    <title>Portfolio Navigation</title>
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
         rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <!-- Bootstrap 5 CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-dark-theme">
 
-    <nav class="navbar navbar-expand-lg py-3 fixed-top bg-white border-bottom shadow-sm" role="navigation">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#"
-                style="font-family: 'Playfair Display', serif; letter-spacing: -1px;">Portfolio</a>
+    <!-- NAVBAR SECTION -->
+    <nav class="custom-navbar-wrapper fixed-top" id="mainNavbar">
+        <div class="container d-flex align-items-center justify-content-between">
 
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <!-- Left: Logo + Availability Badge -->
+            <div class="d-flex align-items-center gap-3">
+                <a class="navbar-logo" href="#">
+                    <img src="Data/Dilli.png" alt="Logo" class="logo-img">
+                </a>
 
-            <div class="collapse navbar-collapse" id="mainNavbar">
-                <ul class="navbar-nav mx-auto text-uppercase small fw-bold ls-wide" role="menubar">
+                <!-- Status Badge -->
+                <div class="status-badge d-none d-lg-inline-flex align-items-center gap-2">
+                    <span class="status-dot"></span>
+                    <span class="status-text">Available for work</span>
+                </div>
+            </div>
+
+            <!-- Center: Capsule Dock Navigation (Desktop) -->
+            <div class="nav-dock d-none d-md-block">
+                <ul class="nav-dock-list m-0 p-0 d-flex align-items-center list-unstyled">
+                    <li class="nav-dock-item">
+                        <a href="#skills" class="nav-dock-link">
+                            <i class="bi bi-lightning-charge"></i>
+                            <span>Skills</span>
+                        </a>
+                    </li>
+                    <li class="nav-dock-item">
+                        <a href="#projects" class="nav-dock-link">
+                            <i class="bi bi-folder2-open"></i>
+                            <span>Projects</span>
+                        </a>
+                    </li>
+                    <li class="nav-dock-item">
+                        <a href="#experience" class="nav-dock-link">
+                            <i class="bi bi-briefcase"></i>
+                            <span>Experience</span>
+                        </a>
+                    </li>
+                    <li class="nav-dock-item">
+                        <a href="#certificates" class="nav-dock-link">
+                            <i class="bi bi-award"></i>
+                            <span>Certificate</span>
+                        </a>
+                    </li>
                 </ul>
-                <button class="btn btn-dark-custom d-none d-lg-block">Let's Connect</button>
+            </div>
+
+            <!-- Right: Action Buttons -->
+            <div class="nav-actions d-flex align-items-center gap-2">
+
+                <!-- Resume Download Button -->
+                <a href="Data/Resume.pdf" download class="btn-outline-glass" title="Download Resume">
+                    <i class="bi bi-file-earmark-arrow-down"></i>
+                    <span class="d-none d-sm-inline">CV</span>
+                </a>
+
+                <!-- Let's Connect Button -->
+                <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-sm">
+                    <span class="pulse-dot-sm d-inline-block d-lg-none"></span>
+                    Let's Connect
+                </a>
+
+                <!-- Admin Button -->
+                <a href="#admin" class="btn-admin-icon" title="Admin Login" aria-label="Admin Login">
+                    <i class="bi bi-lock-fill"></i>
+                </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-toggle-btn d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Mobile Glass Menu Dropdown -->
+        <div class="collapse d-md-none" id="mobileNavMenu">
+            <div class="container mt-2">
+                <div class="glass-mobile-card">
+                    <!-- Mobile Availability Status -->
+                    <div
+                        class="status-badge-mobile d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-secondary-subtle">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for work</span>
+                    </div>
+
+                    <ul class="mobile-nav-list m-0 p-0 list-unstyled">
+                        <li>
+                            <a href="#skills" class="mobile-nav-link">
+                                <i class="bi bi-lightning-charge"></i>
+                                <span>Skills</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#projects" class="mobile-nav-link">
+                                <i class="bi bi-folder2-open"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#experience" class="mobile-nav-link">
+                                <i class="bi bi-briefcase"></i>
+                                <span>Experience</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#certificates" class="mobile-nav-link">
+                                <i class="bi bi-award"></i>
+                                <span>Certificate</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
 
-    <header id="home" class="hero-section text-center">
-        <div class="container">
-            <div class="d-flex justify-content-center align-items-center gap-3 mb-4">
-                <span class="small fw-medium text-muted">Day Mode</span>
-                <div class="custom-switch">
-                    <input type="checkbox" id="toggle" checked>
-                    <label for="toggle" aria-label="Toggle dark mode"></label>
-                </div>
-                <span class="small fw-bold">Night Mode</span>
-            </div>
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-            <h1 class="display-1 main-title">Product Specialist<br>Product Strategy</h1>
-
-            <p class="hero-subtitle mx-auto">
-                <span id="typed-text"></span>
-            </p>
-
-            <div class="mt-5 d-flex flex-column align-items-center">
-                <a href="mailto:ramyarams5143@gmail.com" class="btn-professional">
-                    <span class="btn-text">Download CV</span>
-                    <span class="btn-icon-box">
-                        <i class="bi bi-arrow-up-right"></i>
-                    </span>
-                </a>
-            </div>
-
-            <div id="hero-social-links"
-                class="d-flex justify-content-center flex-wrap gap-4 mt-5 social-icon-only-setup"></div>
-        </div>
-    </header>
-
-    <div class="skills-marquee-container">
-        <div class="skills-marquee-inner" id="skills-marquee">
-        </div>
-    </div>
-
-    <main id="content-root"></main>
-
-    <footer class="footer-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-                    <a class="footer-brand" href="#">Portfolio</a>
-                    <p class="footer-tagline">Building digital experiences with precision and strategy.</p>
-                </div>
-
-                <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <div class="footer-social-links" id="footer-social-links"></div>
-                </div>
-
-                <div class="col-md-4 text-center text-md-end">
-                    <a href="mailto:ramyarams5143@gmail.com" class="btn-footer-connect">
-                        Let's Talk <i class="bi bi-chat-dots-fill ms-2"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="footer-bottom">
-                <p>&copy; 2026 Rammya Kannan. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js" defer></script>
-
-    <script defer>
-        const appData = {
-            nav: [
-                { label: 'Home', href: '#home' },
-                { label: 'About', href: '#about' },
-                { label: 'Skills', href: '#skills' },
-                { label: 'Projects', href: '#projects' },
-                { label: 'Certificates', href: '#certificates' },
-            ],
-            socials: [
-                { href: '#', icon: 'bi-github', label: 'GitHub' },
-                { href: 'https://www.linkedin.com/in/rammya-ramsa29347253', icon: 'bi-linkedin', label: 'LinkedIn' },
-                { href: 'mailto:ramyarams5143@gmail.com', icon: 'bi-envelope-fill', label: 'Email' },
-                { href: 'https://wa.me/918778547340', icon: 'bi-whatsapp', label: 'WhatsApp' },
-                { href: 'https://www.instagram.com/rammyakannan?igsh=cmNwcTczcTdyb2Z3', icon: 'bi-instagram', label: 'Instagram' },
-            ],
-            skills: [
-                'SEO', 'Social Media Marketing', 'Meta Ads', 'Google Ads', 'UX Research', 'Figma Mobile & Web Design', 'Python'
-            ],
-            tools: [
-                { title: 'Design & Social', lines: ['Figma & Canva', 'Hashtagify', 'Google Analytics', 'Capcut'] },
-                { title: 'SEO & Growth', lines: ['Google Search Console', 'Google Keyword Planner', 'Screaming Frog SEO Spider', 'SEMrush, Ahrefs'] },
-                { title: 'Ads & Strategy', lines: ['Google Analytics', 'Meta Ads Manager', 'Google Ads Manager', 'Meta Pixels', 'Ad Library'] },
-            ],
-            projects: [
-                { title: 'Digital Marketing Agency', category: 'Search Engine Optimization', subtitle: 'SEO, PPC & online marketing services focused on high-conversion results.', badge: 'Case Study', image: 'your-agency-image.jpg', url: 'YOUR_PROJECT_URL_1' },
-                { title: 'Thoughtful Poster Design', category: 'Visual Arts', subtitle: 'Creative storytelling through minimalist and impact-driven visual design.', badge: 'Design', image: 'your-poster-image.jpg', url: 'YOUR_PROJECT_URL_2' },
-                { title: 'Social Media Audit', category: 'Social Media Marketing', subtitle: 'Data-driven Instagram presence improvements for local businesses.', badge: 'Marketing', image: 'your-audit-image.jpg', url: 'YOUR_PROJECT_URL_3' },
-            ],
-            experience: {
-                role: 'Digital Marketing Intern',
-                company: 'Bigspace Coworking',
-                location: 'Guindy, Chennai',
-                duration: 'Feb 2026 — Mar 2026',
-                contributions: [
-                    'Optimized official website content to improve search engine visibility.',
-                    'Developed and executed marketing strategies to enhance online presence.',
-                    'Contributed to digital marketing activities with a focus on data-driven growth.'
-                ],
-                certificateLink: 'path-to-your-certificate.pdf',
-            },
-            workshops: [
-                { tag: 'Finance & AI', title: 'Navigating Financial Waters', details: 'Explored the impact of Artificial Intelligence on Stock Market Dynamics and predictive modeling.', icon: 'bi-graph-up-arrow', fullWidth: true },
-                { tag: 'Expert Talk', title: 'AI in Business Development', subtitle: 'The Role of Artificial Intelligence', details: 'Participated in expert discussions on leveraging AI for scalable business growth strategies.', icon: 'bi-lightbulb' },
-                { tag: 'Business Practices', title: 'GST & Business Practices', details: 'Hands-on training to enhance practical skills in GST filing and regulatory compliance.', icon: 'bi-receipt' },
-            ],
-            certificates: [
-                { icon: 'bi-calculator', title: 'Tally Essential', level: 'Level 2 | Tally Prime', issuer: 'Tally Solutions' },
-                { icon: 'bi-file-earmark-text', title: 'GST Training', level: 'Level 1 Certification', issuer: 'Professional Training' },
-                { icon: 'bi-code-slash', title: 'C++ Programming', level: 'Technical Proficiency', issuer: 'Programming Credential' },
-                { icon: 'bi-people', title: 'Business Negotiations', level: 'Advanced Strategy', issuer: 'IIFT, New Delhi' }
-            ]
-        };
-
-        const createEl = (tag, attrs = {}, ...children) => {
-            const el = document.createElement(tag);
-            Object.entries(attrs).forEach(([k, v]) => {
-                if (k === 'class') el.className = v;
-                else if (k === 'innerHTML') el.innerHTML = v;
-                else if (k === 'text') el.textContent = v;
-                else if (k === 'dataset') Object.assign(el.dataset, v);
-                else el.setAttribute(k, v);
-            });
-            children.flat().forEach(c => {
-                if (c == null) return;
-                if (typeof c === 'string') el.appendChild(document.createTextNode(c));
-                else el.appendChild(c);
-            });
-            return el;
-        };
-
-        const renderNav = () => {
-            const navLinks = document.querySelector('.navbar-nav');
-            if (!navLinks) return;
-            navLinks.innerHTML = '';
-            appData.nav.forEach(item => {
-                navLinks.appendChild(createEl('li', { class: 'nav-item' }, createEl('a', { class: 'nav-link px-3', href: item.href, text: item.label, role: 'menuitem' })));
-            });
-        };
-
-        const renderSocials = (containerId) => {
-            const container = document.getElementById(containerId);
-            if (!container) return;
-            container.innerHTML = '';
-            appData.socials.forEach(s => {
-                const link = createEl('a', { class: 'social-icon-link', href: s.href, target: '_blank', rel: 'noopener noreferrer', 'aria-label': s.label }, createEl('i', { class: `bi ${s.icon}` }));
-                container.appendChild(link);
-            });
-        };
-
-        const renderSkillsMarquee = () => {
-            const container = document.getElementById('skills-marquee');
-            if (!container) return;
-
-            // Map each specific skill string to its premium icon class
-            const skillIconMap = {
-                'SEO': 'bi bi-search',
-                'Social Media Marketing': 'bi bi-megaphone',
-                'Meta Ads': 'bi bi-meta',
-                'Google Ads': 'bi bi-google',
-                'UX Research': 'bi bi-eye',
-                'Figma Mobile & Web Design': 'devicon-figma-plain',
-                'Python': 'devicon-python-plain colored'
-            };
-
-            const line = [];
-            appData.skills.forEach((skill, index) => {
-                const iconClass = skillIconMap[skill] || 'bi bi-patch-check';
-
-                // 1. Add the Skill with its actual tech icon
-                line.push(
-                    createEl('span', { class: 'marquee-skill-item' },
-                        createEl('i', { class: iconClass }),
-                        ` ${skill}`
-                    )
-                );
-
-                // 2. Clear inline styling so your updated style.css rules can take control cleanly!
-                line.push(
-                    createEl('span', { class: 'marquee-sparkle' },
-                        createEl('i', { class: 'bi bi-sparkles' })
-                    )
-                );
-            });
-            const content = createEl('div', { class: 'skills-content' }, ...line);
-            const repeat = createEl('div', { class: 'skills-content', 'aria-hidden': 'true' }, ...line);
-
-            container.innerHTML = ''; // Clear previous static contents
-            container.append(content, repeat);
-        };
-
-        const renderSection = () => {
-            const root = document.getElementById('content-root');
-            if (!root) return;
-            root.innerHTML = '';
-
-            root.appendChild(createEl('section', { id: 'about', class: 'about-section text-center py-5' },
-                createEl('div', { class: 'container' },
-                    createEl('h2', { class: 'group-title', text: 'About Me' }),
-                    createEl('p', { class: 'hero-subtitle', text: 'I craft user-centric digital products with growth-minded marketing strategy and clean delivery. My focus is on measurable impact, efficient execution, and scalable systems.' })
-                )
-            ));
-
-            root.appendChild(createEl('section', { id: 'skills', class: 'skills-section text-center' },
-                createEl('div', { class: 'container' },
-                    createEl('h2', { class: 'skills-main-title', text: 'What Powers Me' }),
-                    createEl('p', { class: 'hero-subtitle', text: 'A snapshot of the skills and tools I use to build seamless, scalable and user-friendly digital experiences.' }),
-                    createEl('div', { class: 'skills-list' }, ...appData.skills.map(skill => createEl('span', { text: skill }))),
-                    createEl('div', { class: 'tools-grid' }, ...appData.tools.map(tool => createEl('div', { class: 'tool-column' }, createEl('h5', { text: tool.title }), createEl('p', { innerHTML: tool.lines.join('<br>') }))))
-                )
-            ));
-
-            root.appendChild(createEl('section', { id: 'projects', class: 'projects-section' },
-                createEl('div', { class: 'container' },
-                    createEl('div', { class: 'text-center mb-5' },
-                        createEl('h2', { class: 'projects-main-title', text: "What I've Built" }),
-                        createEl('p', { class: 'projects-subtitle', text: 'Every project is a chapter in my design journey.' })
-                    ),
-                    createEl('div', { class: 'row g-4' }, ...appData.projects.map(project =>
-                        createEl('div', { class: 'col-lg-4 col-md-6' },
-                            createEl('a', { class: 'project-card-link', href: project.url, target: '_blank', rel: 'noopener noreferrer' },
-                                createEl('div', { class: 'project-card' },
-                                    createEl('div', { class: 'project-img-container' },
-                                        createEl('img', { src: project.image, alt: project.title, loading: 'lazy' }),
-                                        createEl('div', { class: 'project-badge', text: project.badge })
-                                    ),
-                                    createEl('div', { class: 'project-info' },
-                                        createEl('span', { class: 'project-category', text: project.category }),
-                                        createEl('h4', { class: 'project-title', text: project.title }),
-                                        createEl('p', { class: 'project-desc', text: project.subtitle })
-                                    )
-                                )
-                            )
-                        )
-                    ))
-                )
-            ));
-
-            root.appendChild(createEl('section', { id: 'experience', class: 'experience-section' },
-                createEl('div', { class: 'container' },
-                    createEl('div', { class: 'row align-items-center' },
-                        createEl('div', { class: 'col-lg-4' },
-                            createEl('h2', { class: 'experience-main-title', text: 'Professional Journey' }),
-                            createEl('p', { class: 'experience-subtitle', text: 'Real-world experience building digital presence for industry leaders.' })
-                        ),
-                        createEl('div', { class: 'col-lg-8' },
-                            createEl('div', { class: 'internship-card' },
-                                createEl('div', { class: 'internship-header' },
-                                    createEl('div', { class: 'company-info' },
-                                        createEl('h3', { class: 'company-name', text: appData.experience.company }),
-                                        createEl('span', { class: 'location', innerHTML: `<i class="bi bi-geo-alt"></i> ${appData.experience.location}` })
-                                    ),
-                                    createEl('div', { class: 'duration-badge', text: appData.experience.duration })
-                                ),
-                                createEl('div', { class: 'role-title', text: appData.experience.role }),
-                                createEl('ul', { class: 'contribution-list' }, ...appData.experience.contributions.map(item => createEl('li', { text: item }))),
-                                createEl('div', { class: 'certificate-footer' },
-                                    createEl('span', { class: 'status-tag', innerHTML: '<i class="bi bi-check-circle-fill"></i> Completed Successfully' }),
-                                    createEl('a', { class: 'btn-verify', href: appData.experience.certificateLink, target: '_blank', rel: 'noopener noreferrer', text: 'Verify Certificate ' },
-                                        createEl('i', { class: 'bi bi-arrow-right-short' })
-                                    )
-                                )
-                            )
-                        )
-                    )
-                )
-            ));
-
-            root.appendChild(createEl('section', { id: 'workshops', class: 'workshop-section' },
-                createEl('div', { class: 'container' },
-                    createEl('div', { class: 'text-center mb-5' },
-                        createEl('h2', { class: 'workshop-main-title', text: 'Workshops & Learning' }),
-                        createEl('p', { class: 'workshop-subtitle', text: 'Continuous growth through expert-led sessions and technical training.' })
-                    ),
-                    createEl('div', { class: 'workshop-grid' }, ...appData.workshops.map((workshop, idx) =>
-                        createEl('div', { class: `workshop-card ${workshop.fullWidth ? 'premium-card' : workshop.tag === 'Expert Talk' ? 'orange-card' : 'premium-card'}` },
-                            createEl('div', { class: 'workshop-icon' }, createEl('i', { class: `bi ${workshop.icon}` })),
-                            createEl('div', { class: 'workshop-content' },
-                                createEl('span', { class: 'workshop-tag', text: workshop.tag }),
-                                createEl('h4', { class: 'workshop-title', text: workshop.title }),
-                                workshop.subtitle ? createEl('h5', { class: 'workshop-subtitle-small', text: workshop.subtitle }) : null,
-                                createEl('p', { class: 'workshop-detail', text: workshop.details })
-                            )
-                        )
-                    ))
-                )
-            ));
-
-            root.appendChild(createEl('section', { id: 'certificates', class: 'certificates-section' },
-                createEl('div', { class: 'container' },
-                    createEl('div', { class: 'text-center mb-5' },
-                        createEl('h2', { class: 'cert-main-title', text: 'Certifications' }),
-                        createEl('p', { class: 'cert-subtitle', text: 'Professional credentials and technical validations.' })
-                    ),
-                    createEl('div', { class: 'row g-4' }, ...appData.certificates.map(cert =>
-                        createEl('div', { class: 'col-md-6 col-lg-3' },
-                            createEl('div', { class: 'cert-card' },
-                                createEl('div', { class: 'cert-icon-wrapper' }, createEl('i', { class: `bi ${cert.icon}` })),
-                                createEl('div', { class: 'cert-name', text: cert.title }),
-                                createEl('p', { class: 'cert-level', text: cert.level }),
-                                createEl('div', { class: 'cert-divider' }),
-                                createEl('span', { class: 'cert-issuer', text: cert.issuer })
-                            )
-                        )
-                    ))
-                )
-            ));
-        };
-
-        const initTypography = () => {
-            new Typed('#typed-text', {
-                strings: ['One clean, structured space your clients can rely on.', 'Data-driven insights and premium digital marketing.', 'Customer-centric product strategy with measurable ROI.'],
-                typeSpeed: 45,
-                backSpeed: 25,
-                backDelay: 1900,
-                loop: true,
-                showCursor: true,
-                cursorChar: '|'
-            });
-        };
-
-        const initObservers = () => {
-            const skillsSection = document.querySelector('#skills');
-            if (!skillsSection) return;
-            const observer = new IntersectionObserver(entries => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        skillsSection.classList.add('visible');
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, { threshold: 0.18 });
-            observer.observe(skillsSection);
-        };
-
-        document.addEventListener('DOMContentLoaded', () => {
-            renderNav();
-            renderSocials('footer-social-links');
-            renderSocials('hero-social-links');
-            renderSkillsMarquee();
-            renderSection();
-            initTypography();
-            initObservers();
-
-            const toggle = document.getElementById('toggle');
-            const rootEl = document.documentElement;
-            const savedMode = localStorage.getItem('theme') || 'light';
-            const applyMode = mode => {
-                rootEl.dataset.theme = mode;
-                toggle.checked = mode === 'dark';
-                localStorage.setItem('theme', mode);
-            };
-            applyMode(savedMode);
-            toggle.addEventListener('change', () => applyMode(toggle.checked ? 'dark' : 'light'));
+    <!-- Scroll Blur Script -->
+    <script>
+        window.addEventListener('scroll', function () {
+            const navbar = document.getElementById('mainNavbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('navbar-scrolled');
+            } else {
+                navbar.classList.remove('navbar-scrolled');
+            }
         });
     </script>
 </body>
