@@ -1,0 +1,162 @@
+/* --------------------------------------------------
+   4. CANVAS HERO SECTION WITH RESPONSIVE TOP PADDING
+-------------------------------------------------- */
+.hero-section {
+    min-height: 100vh;
+    /* Desktop Top Offset: Accommodates Boxed Marquee + Navbar */
+    padding-top: 170px;
+    padding-bottom: 60px;
+    overflow: hidden;
+    background-color: var(--bg-dark);
+}
+
+/* 1. Darker & Sharp Grid Lines */
+.hero-grid-bg {
+    position: absolute;
+    inset: 0;
+    background-size: 40px 40px;
+    background-image:
+        linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+    mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.1) 95%);
+    -webkit-mask-image: radial-gradient(circle at center, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.1) 95%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* 2. Canvas Frame Border & Corner Anchors */
+.hero-canvas-frame {
+    border: 1px solid rgba(255, 255, 255, 0.22);
+    position: relative;
+    max-width: 900px;
+}
+
+/* Square Anchor Nodes at Box Corners */
+.corner-node {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #f06a38;
+    border: 1px solid #fff;
+    z-index: 10;
+}
+
+.corner-node.top-left { top: -4px; left: -4px; }
+.corner-node.top-right { top: -4px; right: -4px; }
+.corner-node.bottom-left { bottom: -4px; left: -4px; }
+.corner-node.bottom-right { bottom: -4px; right: -4px; }
+
+/* 3. Typography Styles */
+.hero-title {
+    color: var(--text-primary);
+    line-height: 1.15;
+    letter-spacing: -0.03em;
+}
+
+.hero-italic-text {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--text-primary);
+}
+
+.hero-subtitle {
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    max-width: 580px;
+    color: rgba(240, 244, 241, 0.65) !important;
+}
+
+/* 4. Floating Cursor Chips & Pointer Arrows */
+.cursor-chip {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    z-index: 15;
+    pointer-events: none;
+}
+
+.chip-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 100px;
+    letter-spacing: 0.02em;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+.label-orange { background-color: #f06a38; color: #ffffff; }
+.label-white  { background-color: #ffffff; color: #111111; }
+.label-yellow { background-color: #f0e698; color: #111111; }
+
+.pointer-arrow {
+    width: 14px;
+    height: 14px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.chip-left .pointer-arrow { color: #f06a38; }
+.chip-top-right .pointer-arrow { color: #ffffff; }
+.chip-bottom-right .pointer-arrow { color: #f0e698; }
+
+.chip-left {
+    left: -45px;
+    bottom: 25%;
+}
+
+.chip-top-right {
+    right: -45px;
+    top: 20%;
+}
+
+.chip-bottom-right {
+    right: 12%;
+    bottom: -16px;
+}
+
+.arrow-top-right { transform: rotate(15deg); }
+.arrow-bottom-left { transform: rotate(-135deg); }
+.arrow-top-left { transform: rotate(-45deg); }
+
+/* --------------------------------------------------
+   5. RESPONSIVE BREAKPOINTS
+-------------------------------------------------- */
+
+/* Tablets & Small Desktops */
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 150px;
+    }
+}
+
+/* Mobile Screens */
+@media (max-width: 768px) {
+    .hero-section {
+        /* Extra clearance for mobile viewports */
+        padding-top: 140px;
+        padding-bottom: 40px;
+    }
+
+    .hero-canvas-frame {
+        border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    /* Reposition chips so they don't overflow the viewport */
+    .chip-left {
+        left: 10px;
+        top: -16px;
+        bottom: auto;
+    }
+
+    .chip-top-right {
+        right: 10px;
+        top: -16px;
+    }
+
+    .chip-bottom-right {
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -16px;
+    }
+}

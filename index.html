@@ -19,11 +19,12 @@
 
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hero.css">
 </head>
 
 <body class="bg-dark-theme">
 
-    <!-- FIXED TOP HEADER WRAPPER -->
+    <!-- FIXED TOP HEADER WRAPPER (NAVBAR ONLY) -->
     <header class="fixed-top-wrapper fixed-top">
 
         <!-- Floating Boxed Marquee -->
@@ -113,7 +114,7 @@
                 <div class="container mt-2">
                     <div class="glass-mobile-card">
 
-                        <!-- Header Bar (No Hard Line) -->
+                        <!-- Header Bar -->
                         <div class="d-flex align-items-center justify-content-between mb-2">
                             <div class="status-badge d-inline-flex align-items-center gap-2">
                                 <span class="status-dot"></span>
@@ -168,8 +169,56 @@
         </nav>
     </header>
 
-    <!-- Content Spacer so body content isn't covered by header -->
-    <div style="padding-top: 130px;"></div>
+    <!-- MAIN PAGE CONTENT (OUTSIDE HEADER) -->
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center">
+
+            <!-- Dark Tech Grid Background -->
+            <div class="hero-grid-bg"></div>
+
+            <div class="container position-relative z-2">
+                <div class="row justify-content-center">
+                    <div class="col-lg-10 col-xl-9">
+
+                        <div class="hero-text-content">
+                            <!-- Main Heading -->
+                            <h1 class="hero-title display-2 fw-bold mb-4">
+                                Every Person has a story, <br>
+
+                                <!-- Mint Glass Selection Box around "here's mine!" -->
+                                <span class="selection-box-wrapper d-inline-block position-relative">
+
+                                    <!-- Selection Anchor Nodes -->
+                                    <span class="box-node top-left"></span>
+                                    <span class="box-node top-right"></span>
+                                    <span class="box-node bottom-left"></span>
+                                    <span class="box-node bottom-right"></span>
+
+                                    <!-- Floating Figma Cursor Badge -->
+                                    <div class="me-cursor-chip">
+                                        <svg class="pointer-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                            <path d="M3 3l7 18 3-7 7-3L3 3z" />
+                                        </svg>
+                                        <span class="me-label">Me</span>
+                                    </div>
+
+                                    <!-- Selected Text -->
+                                    <span class="highlight-text">here's mine!</span>
+                                </span>
+                            </h1>
+
+                            <!-- Subtitle -->
+                            <p class="hero-subtitle text-muted mx-auto mb-0">
+                                Transforming ideas into reality • Crafting modern web apps & UI/UX experiences
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
