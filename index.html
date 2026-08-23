@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Navigation</title>
-
+    
     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
     <!-- Bootstrap 5 CSS & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body class="bg-dark-theme">
 
     <!-- NAVBAR SECTION -->
     <nav class="custom-navbar-wrapper fixed-top" id="mainNavbar">
         <div class="container d-flex align-items-center justify-content-between">
-
-            <!-- Left: Logo + Availability Badge -->
+            
+            <!-- Left: Logo + Desktop Availability Badge -->
             <div class="d-flex align-items-center gap-3">
                 <a class="navbar-logo" href="#">
                     <img src="Data/Dilli.png" alt="Logo" class="logo-img">
                 </a>
-
-                <!-- Status Badge -->
+                
                 <div class="status-badge d-none d-lg-inline-flex align-items-center gap-2">
                     <span class="status-dot"></span>
                     <span class="status-text">Available for work</span>
                 </div>
             </div>
 
-            <!-- Center: Capsule Dock Navigation (Desktop) -->
+            <!-- Center: Capsule Dock Navigation (Desktop Only) -->
             <div class="nav-dock d-none d-md-block">
                 <ul class="nav-dock-list m-0 p-0 d-flex align-items-center list-unstyled">
                     <li class="nav-dock-item">
@@ -69,48 +65,47 @@
                 </ul>
             </div>
 
-            <!-- Right: Action Buttons -->
-            <div class="nav-actions d-flex align-items-center gap-2">
-
-                <!-- Resume Download Button -->
+            <!-- Desktop Right Actions -->
+            <div class="nav-actions d-none d-md-flex align-items-center gap-2">
                 <a href="Data/Resume.pdf" download class="btn-outline-glass" title="Download Resume">
                     <i class="bi bi-file-earmark-arrow-down"></i>
-                    <span class="d-none d-sm-inline">CV</span>
+                    <span>CV</span>
                 </a>
 
-                <!-- Let's Connect Button -->
                 <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-sm">
-                    <span class="pulse-dot-sm d-inline-block d-lg-none"></span>
                     Let's Connect
                 </a>
 
-                <!-- Admin Button -->
                 <a href="#admin" class="btn-admin-icon" title="Admin Login" aria-label="Admin Login">
                     <i class="bi bi-lock-fill"></i>
                 </a>
-
-                <!-- Mobile Hamburger Toggle -->
-                <button class="mobile-toggle-btn d-md-none" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <i class="bi bi-list"></i>
-                </button>
             </div>
+
+            <!-- Mobile Hamburger Toggle -->
+            <button class="mobile-toggle-btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="bi bi-list"></i>
+            </button>
 
         </div>
 
-        <!-- Mobile Glass Menu Dropdown -->
+        <!-- Seamless Mobile Glass Drawer -->
         <div class="collapse d-md-none" id="mobileNavMenu">
             <div class="container mt-2">
                 <div class="glass-mobile-card">
-                    <!-- Mobile Availability Status -->
-                    <div
-                        class="status-badge-mobile d-flex align-items-center gap-2 mb-3 pb-2 border-bottom border-secondary-subtle">
-                        <span class="status-dot"></span>
-                        <span class="status-text">Available for work</span>
+                    
+                    <!-- Header Bar (No Hard Line) -->
+                    <div class="d-flex align-items-center justify-content-between mb-2">
+                        <div class="status-badge d-inline-flex align-items-center gap-2">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Available for work</span>
+                        </div>
+                        <a href="#admin" class="btn-admin-icon-sm" title="Admin Login">
+                            <i class="bi bi-lock-fill"></i>
+                        </a>
                     </div>
 
-                    <ul class="mobile-nav-list m-0 p-0 list-unstyled">
+                    <!-- Navigation Links -->
+                    <ul class="mobile-nav-list m-0 p-0 list-unstyled d-flex flex-column gap-1">
                         <li>
                             <a href="#skills" class="mobile-nav-link">
                                 <i class="bi bi-lightning-charge"></i>
@@ -136,6 +131,17 @@
                             </a>
                         </li>
                     </ul>
+
+                    <!-- Action Buttons -->
+                    <div class="mobile-drawer-actions d-flex flex-column gap-2 mt-3">
+                        <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-mobile text-center">
+                            Let's Connect
+                        </a>
+                        <a href="Data/Resume.pdf" download class="btn-outline-mobile text-center">
+                            <i class="bi bi-file-earmark-arrow-down me-2"></i>Download CV
+                        </a>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -146,7 +152,7 @@
 
     <!-- Scroll Blur Script -->
     <script>
-        window.addEventListener('scroll', function () {
+        window.addEventListener('scroll', function() {
             const navbar = document.getElementById('mainNavbar');
             if (window.scrollY > 20) {
                 navbar.classList.add('navbar-scrolled');
@@ -156,5 +162,4 @@
         });
     </script>
 </body>
-
 </html>

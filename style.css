@@ -13,43 +13,38 @@ body.bg-dark-theme {
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--text-primary);
     min-height: 200vh;
-    /* Added height for testing scroll effect */
     letter-spacing: -0.02em;
 }
 
-/* Navbar Wrapper & Dynamic Scroll Blur Effect */
+/* Dynamic Scroll Blur */
 .custom-navbar-wrapper {
-    padding: 20px 0;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 18px 0;
+    transition: all 0.3s ease;
     z-index: 1000;
 }
 
 .custom-navbar-wrapper.navbar-scrolled {
     padding: 12px 0;
-    background: rgba(7, 9, 8, 0.75);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background: rgba(7, 9, 8, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-/* Left Logo */
+/* Logo */
 .navbar-logo .logo-img {
-    height: 36px;
+    height: 34px;
     width: auto;
     object-fit: contain;
 }
 
-/* Availability Badge & Pulsing Green Dot */
+/* Availability Badge */
 .status-badge {
     background: rgba(82, 225, 133, 0.06);
-    border: 1px solid rgba(82, 225, 133, 0.18);
+    border: 1px solid rgba(82, 225, 133, 0.15);
     border-radius: 100px;
     padding: 5px 12px;
-}
-
-.status-badge-mobile {
-    padding: 4px 8px;
 }
 
 .status-text {
@@ -58,8 +53,7 @@ body.bg-dark-theme {
     color: #a8efc1;
 }
 
-.status-dot,
-.pulse-dot-sm {
+.status-dot {
     width: 7px;
     height: 7px;
     background-color: var(--mint-accent);
@@ -68,8 +62,7 @@ body.bg-dark-theme {
     display: inline-block;
 }
 
-.status-dot::after,
-.pulse-dot-sm::after {
+.status-dot::after {
     content: '';
     position: absolute;
     top: -2px;
@@ -94,7 +87,7 @@ body.bg-dark-theme {
     }
 }
 
-/* Center Desktop Dock */
+/* Desktop Dock */
 .nav-dock {
     background: var(--dock-bg);
     border: 1px solid var(--border-color);
@@ -124,7 +117,6 @@ body.bg-dark-theme {
 .nav-dock-link i {
     font-size: 0.95rem;
     color: var(--text-muted);
-    transition: color 0.25s ease;
 }
 
 .nav-dock-link:hover {
@@ -136,14 +128,14 @@ body.bg-dark-theme {
     color: var(--mint-accent);
 }
 
-/* Outline Glass CTA Button (Resume) */
+/* Desktop Buttons */
 .btn-outline-glass {
     background: var(--dock-bg);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
     font-weight: 500;
     font-size: 0.85rem;
-    padding: 8px 14px;
+    padding: 8px 16px;
     border-radius: 100px;
     text-decoration: none;
     display: inline-flex;
@@ -158,20 +150,16 @@ body.bg-dark-theme {
     background: rgba(82, 225, 133, 0.06);
 }
 
-/* Primary Button (Let's Connect) */
 .btn-mint-sm {
     background-color: var(--mint-accent);
     color: #000;
     font-weight: 600;
     font-size: 0.85rem;
-    padding: 9px 18px;
+    padding: 9px 20px;
     border-radius: 100px;
     text-decoration: none;
     transition: all 0.25s ease;
     white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
 }
 
 .btn-mint-sm:hover {
@@ -181,7 +169,6 @@ body.bg-dark-theme {
     box-shadow: 0 4px 15px rgba(82, 225, 133, 0.25);
 }
 
-/* Admin Icon Button */
 .btn-admin-icon {
     width: 36px;
     height: 36px;
@@ -195,7 +182,6 @@ body.bg-dark-theme {
     text-decoration: none;
     font-size: 0.85rem;
     transition: all 0.25s ease;
-    flex-shrink: 0;
 }
 
 .btn-admin-icon:hover {
@@ -206,55 +192,105 @@ body.bg-dark-theme {
 
 /* Mobile Toggle Button */
 .mobile-toggle-btn {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     background: var(--dock-bg);
     border: 1px solid var(--border-color);
     color: var(--text-primary);
-    border-radius: 10px;
+    border-radius: 12px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.25rem;
+    font-size: 1.35rem;
     cursor: pointer;
     transition: all 0.25s ease;
 }
 
-/* Glass Floating Mobile Dropdown */
-.glass-mobile-card {
-    background: rgba(13, 17, 15, 0.9);
-    border: 1px solid var(--border-color);
-    backdrop-filter: blur(20px);
-    border-radius: 16px;
-    padding: 14px;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+.mobile-toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.08);
 }
 
-.mobile-nav-list {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
+/* Clean, Lineless Mobile Drawer Card */
+.glass-mobile-card {
+    background: rgba(13, 17, 15, 0.95);
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border-radius: 20px;
+    padding: 16px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+
+.btn-admin-icon-sm {
+    width: 32px;
+    height: 32px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 0.8rem;
 }
 
 .mobile-nav-link {
     display: flex;
     align-items: center;
     gap: 12px;
-    padding: 12px 16px;
+    padding: 11px 14px;
     border-radius: 12px;
     color: var(--text-muted);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     font-weight: 500;
     transition: all 0.25s ease;
 }
 
+.mobile-nav-link i {
+    font-size: 1.05rem;
+}
+
 .mobile-nav-link:hover {
     color: var(--text-primary);
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0%, rgba(82, 225, 133, 0.08) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .mobile-nav-link:hover i {
     color: var(--mint-accent);
+}
+
+/* Mobile Action Buttons */
+.btn-mint-mobile {
+    background-color: var(--mint-accent);
+    color: #000;
+    font-weight: 600;
+    padding: 11px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.25s ease;
+}
+
+.btn-mint-mobile:hover {
+    background-color: var(--mint-hover);
+    color: #000;
+}
+
+.btn-outline-mobile {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    font-weight: 500;
+    padding: 11px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    transition: all 0.25s ease;
+}
+
+.btn-outline-mobile:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-primary);
 }
