@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Mono:wght@400;700&display=swap');
+
 :root {
     --bg-dark: #070908;
     --dock-bg: #0d110f;
@@ -16,16 +18,88 @@ body.bg-dark-theme {
     letter-spacing: -0.02em;
 }
 
-/* Dynamic Scroll Blur */
+/* --------------------------------------------------
+   1. FIXED TOP WRAPPER & FLOATING ANNOUNCEMENT BANNER
+-------------------------------------------------- */
+.fixed-top-wrapper {
+    z-index: 1030;
+}
+
+/* Floating Boxed Container */
+.announcement-banner-boxed {
+    max-width: 680px;
+    width: 90%;
+    overflow: hidden;
+    white-space: nowrap;
+    
+    /* Dark Glass Floating Capsule */
+    background: rgba(13, 17, 15, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 100px;
+    padding: 6px 16px;
+    
+    display: flex;
+    align-items: center;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.3s ease;
+}
+
+.announcement-banner-boxed:hover {
+    border-color: rgba(82, 225, 133, 0.3);
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    animation: marqueeScroll 18s linear infinite;
+    will-change: transform;
+}
+
+.marquee-track span {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 500;
+    color: rgba(240, 244, 241, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    white-space: nowrap;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.1);
+}
+
+.marquee-track .dot {
+    color: var(--mint-accent);
+    font-size: 0.65rem;
+    text-shadow: 0 0 6px rgba(82, 225, 133, 0.5);
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.announcement-banner-boxed:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+/* --------------------------------------------------
+   2. NAVBAR SECTION
+-------------------------------------------------- */
 .custom-navbar-wrapper {
-    padding: 18px 0;
+    padding: 14px 0;
     transition: all 0.3s ease;
-    z-index: 1000;
 }
 
 .custom-navbar-wrapper.navbar-scrolled {
-    padding: 12px 0;
-    background: rgba(7, 9, 8, 0.8);
+    padding: 10px 0;
+    background: rgba(7, 9, 8, 0.85);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border-bottom: 1px solid var(--border-color);
@@ -80,7 +154,6 @@ body.bg-dark-theme {
         transform: scale(0.8);
         opacity: 0.8;
     }
-
     100% {
         transform: scale(2.4);
         opacity: 0;
@@ -210,7 +283,9 @@ body.bg-dark-theme {
     background: rgba(255, 255, 255, 0.08);
 }
 
-/* Clean, Lineless Mobile Drawer Card */
+/* --------------------------------------------------
+   3. MOBILE DRAWER
+-------------------------------------------------- */
 .glass-mobile-card {
     background: rgba(13, 17, 15, 0.95);
     border: 1px solid var(--border-color);
@@ -261,7 +336,6 @@ body.bg-dark-theme {
     color: var(--mint-accent);
 }
 
-/* Mobile Action Buttons */
 .btn-mint-mobile {
     background-color: var(--mint-accent);
     color: #000;

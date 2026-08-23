@@ -1,158 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Navigation</title>
-    
-    <!-- Google Fonts: Plus Jakarta Sans -->
+
+    <!-- Google Fonts: Plus Jakarta Sans & Space Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300..800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+
     <!-- Bootstrap 5 CSS & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    
+
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body class="bg-dark-theme">
 
-    <!-- NAVBAR SECTION -->
-    <nav class="custom-navbar-wrapper fixed-top" id="mainNavbar">
-        <div class="container d-flex align-items-center justify-content-between">
-            
-            <!-- Left: Logo + Desktop Availability Badge -->
-            <div class="d-flex align-items-center gap-3">
-                <a class="navbar-logo" href="#">
-                    <img src="Data/Dilli.png" alt="Logo" class="logo-img">
-                </a>
-                
-                <div class="status-badge d-none d-lg-inline-flex align-items-center gap-2">
-                    <span class="status-dot"></span>
-                    <span class="status-text">Available for work</span>
+    <!-- FIXED TOP HEADER WRAPPER -->
+    <header class="fixed-top-wrapper fixed-top">
+
+        <!-- Floating Boxed Marquee -->
+        <div class="announcement-wrapper d-flex justify-content-center pt-3">
+            <div class="announcement-banner-boxed">
+                <div class="marquee-track">
+                    <span>AVAILABLE FOR Q3/Q4 2026 FULL-TIME ROLES & PROJECTS</span>
+                    <span class="dot">•</span>
+                    <span>AVAILABLE FOR Q3/Q4 2026 FULL-TIME ROLES & PROJECTS</span>
                 </div>
             </div>
-
-            <!-- Center: Capsule Dock Navigation (Desktop Only) -->
-            <div class="nav-dock d-none d-md-block">
-                <ul class="nav-dock-list m-0 p-0 d-flex align-items-center list-unstyled">
-                    <li class="nav-dock-item">
-                        <a href="#skills" class="nav-dock-link">
-                            <i class="bi bi-lightning-charge"></i>
-                            <span>Skills</span>
-                        </a>
-                    </li>
-                    <li class="nav-dock-item">
-                        <a href="#projects" class="nav-dock-link">
-                            <i class="bi bi-folder2-open"></i>
-                            <span>Projects</span>
-                        </a>
-                    </li>
-                    <li class="nav-dock-item">
-                        <a href="#experience" class="nav-dock-link">
-                            <i class="bi bi-briefcase"></i>
-                            <span>Experience</span>
-                        </a>
-                    </li>
-                    <li class="nav-dock-item">
-                        <a href="#certificates" class="nav-dock-link">
-                            <i class="bi bi-award"></i>
-                            <span>Certificate</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-
-            <!-- Desktop Right Actions -->
-            <div class="nav-actions d-none d-md-flex align-items-center gap-2">
-                <a href="Data/Resume.pdf" download class="btn-outline-glass" title="Download Resume">
-                    <i class="bi bi-file-earmark-arrow-down"></i>
-                    <span>CV</span>
-                </a>
-
-                <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-sm">
-                    Let's Connect
-                </a>
-
-                <a href="#admin" class="btn-admin-icon" title="Admin Login" aria-label="Admin Login">
-                    <i class="bi bi-lock-fill"></i>
-                </a>
-            </div>
-
-            <!-- Mobile Hamburger Toggle -->
-            <button class="mobile-toggle-btn d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="bi bi-list"></i>
-            </button>
-
         </div>
 
-        <!-- Seamless Mobile Glass Drawer -->
-        <div class="collapse d-md-none" id="mobileNavMenu">
-            <div class="container mt-2">
-                <div class="glass-mobile-card">
-                    
-                    <!-- Header Bar (No Hard Line) -->
-                    <div class="d-flex align-items-center justify-content-between mb-2">
-                        <div class="status-badge d-inline-flex align-items-center gap-2">
-                            <span class="status-dot"></span>
-                            <span class="status-text">Available for work</span>
-                        </div>
-                        <a href="#admin" class="btn-admin-icon-sm" title="Admin Login">
-                            <i class="bi bi-lock-fill"></i>
-                        </a>
-                    </div>
+        <!-- NAVBAR SECTION -->
+        <nav class="custom-navbar-wrapper" id="mainNavbar">
+            <div class="container d-flex align-items-center justify-content-between">
 
-                    <!-- Navigation Links -->
-                    <ul class="mobile-nav-list m-0 p-0 list-unstyled d-flex flex-column gap-1">
-                        <li>
-                            <a href="#skills" class="mobile-nav-link">
+                <!-- Left: Logo + Desktop Availability Badge -->
+                <div class="d-flex align-items-center gap-3">
+                    <a class="navbar-logo" href="#">
+                        <img src="Data/Dilli.png" alt="Logo" class="logo-img">
+                    </a>
+
+                    <div class="status-badge d-none d-lg-inline-flex align-items-center gap-2">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for work</span>
+                    </div>
+                </div>
+
+                <!-- Center: Capsule Dock Navigation (Desktop Only) -->
+                <div class="nav-dock d-none d-md-block">
+                    <ul class="nav-dock-list m-0 p-0 d-flex align-items-center list-unstyled">
+                        <li class="nav-dock-item">
+                            <a href="#skills" class="nav-dock-link">
                                 <i class="bi bi-lightning-charge"></i>
                                 <span>Skills</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#projects" class="mobile-nav-link">
+                        <li class="nav-dock-item">
+                            <a href="#projects" class="nav-dock-link">
                                 <i class="bi bi-folder2-open"></i>
                                 <span>Projects</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#experience" class="mobile-nav-link">
+                        <li class="nav-dock-item">
+                            <a href="#experience" class="nav-dock-link">
                                 <i class="bi bi-briefcase"></i>
                                 <span>Experience</span>
                             </a>
                         </li>
-                        <li>
-                            <a href="#certificates" class="mobile-nav-link">
+                        <li class="nav-dock-item">
+                            <a href="#certificates" class="nav-dock-link">
                                 <i class="bi bi-award"></i>
                                 <span>Certificate</span>
                             </a>
                         </li>
                     </ul>
+                </div>
 
-                    <!-- Action Buttons -->
-                    <div class="mobile-drawer-actions d-flex flex-column gap-2 mt-3">
-                        <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-mobile text-center">
-                            Let's Connect
-                        </a>
-                        <a href="Data/Resume.pdf" download class="btn-outline-mobile text-center">
-                            <i class="bi bi-file-earmark-arrow-down me-2"></i>Download CV
-                        </a>
+                <!-- Desktop Right Actions -->
+                <div class="nav-actions d-none d-md-flex align-items-center gap-2">
+                    <a href="Data/Resume.pdf" download class="btn-outline-glass" title="Download Resume">
+                        <i class="bi bi-file-earmark-arrow-down"></i>
+                        <span>CV</span>
+                    </a>
+
+                    <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-sm">
+                        Let's Connect
+                    </a>
+
+                    <a href="#admin" class="btn-admin-icon" title="Admin Login" aria-label="Admin Login">
+                        <i class="bi bi-lock-fill"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-toggle-btn d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+
+            </div>
+
+            <!-- Seamless Mobile Glass Drawer -->
+            <div class="collapse d-md-none" id="mobileNavMenu">
+                <div class="container mt-2">
+                    <div class="glass-mobile-card">
+
+                        <!-- Header Bar (No Hard Line) -->
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="status-badge d-inline-flex align-items-center gap-2">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Available for work</span>
+                            </div>
+                            <a href="#admin" class="btn-admin-icon-sm" title="Admin Login">
+                                <i class="bi bi-lock-fill"></i>
+                            </a>
+                        </div>
+
+                        <!-- Navigation Links -->
+                        <ul class="mobile-nav-list m-0 p-0 list-unstyled d-flex flex-column gap-1">
+                            <li>
+                                <a href="#skills" class="mobile-nav-link">
+                                    <i class="bi bi-lightning-charge"></i>
+                                    <span>Skills</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="mobile-nav-link">
+                                    <i class="bi bi-folder2-open"></i>
+                                    <span>Projects</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#experience" class="mobile-nav-link">
+                                    <i class="bi bi-briefcase"></i>
+                                    <span>Experience</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#certificates" class="mobile-nav-link">
+                                    <i class="bi bi-award"></i>
+                                    <span>Certificate</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Action Buttons -->
+                        <div class="mobile-drawer-actions d-flex flex-column gap-2 mt-3">
+                            <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-mobile text-center">
+                                Let's Connect
+                            </a>
+                            <a href="Data/Resume.pdf" download class="btn-outline-mobile text-center">
+                                <i class="bi bi-file-earmark-arrow-down me-2"></i>Download CV
+                            </a>
+                        </div>
+
                     </div>
-
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
+    </header>
+
+    <!-- Content Spacer so body content isn't covered by header -->
+    <div style="padding-top: 130px;"></div>
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Scroll Blur Script -->
     <script>
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             const navbar = document.getElementById('mainNavbar');
             if (window.scrollY > 20) {
                 navbar.classList.add('navbar-scrolled');
@@ -162,4 +186,5 @@
         });
     </script>
 </body>
+
 </html>
