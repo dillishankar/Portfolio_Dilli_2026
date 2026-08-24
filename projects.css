@@ -1,0 +1,790 @@
+/* ==================================================
+   PROJECTS SECTION — FIXED LAYOUT
+================================================== */
+
+.projects-section {
+    position: relative;
+    height: 600vh;
+    background: #070908;
+}
+
+.projects-sticky {
+    position: sticky;
+    top: 0;
+
+    height: 100vh;
+    min-height: 620px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    box-sizing: border-box;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.projects-header {
+    width: min(1400px, 90%);
+    margin: 0 auto;
+
+    flex-shrink: 0;
+}
+
+.projects-label {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-bottom: 20px;
+
+    font-family: 'Space Mono', monospace;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+
+    color: #9ba49e;
+}
+
+.projects-number {
+    color: #52e185;
+}
+
+.projects-line {
+    width: 45px;
+    height: 1px;
+    background: rgba(82, 225, 133, 0.5);
+}
+
+
+/* ==================================================
+   TITLE
+================================================== */
+
+.projects-heading-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+.projects-title {
+    margin: 0;
+
+    max-width: 760px;
+
+    font-size: clamp(3rem, 6vw, 6rem);
+    line-height: 0.88;
+
+    font-weight: 800;
+    letter-spacing: -0.06em;
+
+    color: #f0f4f1;
+}
+
+.projects-title em {
+    color: #52e185;
+
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.projects-description {
+    max-width: 390px;
+
+    margin: 0;
+
+    color: #9ba49e;
+
+    font-size: 0.9rem;
+    line-height: 1.75;
+}
+
+
+/* ==================================================
+   PROJECT VIEWPORT
+================================================== */
+
+.projects-viewport {
+    width: 100%;
+
+    margin-top: 35px;
+
+    overflow: hidden;
+
+    flex: 1;
+
+    min-height: 0;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* ==================================================
+   HORIZONTAL TRACK
+================================================== */
+
+.projects-track {
+    display: flex;
+    align-items: center;
+
+    gap: 28px;
+
+    width: max-content;
+
+    padding-left: max(5vw,
+            calc((100vw - 1400px) / 2));
+
+    padding-right: 10vw;
+
+    will-change: transform;
+}
+
+
+/* ==================================================
+   PROJECT CARDS
+================================================== */
+
+.project-card {
+    width: 360px;
+    height: 430px;
+
+    flex: 0 0 360px;
+
+    background: #0d110f;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    transition:
+        border-color 0.4s ease,
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    border-color: rgba(82, 225, 133, 0.45);
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.project-image-wrap {
+    position: relative;
+
+    width: 100%;
+    height: 235px;
+
+    overflow: hidden;
+
+    background: #101613;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+
+/* ==================================================
+   PROJECT CONTENT
+================================================== */
+
+.project-content {
+    padding: 20px 23px 22px;
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 6px;
+
+    margin-bottom: 12px;
+}
+
+.project-meta span {
+    padding: 4px 8px;
+
+    border-radius: 100px;
+
+    background: rgba(82, 225, 133, 0.06);
+
+    border: 1px solid rgba(82, 225, 133, 0.14);
+
+    color: #a8efc1;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.55rem;
+    letter-spacing: 0.07em;
+}
+
+.project-content h3 {
+    margin: 0 0 8px;
+
+    color: #f0f4f1;
+
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+
+.project-content p {
+    margin: 0 0 14px;
+
+    color: #9ba49e;
+
+    font-size: 0.76rem;
+    line-height: 1.55;
+}
+
+
+/* ==================================================
+   PROJECT NUMBER
+================================================== */
+
+.project-number {
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(7, 9, 8, 0.78);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(10px);
+
+    color: #52e185;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.7rem;
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   END CARD
+================================================== */
+
+.projects-end-card {
+    width: 360px;
+    height: 430px;
+
+    flex: 0 0 360px;
+
+    border-radius: 22px;
+
+    border: 1px dashed rgba(82, 225, 133, 0.25);
+
+    background:
+        linear-gradient(135deg,
+            rgba(82, 225, 133, 0.04),
+            rgba(255, 255, 255, 0.015));
+
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.projects-end-label {
+    color: #52e185;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.6rem;
+
+    letter-spacing: 0.15em;
+}
+
+.projects-end-icon {
+    width: 58px;
+    height: 58px;
+
+    margin: 22px auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(82, 225, 133, 0.08);
+
+    border: 1px solid rgba(82, 225, 133, 0.2);
+
+    color: #52e185;
+}
+
+.projects-end-card h3 {
+    margin: 0;
+
+    color: #f0f4f1;
+
+    font-size: 1.45rem;
+}
+
+
+/* ==================================================
+   PROGRESS
+================================================== */
+
+.projects-progress {
+    position: absolute;
+
+    left: 50%;
+    bottom: 25px;
+
+    transform: translateX(-50%);
+
+    width: min(500px, 80%);
+
+    display: flex;
+    align-items: center;
+
+    gap: 15px;
+
+    z-index: 10;
+}
+
+.projects-progress-track {
+    flex: 1;
+
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.projects-progress-bar {
+    width: 0;
+    height: 100%;
+
+    background: #52e185;
+}
+
+.projects-scroll-text {
+    color: #9ba49e;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.55rem;
+
+    letter-spacing: 0.12em;
+
+    white-space: nowrap;
+}
+
+/* ==================================================
+   PROJECT LINK
+================================================== */
+
+.project-link {
+    color: #52e185;
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 600;
+
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.project-link:hover {
+    color: #a8efc1;
+    text-decoration: none;
+
+    transform: translateX(4px);
+}
+
+.project-link i {
+    font-size: 0.9rem;
+}
+
+/* ==================================================
+   SMALL LAPTOP / TABLET
+================================================== */
+
+@media (max-height: 750px) and (min-width: 992px) {
+
+    .projects-label {
+        margin-bottom: 14px;
+    }
+
+    .projects-heading-row {
+        gap: 40px;
+    }
+
+    .projects-title {
+        font-size: clamp(3rem, 5vw, 5rem);
+    }
+
+    .projects-viewport {
+        margin-top: 25px;
+    }
+
+    .project-card,
+    .projects-end-card {
+        height: 380px;
+    }
+
+    .project-image-wrap {
+        height: 200px;
+    }
+
+    .project-content {
+        padding: 16px 20px;
+    }
+
+}
+
+/* ==================================================
+   PROJECTS — MOBILE RESPONSIVE
+================================================== */
+
+@media (max-width: 991px) {
+
+    /* ----------------------------------------------
+       SECTION
+    ---------------------------------------------- */
+
+    .projects-section {
+        height: auto !important;
+        min-height: 0;
+
+        padding: 90px 0 80px;
+
+        overflow: hidden;
+    }
+
+
+    /* ----------------------------------------------
+       STICKY DISABLED ON MOBILE
+    ---------------------------------------------- */
+
+    .projects-sticky {
+        position: relative;
+
+        top: auto;
+
+        width: 100%;
+
+        height: auto !important;
+        min-height: 0 !important;
+
+        display: block;
+
+        overflow: visible;
+    }
+
+
+    /* ----------------------------------------------
+       HEADER
+    ---------------------------------------------- */
+
+    .projects-header {
+        width: calc(100% - 36px);
+
+        margin: 0 auto;
+    }
+
+
+    .projects-label {
+        margin-bottom: 22px;
+
+        gap: 10px;
+
+        font-size: 0.62rem;
+
+        letter-spacing: 0.14em;
+    }
+
+
+    .projects-line {
+        width: 30px;
+    }
+
+
+    /* ----------------------------------------------
+       TITLE
+    ---------------------------------------------- */
+
+    .projects-heading-row {
+        display: block;
+
+        width: 100%;
+    }
+
+
+    .projects-title {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 0;
+
+        font-size: clamp(3rem, 15vw, 5rem);
+
+        line-height: 0.88;
+
+        letter-spacing: -0.065em;
+    }
+
+
+    .projects-description {
+        width: 100%;
+        max-width: 100%;
+
+        margin-top: 28px;
+
+        font-size: 0.82rem;
+
+        line-height: 1.7;
+    }
+
+
+    /* ----------------------------------------------
+       VIEWPORT
+    ---------------------------------------------- */
+
+    .projects-viewport {
+        width: 100%;
+
+        margin-top: 45px;
+
+        display: block;
+
+        overflow: visible;
+
+        flex: none;
+
+        min-height: 0;
+    }
+
+
+    /* ----------------------------------------------
+       TRACK
+       IMPORTANT:
+       No horizontal transform on mobile.
+    ---------------------------------------------- */
+
+    .projects-track {
+        width: 100%;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 20px;
+
+        padding: 0 18px;
+
+        transform: none !important;
+
+        will-change: auto;
+    }
+
+
+    /* ----------------------------------------------
+       PROJECT CARD
+    ---------------------------------------------- */
+
+    .project-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        flex: none;
+
+        height: auto;
+
+        min-height: 0;
+
+        border-radius: 18px;
+
+        transform: none !important;
+    }
+
+
+    .project-card:hover {
+        transform: none !important;
+
+        box-shadow: none;
+    }
+
+
+    /* ----------------------------------------------
+       IMAGE
+    ---------------------------------------------- */
+
+    .project-image-wrap {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 16 / 10;
+
+        min-height: 0;
+    }
+
+
+    .project-image {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    .project-card:hover .project-image {
+        transform: none;
+    }
+
+
+    /* ----------------------------------------------
+       PROJECT NUMBER
+    ---------------------------------------------- */
+
+    .project-number {
+        top: 14px;
+        left: 14px;
+
+        width: 38px;
+        height: 38px;
+
+        font-size: 0.62rem;
+    }
+
+
+    /* ----------------------------------------------
+       CONTENT
+    ---------------------------------------------- */
+
+    .project-content {
+        padding: 20px 20px 23px;
+    }
+
+
+    .project-meta {
+        gap: 5px;
+
+        margin-bottom: 12px;
+    }
+
+
+    .project-meta span {
+        padding: 4px 7px;
+
+        font-size: 0.5rem;
+    }
+
+
+    .project-content h3 {
+        margin-bottom: 9px;
+
+        font-size: 1.3rem;
+    }
+
+
+    .project-content p {
+        margin-bottom: 17px;
+
+        font-size: 0.78rem;
+
+        line-height: 1.6;
+    }
+
+
+    .project-link {
+        font-size: 0.75rem;
+    }
+
+
+    /* ----------------------------------------------
+       END CARD
+    ---------------------------------------------- */
+
+    .projects-end-card {
+        width: 100%;
+
+        max-width: 100%;
+
+        height: 300px;
+
+        min-height: 300px;
+
+        flex: none;
+
+        border-radius: 18px;
+
+        padding: 25px;
+    }
+
+
+    .projects-end-card h3 {
+        font-size: 1.3rem;
+    }
+
+
+    /* ----------------------------------------------
+       PROGRESS BAR
+       Not required on mobile because cards
+       are normal vertical scrolling.
+    ---------------------------------------------- */
+
+    .projects-progress {
+        display: none;
+    }
+
+}

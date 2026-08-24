@@ -95,8 +95,13 @@ body.bg-dark-theme {
 }
 
 @keyframes marqueeScroll {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); }
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .announcement-banner-boxed:hover .marquee-track {
@@ -153,8 +158,15 @@ body.bg-dark-theme {
 }
 
 @keyframes statusPulse {
-    0% { transform: scale(0.8); opacity: 0.8; }
-    100% { transform: scale(2.4); opacity: 0; }
+    0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(2.4);
+        opacity: 0;
+    }
 }
 
 .nav-dock {
@@ -165,7 +177,9 @@ body.bg-dark-theme {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
 }
 
-.nav-dock-list { gap: 2px; }
+.nav-dock-list {
+    gap: 2px;
+}
 
 .nav-dock-link {
     display: inline-flex;
@@ -310,7 +324,9 @@ body.bg-dark-theme {
     background: rgba(255, 255, 255, 0.05);
 }
 
-.mobile-nav-link:hover i { color: var(--mint-accent); }
+.mobile-nav-link:hover i {
+    color: var(--mint-accent);
+}
 
 .btn-mint-mobile {
     background-color: var(--mint-accent);
@@ -362,9 +378,13 @@ body.bg-dark-theme {
 }
 
 .hero-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+
     color: var(--text-primary);
-    line-height: 1.25;
-    letter-spacing: -0.03em;
+    line-height: 1.05;
+    letter-spacing: -0.055em;
+
     animation: heroFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
@@ -396,10 +416,25 @@ body.bg-dark-theme {
     z-index: 10;
 }
 
-.box-node.top-left { top: -4px; left: -4px; }
-.box-node.top-right { top: -4px; right: -4px; }
-.box-node.bottom-left { bottom: -4px; left: -4px; }
-.box-node.bottom-right { bottom: -4px; right: -4px; }
+.box-node.top-left {
+    top: -4px;
+    left: -4px;
+}
+
+.box-node.top-right {
+    top: -4px;
+    right: -4px;
+}
+
+.box-node.bottom-left {
+    bottom: -4px;
+    left: -4px;
+}
+
+.box-node.bottom-right {
+    bottom: -4px;
+    right: -4px;
+}
 
 .me-cursor-chip {
     position: absolute;
@@ -513,34 +548,77 @@ body.bg-dark-theme {
    6. ANIMATIONS & RESPONSIVE
 -------------------------------------------------- */
 @keyframes heroFadeUp {
-    from { opacity: 0; transform: translateY(24px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes boxPop {
-    0% { opacity: 0; transform: scale(0.92); }
-    70% { transform: scale(1.03); }
-    100% { opacity: 1; transform: scale(1); }
+    0% {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    70% {
+        transform: scale(1.03);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes cursorFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-5px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 @keyframes gridPulse {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 0.9; }
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.9;
+    }
 }
 
 @keyframes rotateText {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @keyframes stampFloat {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-8px) rotate(-3deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-8px) rotate(-3deg);
+    }
 }
 
 @media (max-width: 768px) {

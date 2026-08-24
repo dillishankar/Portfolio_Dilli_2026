@@ -322,23 +322,23 @@
 
 @media (max-width: 991px) {
 
-    .about-bento-section .row > [class*='col-'] {
+    .about-bento-section .row>[class*='col-'] {
         height: auto !important;
     }
 
-    .about-bento-section .row > .col-lg-4:nth-child(2) {
+    .about-bento-section .row>.col-lg-4:nth-child(2) {
         height: auto !important;
         display: flex;
         flex-direction: column;
         gap: 12px;
     }
 
-    .about-bento-section .row > .col-lg-4:nth-child(2) > .bento-card:first-child {
+    .about-bento-section .row>.col-lg-4:nth-child(2)>.bento-card:first-child {
         flex: none;
         min-height: 0;
     }
 
-    .about-bento-section .row > .col-lg-4:nth-child(2) > .bento-card:last-child {
+    .about-bento-section .row>.col-lg-4:nth-child(2)>.bento-card:last-child {
         flex: none;
         min-height: 0;
     }
@@ -417,6 +417,7 @@
 .delay-3 {
     transition-delay: 0.3s;
 }
+
 /* ==================================================
    ABOUT ME — TYPEWRITER
 ================================================== */
@@ -434,6 +435,7 @@
 }
 
 @keyframes typewriterBlink {
+
     0%,
     50% {
         opacity: 1;
@@ -518,4 +520,16 @@
         transform: none;
         transition: none;
     }
+}
+
+/* ==================================================
+   ABOUT SECTION HEADING — DISPLAY FONT
+================================================== */
+
+.about-bento-section .section-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+
+    letter-spacing: -0.055em;
+    line-height: 0.95;
 }
