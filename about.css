@@ -444,3 +444,78 @@
         opacity: 0;
     }
 }
+
+/* ==================================================
+   ABOUT SECTION — PROFESSIONAL SCROLL REVEAL
+================================================== */
+
+.about-reveal {
+    opacity: 0;
+    will-change: transform, opacity;
+    transition:
+        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Starting positions */
+
+.about-card-1 {
+    transform: translateX(-55px);
+}
+
+.about-card-2 {
+    transform: translateY(45px);
+}
+
+.about-card-3 {
+    transform: translateY(45px);
+}
+
+.about-card-4 {
+    transform: translateX(55px);
+}
+
+
+/* Visible state */
+
+.about-reveal.is-visible {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* Stagger timing */
+
+.about-card-1.is-visible {
+    transition-delay: 0.05s;
+}
+
+.about-card-2.is-visible {
+    transition-delay: 0.18s;
+}
+
+.about-card-3.is-visible {
+    transition-delay: 0.31s;
+}
+
+.about-card-4.is-visible {
+    transition-delay: 0.44s;
+}
+
+
+/* Slight premium hover after entrance */
+
+.about-reveal.is-visible .bento-card {
+    transform: translateZ(0);
+}
+
+
+/* Respect reduced-motion accessibility */
+
+@media (prefers-reduced-motion: reduce) {
+    .about-reveal {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}

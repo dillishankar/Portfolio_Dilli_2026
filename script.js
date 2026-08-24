@@ -1,22 +1,38 @@
 /* ==================================================
-   SCROLL REVEAL
+   ABOUT SECTION — STAGGERED SCROLL REVEAL
 ================================================== */
 
-const observerOptions = {
-    threshold: 0.15
-};
+document.addEventListener("DOMContentLoaded", () => {
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
+    const aboutCards = document.querySelectorAll(".about-reveal");
+
+    if (!aboutCards.length) return;
+
+    const aboutObserver = new IntersectionObserver(
+        (entries, observer) => {
+
+            entries.forEach((entry) => {
+
+                if (entry.isIntersecting) {
+
+                    entry.target.classList.add("is-visible");
+
+                    observer.unobserve(entry.target);
+                }
+
+            });
+
+        },
+        {
+            threshold: 0.18,
+            rootMargin: "0px 0px -40px 0px"
         }
-    });
-}, observerOptions);
+    );
 
-document.querySelectorAll('.reveal-on-scroll').forEach((element) => {
-    observer.observe(element);
+    aboutCards.forEach((card) => {
+        aboutObserver.observe(card);
+    });
+
 });
 
 /* ==================================================
