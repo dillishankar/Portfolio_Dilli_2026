@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="hero.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="about.css">
 </head>
 
@@ -203,7 +203,6 @@
                 <p class="hero-subtitle mx-auto mt-3">
                     Transforming ideas into reality • Crafting modern web apps & UI/UX experiences
                 </p>
-
             </div>
         </section>
     </main>
@@ -214,7 +213,12 @@
 
             <!-- Section Header -->
             <div class="text-center mb-5">
-                <h2 class="section-title display-5 fw-bold text-white">Behind the Code</h2>
+                <h2 class="section-title display-5 fw-bold text-white">What Powers Me</h2>
+                <p class="hero-subtitle mx-auto mt-3">
+                    A snapshot of the skills and tools I use to build seamless, scalable and user-friendly digital
+                    experiences.
+                </p>
+
             </div>
 
             <!-- Bento Grid Layout -->
@@ -224,7 +228,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="bento-card bento-image-card position-relative overflow-hidden h-100">
 
-                        <img src="Data/pic-of-mee.png" alt="Dillibabu Portrait" class="bento-profile-img">
+                        <img src="Data/pic-of-mee1.png" alt="Dillibabu Portrait" class="bento-profile-img">
 
                         <div class="bento-img-overlay p-3 p-xl-4 d-flex flex-column justify-content-end">
 
@@ -270,11 +274,8 @@
 
                         </div>
 
-                        <p class="bento-text m-0">
-                            Full-Stack Web Developer & UI/UX Designer specialized in
-                            building scalable MERN stack web applications and clean,
-                            human-centered interfaces. Focused on performance, crisp
-                            typography, and seamless user experiences.
+                        <p class="bento-text typewriter-text m-0" style="color: lightgray;">
+                            <span id="aboutTypewriter"></span><span class="typewriter-cursor">|</span>
                         </p>
 
                     </div>
@@ -436,18 +437,7 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="js/hero.js"></script>
-
-    <script>
-        window.addEventListener('scroll', function () {
-            const navbar = document.getElementById('mainNavbar');
-            if (window.scrollY > 20) {
-                navbar.classList.add('navbar-scrolled');
-            } else {
-                navbar.classList.remove('navbar-scrolled');
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

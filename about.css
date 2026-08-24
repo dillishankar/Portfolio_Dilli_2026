@@ -320,15 +320,127 @@
    MOBILE & TABLET
 ================================================== */
 
-@media (min-width: 992px) {
-    .about-bento-section .row>[class*='col-'] {
-        height: 480px;
+@media (max-width: 991px) {
+
+    .about-bento-section .row > [class*='col-'] {
+        height: auto !important;
     }
 
-    .about-bento-section .row>.col-lg-4:nth-child(2) {
-        height: 480px;
+    .about-bento-section .row > .col-lg-4:nth-child(2) {
+        height: auto !important;
         display: flex;
         flex-direction: column;
         gap: 12px;
+    }
+
+    .about-bento-section .row > .col-lg-4:nth-child(2) > .bento-card:first-child {
+        flex: none;
+        min-height: 0;
+    }
+
+    .about-bento-section .row > .col-lg-4:nth-child(2) > .bento-card:last-child {
+        flex: none;
+        min-height: 0;
+    }
+
+    .bento-image-card {
+        min-height: 360px;
+    }
+
+    .bento-skills-card {
+        min-height: 400px;
+    }
+
+    .vertical-marquee-wrapper {
+        height: 300px;
+    }
+}
+
+/* Subtle float effect for cards or images */
+@keyframes floatY {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+/* Glow animation for accent borders or buttons */
+@keyframes borderGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 15px rgba(82, 225, 133, 0.15);
+    }
+
+    50% {
+        box-shadow: 0 0 25px rgba(82, 225, 133, 0.35);
+    }
+}
+
+/* Application classes */
+.about-card {
+    animation: floatY 6s ease-in-out infinite;
+}
+
+.about-highlight-card {
+    animation: borderGlow 4s ease-in-out infinite;
+}
+
+/* Initial hidden state */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Visible active state */
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Optional staggered delays for child items */
+.delay-1 {
+    transition-delay: 0.1s;
+}
+
+.delay-2 {
+    transition-delay: 0.2s;
+}
+
+.delay-3 {
+    transition-delay: 0.3s;
+}
+/* ==================================================
+   ABOUT ME — TYPEWRITER
+================================================== */
+
+.typewriter-text {
+    min-height: 220px;
+}
+
+.typewriter-cursor {
+    display: inline-block;
+    margin-left: 2px;
+    color: #52e185;
+    font-weight: 400;
+    animation: typewriterBlink 0.8s step-end infinite;
+}
+
+@keyframes typewriterBlink {
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
     }
 }
