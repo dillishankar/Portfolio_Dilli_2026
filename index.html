@@ -215,49 +215,57 @@
 ================================================== -->
 
     <section class="about-bento-section py-5" id="about">
+        <div class="projects-header">
 
-        <div class="container">
+            <div class="projects-label">
+                <span class="projects-number">02</span>
+                <span class="projects-line"></span>
+                <span>ABOUT ME</span>
+            </div>
 
-            <!-- Section Header -->
-            <div class="text-center mb-5">
+            <div class="projects-heading-row">
 
-                <h2 class="section-title display-5 fw-bold text-white">
-                    What Powers Me
+                <h2 class="projects-title">
+                    What
+                    <span>Powers Me.</span>
+                    <br>
                 </h2>
 
-                <p class="hero-subtitle mx-auto mt-3">
+                <p class="projects-description">
                     A snapshot of the skills and tools I use to build seamless,
                     scalable and user-friendly digital experiences.
                 </p>
 
             </div>
 
+        </div>
 
-            <!-- ==================================================
+        <!-- ==================================================
              BENTO GRID
         ================================================== -->
+<br>
+<br>
+        <div class="row g-3 align-items-stretch">
 
-            <div class="row g-3 align-items-stretch">
 
-
-                <!-- ==================================================
+            <!-- ==================================================
                  1. LEFT COLUMN — PROFILE IMAGE CARD
             ================================================== -->
 
-                <div class="col-lg-4 col-md-6 about-reveal about-card-1">
+            <div class="col-lg-4 col-md-6 about-reveal about-card-1">
 
-                    <div class="bento-card bento-image-card position-relative overflow-hidden h-100">
+                <div class="bento-card bento-image-card position-relative overflow-hidden h-100">
 
-                        <!-- Profile Image -->
-                        <img src="Data/pic-of-mee1.png" alt="Dillibabu Portrait" class="bento-profile-img">
+                    <!-- Profile Image -->
+                    <img src="Data/pic-of-mee1.png" alt="Dillibabu Portrait" class="bento-profile-img">
 
 
-                        <!-- Image Overlay -->
-                        <div class="bento-img-overlay p-3 p-xl-4
+                    <!-- Image Overlay -->
+                    <div class="bento-img-overlay p-3 p-xl-4
                                 d-flex flex-column justify-content-end">
 
-                            <!-- Signature -->
-                            <img src="Data/signature.png" alt="Dillibabu Signature" style="
+                        <!-- Signature -->
+                        <img src="Data/signature.png" alt="Dillibabu Signature" style="
                                 width: 150px;
                                 height: auto;
                                 display: block;
@@ -265,191 +273,342 @@
                              ">
 
 
-                            <!-- Description -->
-                            <p class="text-muted-light small m-0">
-                                Crafting high-performance digital products &
-                                intuitive interfaces.
-                            </p>
-
-                        </div>
+                        <!-- Description -->
+                        <p class="text-muted-light small m-0">
+                            Crafting high-performance digital products &
+                            intuitive interfaces.
+                        </p>
 
                     </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 2. CENTER COLUMN — ABOUT + CONNECT
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 d-flex flex-column h-100 gap-3">
+
+
+                <!-- ==================================================
+                     ABOUT ME CARD
+                ================================================== -->
+
+                <div class="bento-card p-3 p-xl-4 flex-grow-1
+                            d-flex flex-column justify-content-start
+                            about-reveal about-card-2">
+
+
+                    <!-- Card Header -->
+                    <div class="d-flex align-items-center gap-2 mb-3">
+
+                        <!-- Person Icon -->
+                        <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+                            </path>
+
+                            <circle cx="12" cy="7" r="4">
+                            </circle>
+
+                        </svg>
+
+
+                        <h3 class="h4 fw-bold text-white m-0">
+                            About Me
+                        </h3>
+
+                    </div>
+
+
+                    <!-- Typewriter Text -->
+                    <p class="bento-text typewriter-text m-0" style="color: lightgray;">
+
+                        <span id="aboutTypewriter"></span>
+
+                        <span class="typewriter-cursor">
+                            |
+                        </span>
+
+                    </p>
 
                 </div>
 
 
 
                 <!-- ==================================================
-                 2. CENTER COLUMN — ABOUT + CONNECT
-            ================================================== -->
-
-                <div class="col-lg-4 col-md-6 d-flex flex-column h-100 gap-3">
-
-
-                    <!-- ==================================================
-                     ABOUT ME CARD
+                     CONNECT & RESUME CARD
                 ================================================== -->
 
-                    <div class="bento-card p-3 p-xl-4 flex-grow-1
-                            d-flex flex-column justify-content-start
-                            about-reveal about-card-2">
+                <div class="bento-card p-3 p-xl-4
+                            about-reveal about-card-3">
 
 
-                        <!-- Card Header -->
-                        <div class="d-flex align-items-center gap-2 mb-3">
+                    <!-- Card Header -->
+                    <div class="d-flex align-items-center
+                                justify-content-between mb-3">
 
-                            <!-- Person Icon -->
-                            <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185"
-                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <span class="small fw-semibold text-uppercase
+                                     tracking-wider text-muted">
 
-                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
-                                </path>
+                            Connect & Resume
 
-                                <circle cx="12" cy="7" r="4">
-                                </circle>
-
-                            </svg>
+                        </span>
 
 
-                            <h3 class="h4 fw-bold text-white m-0">
-                                About Me
-                            </h3>
+                        <!-- CV Button -->
+                        <a href="Data/Dillishankar.k-DA-Resume.pdf" download class="btn-cv-download">
 
-                        </div>
+                            <i class="bi bi-file-earmark-arrow-down-fill me-1">
+                            </i>
 
+                            CV
 
-                        <!-- Typewriter Text -->
-                        <p class="bento-text typewriter-text m-0" style="color: lightgray;">
-
-                            <span id="aboutTypewriter"></span>
-
-                            <span class="typewriter-cursor">
-                                |
-                            </span>
-
-                        </p>
+                        </a>
 
                     </div>
 
 
 
-                    <!-- ==================================================
-                     CONNECT & RESUME CARD
-                ================================================== -->
-
-                    <div class="bento-card p-3 p-xl-4
-                            about-reveal about-card-3">
-
-
-                        <!-- Card Header -->
-                        <div class="d-flex align-items-center
-                                justify-content-between mb-3">
-
-                            <span class="small fw-semibold text-uppercase
-                                     tracking-wider text-muted">
-
-                                Connect & Resume
-
-                            </span>
-
-
-                            <!-- CV Button -->
-                            <a href="Data/Dillishankar.k-DA-Resume.pdf" download class="btn-cv-download">
-
-                                <i class="bi bi-file-earmark-arrow-down-fill me-1">
-                                </i>
-
-                                CV
-
-                            </a>
-
-                        </div>
-
-
-
-                        <!-- Social Icons -->
-                        <div class="social-icon-grid d-flex
+                    <!-- Social Icons -->
+                    <div class="social-icon-grid d-flex
                                 align-items-center
                                 justify-content-between
                                 gap-2">
 
 
-                            <!-- GitHub -->
-                            <a href="https://github.com" target="_blank" class="social-box" title="GitHub">
+                        <!-- GitHub -->
+                        <a href="https://github.com" target="_blank" class="social-box" title="GitHub">
 
-                                <i class="bi bi-github"></i>
+                            <i class="bi bi-github"></i>
 
-                            </a>
-
-
-                            <!-- LinkedIn -->
-                            <a href="https://linkedin.com" target="_blank" class="social-box" title="LinkedIn">
-
-                                <i class="bi bi-linkedin"></i>
-
-                            </a>
+                        </a>
 
 
-                            <!-- Email -->
-                            <a href="mailto:ramyarams5143@gmail.com" class="social-box" title="Email">
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com" target="_blank" class="social-box" title="LinkedIn">
 
-                                <i class="bi bi-envelope-fill"></i>
+                            <i class="bi bi-linkedin"></i>
 
-                            </a>
+                        </a>
 
 
-                            <!-- Portfolio -->
-                            <a href="#" class="social-box" title="Portfolio">
+                        <!-- Email -->
+                        <a href="mailto:ramyarams5143@gmail.com" class="social-box" title="Email">
 
-                                <i class="bi bi-globe"></i>
+                            <i class="bi bi-envelope-fill"></i>
 
-                            </a>
+                        </a>
 
-                        </div>
+
+                        <!-- Portfolio -->
+                        <a href="#" class="social-box" title="Portfolio">
+
+                            <i class="bi bi-globe"></i>
+
+                        </a>
 
                     </div>
 
                 </div>
 
+            </div>
 
 
-                <!-- ==================================================
+
+            <!-- ==================================================
                  3. RIGHT COLUMN — CORE TECH STACK
             ================================================== -->
 
-                <div class="col-lg-4 col-md-12">
+            <div class="col-lg-4 col-md-12">
 
-                    <div class="bento-card bento-skills-card p-3 p-xl-4
+                <div class="bento-card bento-skills-card p-3 p-xl-4
                             h-100 d-flex flex-column
                             justify-content-between overflow-hidden
                             about-reveal about-card-4">
 
 
-                        <!-- Card Header -->
-                        <div>
+                    <!-- Card Header -->
+                    <div>
 
-                            <div class="d-flex align-items-center gap-2 mb-1">
-
-
-                                <!-- Stack Icon -->
-                                <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-
-                                    <polygon points="12 2 2 7 12 12 22 7 12 2">
-                                    </polygon>
-
-                                    <polyline points="2 17 12 22 22 17">
-                                    </polyline>
-
-                                    <polyline points="2 12 12 17 22 12">
-                                    </polyline>
-
-                                </svg>
+                        <div class="d-flex align-items-center gap-2 mb-1">
 
 
-                                <h3 class="h4 fw-bold text-white m-0">
-                                    Core Tech Stack
-                                </h3>
+                            <!-- Stack Icon -->
+                            <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                <polygon points="12 2 2 7 12 12 22 7 12 2">
+                                </polygon>
+
+                                <polyline points="2 17 12 22 22 17">
+                                </polyline>
+
+                                <polyline points="2 12 12 17 22 12">
+                                </polyline>
+
+                            </svg>
+
+
+                            <h3 class="h4 fw-bold text-white m-0">
+                                Core Tech Stack
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         DUAL COLUMN VERTICAL SCROLL
+                    ================================================== -->
+
+                    <div class="vertical-marquee-wrapper d-flex gap-2 my-2">
+
+
+                        <!-- ==================================================
+                             LEFT COLUMN — UPWARD
+                        ================================================== -->
+
+                        <div class="vertical-marquee marquee-up">
+
+                            <div class="vertical-track">
+
+
+                                <!-- React -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                        alt="React">
+
+                                    <span>
+                                        React
+                                    </span>
+
+                                </div>
+
+
+                                <!-- JavaScript -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                        alt="JavaScript">
+
+                                    <span>
+                                        JavaScript
+                                    </span>
+
+                                </div>
+
+
+                                <!-- HTML -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                        alt="HTML5">
+
+                                    <span>
+                                        HTML5
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Figma -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                        alt="Figma">
+
+                                    <span>
+                                        Figma
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Python -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                        alt="Python">
+
+                                    <span>
+                                        Python
+                                    </span>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     LOOP DUPLICATES
+                                ================================================== -->
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                        alt="React">
+
+                                    <span>
+                                        React
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                        alt="JavaScript">
+
+                                    <span>
+                                        JavaScript
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                        alt="HTML5">
+
+                                    <span>
+                                        HTML5
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                        alt="Figma">
+
+                                    <span>
+                                        Figma
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                        alt="Python">
+
+                                    <span>
+                                        Python
+                                    </span>
+
+                                </div>
 
                             </div>
 
@@ -458,293 +617,140 @@
 
 
                         <!-- ==================================================
-                         DUAL COLUMN VERTICAL SCROLL
-                    ================================================== -->
-
-                        <div class="vertical-marquee-wrapper d-flex gap-2 my-2">
-
-
-                            <!-- ==================================================
-                             LEFT COLUMN — UPWARD
-                        ================================================== -->
-
-                            <div class="vertical-marquee marquee-up">
-
-                                <div class="vertical-track">
-
-
-                                    <!-- React -->
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                            alt="React">
-
-                                        <span>
-                                            React
-                                        </span>
-
-                                    </div>
-
-
-                                    <!-- JavaScript -->
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                            alt="JavaScript">
-
-                                        <span>
-                                            JavaScript
-                                        </span>
-
-                                    </div>
-
-
-                                    <!-- HTML -->
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                            alt="HTML5">
-
-                                        <span>
-                                            HTML5
-                                        </span>
-
-                                    </div>
-
-
-                                    <!-- Figma -->
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                                            alt="Figma">
-
-                                        <span>
-                                            Figma
-                                        </span>
-
-                                    </div>
-
-
-                                    <!-- Python -->
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                            alt="Python">
-
-                                        <span>
-                                            Python
-                                        </span>
-
-                                    </div>
-
-
-
-                                    <!-- ==================================================
-                                     LOOP DUPLICATES
-                                ================================================== -->
-
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-                                            alt="React">
-
-                                        <span>
-                                            React
-                                        </span>
-
-                                    </div>
-
-
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-                                            alt="JavaScript">
-
-                                        <span>
-                                            JavaScript
-                                        </span>
-
-                                    </div>
-
-
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
-                                            alt="HTML5">
-
-                                        <span>
-                                            HTML5
-                                        </span>
-
-                                    </div>
-
-
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
-                                            alt="Figma">
-
-                                        <span>
-                                            Figma
-                                        </span>
-
-                                    </div>
-
-
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-                                            alt="Python">
-
-                                        <span>
-                                            Python
-                                        </span>
-
-                                    </div>
-
-                                </div>
-
-                            </div>
-
-
-
-                            <!-- ==================================================
                              RIGHT COLUMN — DOWNWARD
                         ================================================== -->
 
-                            <div class="vertical-marquee marquee-down">
+                        <div class="vertical-marquee marquee-down">
 
-                                <div class="vertical-track">
-
-
-                                    <!-- Django -->
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-                                            alt="Django" class="invert-icon">
-
-                                        <span>
-                                            Django
-                                        </span>
-
-                                    </div>
+                            <div class="vertical-track">
 
 
-                                    <!-- MySQL -->
-                                    <div class="skill-card-v">
+                                <!-- Django -->
+                                <div class="skill-card-v">
 
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                            alt="MySQL">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                                        alt="Django" class="invert-icon">
 
-                                        <span>
-                                            MySQL
-                                        </span>
+                                    <span>
+                                        Django
+                                    </span>
 
-                                    </div>
-
-
-                                    <!-- CSS -->
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                            alt="CSS3">
-
-                                        <span>
-                                            CSS3
-                                        </span>
-
-                                    </div>
+                                </div>
 
 
-                                    <!-- Git -->
-                                    <div class="skill-card-v">
+                                <!-- MySQL -->
+                                <div class="skill-card-v">
 
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                            alt="Git">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                        alt="MySQL">
 
-                                        <span>
-                                            Git
-                                        </span>
+                                    <span>
+                                        MySQL
+                                    </span>
 
-                                    </div>
-
-
-                                    <!-- Bootstrap -->
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                                            alt="Bootstrap">
-
-                                        <span>
-                                            Bootstrap
-                                        </span>
-
-                                    </div>
+                                </div>
 
 
+                                <!-- CSS -->
+                                <div class="skill-card-v">
 
-                                    <!-- ==================================================
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                        alt="CSS3">
+
+                                    <span>
+                                        CSS3
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Git -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                        alt="Git">
+
+                                    <span>
+                                        Git
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Bootstrap -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                        alt="Bootstrap">
+
+                                    <span>
+                                        Bootstrap
+                                    </span>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
                                      LOOP DUPLICATES
                                 ================================================== -->
 
-                                    <div class="skill-card-v">
+                                <div class="skill-card-v">
 
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
-                                            alt="Django" class="invert-icon">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                                        alt="Django" class="invert-icon">
 
-                                        <span>
-                                            Django
-                                        </span>
+                                    <span>
+                                        Django
+                                    </span>
 
-                                    </div>
-
-
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                            alt="MySQL">
-
-                                        <span>
-                                            MySQL
-                                        </span>
-
-                                    </div>
+                                </div>
 
 
-                                    <div class="skill-card-v">
+                                <div class="skill-card-v">
 
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
-                                            alt="CSS3">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                        alt="MySQL">
 
-                                        <span>
-                                            CSS3
-                                        </span>
+                                    <span>
+                                        MySQL
+                                    </span>
 
-                                    </div>
-
-
-                                    <div class="skill-card-v">
-
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-                                            alt="Git">
-
-                                        <span>
-                                            Git
-                                        </span>
-
-                                    </div>
+                                </div>
 
 
-                                    <div class="skill-card-v">
+                                <div class="skill-card-v">
 
-                                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
-                                            alt="Bootstrap">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                        alt="CSS3">
 
-                                        <span>
-                                            Bootstrap
-                                        </span>
+                                    <span>
+                                        CSS3
+                                    </span>
 
-                                    </div>
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                        alt="Git">
+
+                                    <span>
+                                        Git
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                        alt="Bootstrap">
+
+                                    <span>
+                                        Bootstrap
+                                    </span>
 
                                 </div>
 
@@ -752,22 +758,24 @@
 
                         </div>
 
+                    </div>
 
-                        <!-- Bottom Description -->
-                        <div class="mt-2">
 
-                            <p class="text-muted-light small mb-0">
-                                A modern toolkit for building scalable,
-                                intuitive and high-performance digital experiences.
-                            </p>
+                    <!-- Bottom Description -->
+                    <div class="mt-2">
 
-                        </div>
+                        <p class="text-muted-light small mb-0">
+                            A modern toolkit for building scalable,
+                            intuitive and high-performance digital experiences.
+                        </p>
 
                     </div>
 
                 </div>
 
             </div>
+
+        </div>
 
         </div>
 
