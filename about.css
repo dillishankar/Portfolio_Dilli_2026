@@ -1,0 +1,334 @@
+/* ==================================================
+   ABOUT BENTO SECTION COMPLETE STYLES
+================================================== */
+
+.about-bento-section {
+    background-color: #070908;
+}
+
+/* ==================================================
+   BASE COLORS & ICONS
+================================================== */
+
+.text-mint {
+    color: #52e185;
+}
+
+.text-muted-light {
+    color: #9ba49e;
+}
+
+.header-icon-svg {
+    width: 22px;
+    height: 22px;
+}
+
+/* ==================================================
+   BENTO ROW
+================================================== */
+
+.about-bento-section .row {
+    display: flex;
+    align-items: stretch;
+}
+
+/* ==================================================
+   DESKTOP — STRICT EQUAL HEIGHT
+================================================== */
+
+@media (min-width: 992px) {
+
+    .about-bento-section .row>[class*='col-'] {
+        height: 480px;
+    }
+
+    /* ----------------------------------------------
+       CENTER COLUMN
+       ---------------------------------------------- */
+
+    .about-bento-section .row>.col-lg-4:nth-child(2) {
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    /* About Me — EXPANDS */
+    .about-bento-section .row>.col-lg-4:nth-child(2)>.bento-card:first-child {
+        flex: 1 1 auto;
+        min-height: 0;
+    }
+
+    /* Connect & Resume — STAYS AT BOTTOM */
+    .about-bento-section .row>.col-lg-4:nth-child(2)>.bento-card:last-child {
+        flex: 0 0 auto;
+        min-height: 125px;
+    }
+
+    /* ----------------------------------------------
+       RIGHT COLUMN
+       ---------------------------------------------- */
+
+    .about-bento-section .row>.col-lg-4:nth-child(3) {
+        height: 480px;
+    }
+
+    .about-bento-section .row>.col-lg-4:nth-child(3)>.bento-skills-card {
+        height: 100%;
+    }
+}
+
+/* ==================================================
+   BENTO CARD FRAME
+================================================== */
+
+.bento-card {
+    background: #0d110f;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    transition:
+        border-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.bento-card:hover {
+    border-color: rgba(82, 225, 133, 0.3);
+}
+
+.bento-card.flex-grow-1 {
+    flex-grow: 1 !important;
+}
+
+/* ==================================================
+   LEFT COLUMN — IMAGE CARD
+================================================== */
+
+.bento-image-card {
+    background: #121714;
+    min-height: 380px;
+}
+
+.bento-profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    position: absolute;
+    inset: 0;
+}
+
+.bento-img-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(to top,
+            rgba(7, 9, 8, 0.95) 10%,
+            rgba(7, 9, 8, 0.2) 50%,
+            transparent 100%);
+    z-index: 2;
+}
+
+.badge-mint-sm {
+    background: #52e185;
+    color: #000;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 3px 8px;
+    border-radius: 6px;
+    width: fit-content;
+}
+
+/* ==================================================
+   CENTER COLUMN — ABOUT ME
+================================================== */
+
+.bento-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #ffffff;
+}
+
+/* ==================================================
+   CV BUTTON
+================================================== */
+
+.btn-cv-download {
+    background: rgba(82, 225, 133, 0.1);
+    border: 1px solid rgba(82, 225, 133, 0.3);
+    color: #52e185;
+    padding: 5px 14px;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.25s ease;
+}
+
+.btn-cv-download:hover {
+    background: #52e185;
+    color: #000;
+    box-shadow: 0 0 15px rgba(82, 225, 133, 0.4);
+}
+
+/* ==================================================
+   SOCIAL BOXES
+================================================== */
+
+.social-box {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #f0f4f1;
+    font-size: 1.15rem;
+    text-decoration: none;
+
+    transition: all 0.25s ease;
+}
+
+.social-box:hover {
+    background: rgba(82, 225, 133, 0.08);
+    border-color: #52e185;
+    color: #52e185;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 4px 12px rgba(82, 225, 133, 0.15);
+}
+
+/* ==================================================
+   RIGHT COLUMN — TECH STACK MARQUEE
+================================================== */
+
+.vertical-marquee-wrapper {
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+
+    mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+
+    -webkit-mask-image:
+        linear-gradient(to bottom,
+            transparent,
+            black 10%,
+            black 90%,
+            transparent);
+}
+
+.vertical-marquee {
+    flex: 1;
+    overflow: hidden;
+}
+
+.vertical-track {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Upward animation */
+.marquee-up .vertical-track {
+    animation: marqueeUp 18s linear infinite;
+}
+
+/* Downward animation */
+.marquee-down .vertical-track {
+    animation: marqueeDown 18s linear infinite;
+}
+
+/* Pause when mouse is over */
+.vertical-marquee:hover .vertical-track {
+    animation-play-state: paused;
+}
+
+/* ==================================================
+   TECH SKILL CARDS
+================================================== */
+
+.skill-card-v {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 12px;
+
+    padding: 8px 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: #f0f4f1;
+    font-size: 0.85rem;
+    font-weight: 500;
+
+    transition: all 0.25s ease;
+}
+
+.skill-card-v:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: rgba(82, 225, 133, 0.4);
+}
+
+.skill-card-v img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.invert-icon {
+    filter: invert(1);
+}
+
+/* ==================================================
+   MARQUEE ANIMATIONS
+================================================== */
+
+@keyframes marqueeUp {
+
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
+}
+
+@keyframes marqueeDown {
+
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* ==================================================
+   MOBILE & TABLET
+================================================== */
+
+@media (min-width: 992px) {
+    .about-bento-section .row>[class*='col-'] {
+        height: 480px;
+    }
+
+    .about-bento-section .row>.col-lg-4:nth-child(2) {
+        height: 480px;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+}

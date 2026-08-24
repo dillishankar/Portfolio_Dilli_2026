@@ -18,15 +18,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hero.css">
-    <link rel="stylesheet" href="js/hero.js">
+    <link rel="stylesheet" href="about.css">
 </head>
 
 <body class="bg-dark-theme">
 
-    <!-- FIXED TOP HEADER WRAPPER (NAVBAR ONLY) -->
-    <header class="fixed-top-wrapper fixed-top">
+    <!-- FIXED TOP HEADER WRAPPER -->
+    <header class="fixed-top-wrapper">
 
         <!-- Floating Boxed Marquee -->
         <div class="announcement-wrapper d-flex justify-content-center pt-3">
@@ -170,64 +169,275 @@
         </nav>
     </header>
 
-    <!-- MAIN PAGE CONTENT (OUTSIDE HEADER) -->
+    <!-- HERO SECTION -->
     <main>
-        <!-- HERO SECTION -->
-        <section class="hero-section position-relative d-flex align-items-center justify-content-center text-center">
-
-            <!-- Dark Tech Grid Background -->
+        <section class="hero-section text-center">
+            <!-- Background Grid Overlay -->
             <div class="hero-grid-bg"></div>
 
             <div class="container position-relative z-2">
-                <div class="row justify-content-center">
-                    <div class="col-lg-10 col-xl-9">
 
-                        <div class="hero-text-content">
-                            <!-- Main Heading -->
-                            <h1 class="hero-title display-2 fw-bold mb-4">
-                                Every Person has a story, <br>
+                <!-- Main Headline -->
+                <h1 class="hero-title display-2 fw-bold mb-4">
+                    Every Person has a story, <br>
 
-                                <!-- Mint Glass Selection Box around "here's mine!" -->
-                                <span class="selection-box-wrapper d-inline-block position-relative">
+                    <!-- Mint Glass Selection Box -->
+                    <span class="selection-box-wrapper d-inline-block position-relative mt-2">
+                        <span class="box-node top-left"></span>
+                        <span class="box-node top-right"></span>
+                        <span class="box-node bottom-left"></span>
+                        <span class="box-node bottom-right"></span>
 
-                                    <!-- Selection Anchor Nodes -->
-                                    <span class="box-node top-left"></span>
-                                    <span class="box-node top-right"></span>
-                                    <span class="box-node bottom-left"></span>
-                                    <span class="box-node bottom-right"></span>
-
-                                    <!-- Floating Figma Cursor Badge -->
-                                    <div class="me-cursor-chip">
-                                        <svg class="pointer-arrow" viewBox="0 0 24 24" fill="currentColor">
-                                            <path d="M3 3l7 18 3-7 7-3L3 3z" />
-                                        </svg>
-                                        <span class="me-label">Me</span>
-                                    </div>
-
-                                    <!-- Selected Text -->
-                                    <span class="highlight-text">here's mine!</span>
-                                </span>
-                            </h1>
-
-                            <!-- Subtitle -->
-                            <p class="hero-subtitle text-muted mx-auto mb-0">
-                                Transforming ideas into reality • Crafting modern web apps & UI/UX experiences
-                            </p>
+                        <div class="me-cursor-chip">
+                            <svg class="pointer-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 3l7 18 3-7 7-3L3 3z" />
+                            </svg>
+                            <span class="me-label">Me</span>
                         </div>
 
-                    </div>
-                </div>
+                        <span class="highlight-text">here's mine!</span>
+                    </span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle mx-auto mt-3">
+                    Transforming ideas into reality • Crafting modern web apps & UI/UX experiences
+                </p>
+
             </div>
         </section>
     </main>
 
+    <!-- ABOUT BENTO SECTION -->
+    <section class="about-bento-section py-5" id="about">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="text-center mb-5">
+                <h2 class="section-title display-5 fw-bold text-white">Behind the Code</h2>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="row g-3 align-items-stretch">
+
+                <!-- 1. LEFT COLUMN: Full Portrait Image Card -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="bento-card bento-image-card position-relative overflow-hidden h-100">
+
+                        <img src="Data/pic-of-mee.png" alt="Dillibabu Portrait" class="bento-profile-img">
+
+                        <div class="bento-img-overlay p-3 p-xl-4 d-flex flex-column justify-content-end">
+
+                            <img src="Data/signature.png" alt="Dillibabu Signature" style="
+                    width: 150px;
+                    height: auto;
+                    display: block;
+                    margin-bottom: 6px;
+                ">
+
+                            <p class="text-muted-light small m-0">
+                                Crafting high-performance digital products & intuitive interfaces.
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- ==================================================
+     2. CENTER COLUMN: ABOUT + CONNECT
+================================================== -->
+
+                <div class="col-lg-4 col-md-6 d-flex flex-column h-100 gap-3">
+
+                    <!-- ==============================================
+         CENTER TOP — ABOUT ME
+    =============================================== -->
+
+                    <div class="bento-card p-3 p-xl-4 flex-grow-1 d-flex flex-column justify-content-start">
+
+                        <div class="d-flex align-items-center gap-2 mb-3">
+
+                            <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+
+                            <h3 class="h4 fw-bold text-white m-0">
+                                About Me
+                            </h3>
+
+                        </div>
+
+                        <p class="bento-text m-0">
+                            Full-Stack Web Developer & UI/UX Designer specialized in
+                            building scalable MERN stack web applications and clean,
+                            human-centered interfaces. Focused on performance, crisp
+                            typography, and seamless user experiences.
+                        </p>
+
+                    </div>
+
+
+                    <!-- ==============================================
+         CENTER BOTTOM — CONNECT & RESUME
+    =============================================== -->
+
+                    <div class="bento-card p-3 p-xl-4">
+
+                        <div class="d-flex align-items-center justify-content-between mb-3">
+
+                            <span class="small fw-semibold text-uppercase tracking-wider text-muted">
+                                Connect & Resume
+                            </span>
+
+                            <a href="Data/Resume.pdf" download class="btn-cv-download">
+                                <i class="bi bi-file-earmark-arrow-down-fill me-1"></i>
+                                CV
+                            </a>
+
+                        </div>
+
+
+                        <div class="social-icon-grid d-flex align-items-center justify-content-between gap-2">
+
+                            <a href="https://github.com" target="_blank" class="social-box" title="GitHub">
+                                <i class="bi bi-github"></i>
+                            </a>
+
+                            <a href="https://linkedin.com" target="_blank" class="social-box" title="LinkedIn">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+
+                            <a href="mailto:ramyarams5143@gmail.com" class="social-box" title="Email">
+                                <i class="bi bi-envelope-fill"></i>
+                            </a>
+
+                            <a href="#" class="social-box" title="Portfolio">
+                                <i class="bi bi-globe"></i>
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- 3. RIGHT COLUMN: Core Tech Stack -->
+                <div class="col-lg-4 col-md-12">
+                    <div
+                        class="bento-card bento-skills-card p-3 p-xl-4 h-100 d-flex flex-column justify-content-between overflow-hidden">
+
+                        <div>
+                            <div class="d-flex align-items-center gap-2 mb-1">
+                                <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                    <polyline points="2 17 12 22 22 17"></polyline>
+                                    <polyline points="2 12 12 17 22 12"></polyline>
+                                </svg>
+                                <h3 class="h4 fw-bold text-white m-0">Core Tech Stack</h3>
+                            </div>
+                        </div>
+
+                        <!-- Dual Column Vertical Scroll -->
+                        <div class="vertical-marquee-wrapper d-flex gap-2 my-2">
+
+                            <!-- Left Column: Upward Scroll -->
+                            <div class="vertical-marquee marquee-up">
+                                <div class="vertical-track">
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                            alt="React"><span>React</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                            alt="JS"><span>JavaScript</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                            alt="HTML5"><span>HTML5</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                            alt="Figma"><span>Figma</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                            alt="Python"><span>Python</span></div>
+
+                                    <!-- Loop Duplicates -->
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                            alt="React"><span>React</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                            alt="JS"><span>JavaScript</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                            alt="HTML5"><span>HTML5</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                            alt="Figma"><span>Figma</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                            alt="Python"><span>Python</span></div>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: Downward Scroll -->
+                            <div class="vertical-marquee marquee-down">
+                                <div class="vertical-track">
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                            alt="Git"><span>Git</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                            alt="Node.js"><span>Node.js</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                            alt="MongoDB"><span>MongoDB</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                                            class="invert-icon" alt="Express"><span>Express</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                            alt="CSS3"><span>CSS3</span></div>
+
+                                    <!-- Loop Duplicates -->
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                            alt="Git"><span>Git</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+                                            alt="Node.js"><span>Node.js</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                                            alt="MongoDB"><span>MongoDB</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg"
+                                            class="invert-icon" alt="Express"><span>Express</span></div>
+                                    <div class="skill-card-v"><img
+                                            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                            alt="CSS3"><span>CSS3</span></div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="text-center pt-1">
+                            <span class="small text-muted"><i class="bi bi-lightning-charge-fill text-mint me-1"></i>
+                                100% Responsive & Scalable</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom Hero Script -->
     <script src="js/hero.js"></script>
 
-    <!-- Scroll Blur Script -->
     <script>
         window.addEventListener('scroll', function () {
             const navbar = document.getElementById('mainNavbar');
@@ -239,3 +449,5 @@
         });
     </script>
 </body>
+
+</html>
