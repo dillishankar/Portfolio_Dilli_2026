@@ -23,9 +23,43 @@
     <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" href="projects.css">
     <link rel="stylesheet" href="certificates.css">
+    <link rel="stylesheet" href="website-transition.css">
 </head>
 
 <body class="bg-dark-theme">
+    <!-- ==================================================
+     PROFESSIONAL PORTFOLIO INTRO
+================================================== -->
+
+    <div class="portfolio-intro" id="portfolioIntro">
+
+        <div class="portfolio-intro-inner">
+
+            <div class="portfolio-logo-wrap">
+
+                <img src="Data/icon-frame.png" alt="DS" class="portfolio-intro-logo">
+
+            </div>
+
+
+            <div class="portfolio-intro-line">
+                <span></span>
+            </div>
+
+
+            <div class="portfolio-intro-meta">
+
+                <span>DILLI SHANKAR</span>
+
+                <span class="portfolio-intro-dot"></span>
+
+                <span>PORTFOLIO</span>
+
+            </div>
+
+        </div>
+
+    </div>
 
     <!-- FIXED TOP HEADER WRAPPER -->
     <header class="fixed-top-wrapper">
@@ -1146,21 +1180,18 @@
         </div>
 
     </section>
-<br>
+    <br>
 
     <!-- ==================================================
      CERTIFICATES SECTION
-     SCROLL CONTROLLED
+     GRID GALLERY
 ================================================== -->
 
     <section class="certificates-section" id="certificates">
 
-        <div class="certificates-sticky">
+        <div class="certificates-container">
 
-            <!-- ==========================================
-             HEADER
-        =========================================== -->
-
+            <!-- HEADER -->
             <div class="certificates-header">
 
                 <div class="certificates-label">
@@ -1201,253 +1232,176 @@
                 </div>
 
             </div>
-<br>
-<br>
-<br>
+
 
             <!-- ==========================================
-             CERTIFICATE VIEWPORT
+             CERTIFICATE GRID
         =========================================== -->
 
-            <div class="certificates-viewport">
+            <div class="certificates-grid">
 
 
-                <!-- ======================================
-                 CERTIFICATE 01
-            ======================================= -->
+                <!-- CERTIFICATE 01 -->
 
-                <article class="certificate-card" data-certificate="0">
+                <button class="certificate-card certificate-card-large" type="button"
+                    data-certificate="Data/certificate/certificate1.jpeg" aria-label="View Certificate 01">
 
-                    <div class="certificate-image-wrap">
+                    <img src="Data/certificate/certificate1.jpeg" alt="Certificate 01" class="certificate-image">
 
-                        <img src="Data/certificate/certificate1.jpeg" alt="Certificate 01" class="certificate-image">
+                    <span class="certificate-overlay"></span>
 
-                    </div>
+                    <span class="certificate-card-number">
+                        01
+                    </span>
 
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
 
-                    <div class="certificate-details">
+                </button>
 
-                        <div>
 
-                            <span class="certificate-category">
-                                CERTIFICATION
-                            </span>
 
-                            <h3>
-                                Certificate Title One
-                            </h3>
+                <!-- CERTIFICATE 02 -->
 
-                            <p>
-                                Issued by Certification Authority
-                            </p>
+                <button class="certificate-card" type="button" data-certificate="Data/certificate/certificate2.jpeg"
+                    aria-label="View Certificate 02">
 
-                        </div>
+                    <img src="Data/certificate/certificate2.jpeg" alt="Certificate 02" class="certificate-image">
 
+                    <span class="certificate-overlay"></span>
 
-                        <span class="certificate-number">
-                            01
-                        </span>
+                    <span class="certificate-card-number">
+                        02
+                    </span>
 
-                    </div>
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
 
-                </article>
+                </button>
 
 
 
-                <!-- ======================================
-                 CERTIFICATE 02
-            ======================================= -->
+                <!-- CERTIFICATE 03 -->
 
-                <article class="certificate-card" data-certificate="1">
+                <button class="certificate-card" type="button" data-certificate="Data/certificate/certificate3.jpeg"
+                    aria-label="View Certificate 03">
 
-                    <div class="certificate-image-wrap">
+                    <img src="Data/certificate/certificate3.jpeg" alt="Certificate 03" class="certificate-image">
 
-                        <img src="Data/certificate/certificate2.jpeg" alt="Certificate 02" class="certificate-image">
+                    <span class="certificate-overlay"></span>
 
-                    </div>
+                    <span class="certificate-card-number">
+                        03
+                    </span>
 
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
 
-                    <div class="certificate-details">
+                </button>
 
-                        <div>
 
-                            <span class="certificate-category">
-                                CERTIFICATION
-                            </span>
 
-                            <h3>
-                                Certificate Title Two
-                            </h3>
+                <!-- CERTIFICATE 04 -->
 
-                            <p>
-                                Issued by Certification Authority
-                            </p>
+                <button class="certificate-card certificate-card-wide" type="button"
+                    data-certificate="Data/certificate/certificate4.jpg" aria-label="View Certificate 04">
 
-                        </div>
+                    <img src="Data/certificate/certificate4.jpg" alt="Certificate 04" class="certificate-image">
 
+                    <span class="certificate-overlay"></span>
 
-                        <span class="certificate-number">
-                            02
-                        </span>
+                    <span class="certificate-card-number">
+                        04
+                    </span>
 
-                    </div>
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
 
-                </article>
+                </button>
 
 
 
-                <!-- ======================================
-                 CERTIFICATE 03
-            ======================================= -->
+                <!-- CERTIFICATE 05 -->
 
-                <article class="certificate-card" data-certificate="2">
+                <button class="certificate-card certificate-card-wide" type="button"
+                    data-certificate="Data/certificate/certificate1.jpeg" aria-label="View Certificate 05">
 
-                    <div class="certificate-image-wrap">
+                    <img src="Data/certificate/certificate1.jpeg" alt="Certificate 05" class="certificate-image">
 
-                        <img src="Data/certificate/certificate3.jpeg" alt="Certificate 03" class="certificate-image">
+                    <span class="certificate-overlay"></span>
 
-                    </div>
-
-
-                    <div class="certificate-details">
-
-                        <div>
-
-                            <span class="certificate-category">
-                                CERTIFICATION
-                            </span>
-
-                            <h3>
-                                Certificate Title Three
-                            </h3>
-
-                            <p>
-                                Issued by Certification Authority
-                            </p>
-
-                        </div>
-
-
-                        <span class="certificate-number">
-                            03
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- ======================================
-                 CERTIFICATE 04
-            ======================================= -->
-
-                <article class="certificate-card" data-certificate="3">
-
-                    <div class="certificate-image-wrap">
-
-                        <img src="Data/certificate/certificate4.jpg" alt="Certificate 04" class="certificate-image">
-
-                    </div>
-
-
-                    <div class="certificate-details">
-
-                        <div>
-
-                            <span class="certificate-category">
-                                CERTIFICATION
-                            </span>
-
-                            <h3>
-                                Certificate Title Four
-                            </h3>
-
-                            <p>
-                                Issued by Certification Authority
-                            </p>
-
-                        </div>
-
-
-                        <span class="certificate-number">
-                            04
-                        </span>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- ======================================
-                 CERTIFICATE 05
-            ======================================= -->
-
-                <article class="certificate-card" data-certificate="4">
-
-                    <div class="certificate-image-wrap">
-
-                        <img src="Data/certificate/certificate1.jpeg" alt="Certificate 05" class="certificate-image">
-
-                    </div>
-
-
-                    <div class="certificate-details">
-
-                        <div>
-
-                            <span class="certificate-category">
-                                CERTIFICATION
-                            </span>
-
-                            <h3>
-                                Certificate Title Five
-                            </h3>
-
-                            <p>
-                                Issued by Certification Authority
-                            </p>
-
-                        </div>
-
-
-                        <span class="certificate-number">
-                            05
-                        </span>
-
-                    </div>
-
-                </article>
-
+                    <span class="certificate-card-number">
+                        05
+                    </span>
+
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+
+                </button>
 
             </div>
 
 
-            <!-- ==========================================
-             SCROLL INDICATOR
-        =========================================== -->
+            <!-- SMALL FOOTER NOTE -->
 
-            <div class="certificates-scroll-indicator">
+            <div class="certificates-footer">
 
-                <div class="certificates-progress-track">
+                <span>
+                    <i class="bi bi-cursor"></i>
+                    Click a certificate to view
+                </span>
 
-                    <div class="certificates-progress-bar" id="certificatesProgressBar">
-                    </div>
+                <span>
+                    05 CERTIFICATES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================
+         CERTIFICATE ZOOM MODAL
+    ================================================== -->
+
+        <div class="certificate-modal" id="certificateModal" aria-hidden="true">
+
+            <div class="certificate-modal-backdrop"></div>
+
+
+            <div class="certificate-modal-content" role="dialog" aria-modal="true" aria-label="Certificate preview">
+
+                <button type="button" class="certificate-modal-close" id="certificateModalClose"
+                    aria-label="Close certificate">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+
+                <div class="certificate-modal-image-wrap">
+
+                    <img src="" alt="Certificate preview" id="certificateModalImage" class="certificate-modal-image">
 
                 </div>
 
 
-                <div class="certificates-counter">
+                <div class="certificate-modal-footer">
 
-                    <span id="certificateCurrent">
-                        01
+                    <span class="modal-certificate-label">
+                        CERTIFICATE
                     </span>
 
-                    <span class="counter-divider"></span>
-
-                    <span id="certificateTotal">
-                        05
+                    <span id="certificateModalNumber" class="modal-certificate-number">
+                        01
                     </span>
 
                 </div>
@@ -1463,6 +1417,8 @@
     <script src="script.js"></script>
     <script src="projects.js"></script>
     <script src="certificates.js"></script>
+    <script src="website-transition.js"></script>
+
 </body>
 
 </html>

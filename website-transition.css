@@ -1,0 +1,415 @@
+/* ==================================================
+   PROFESSIONAL PORTFOLIO INTRO
+================================================== */
+
+.portfolio-intro {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 99999;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #070908;
+
+    overflow: hidden;
+
+    pointer-events: all;
+
+    transition:
+        opacity 0.8s
+        cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+
+/* ==================================================
+   INNER
+================================================== */
+
+.portfolio-intro-inner {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: min(300px, 80vw);
+}
+
+
+/* ==================================================
+   LOGO WRAPPER
+================================================== */
+
+.portfolio-logo-wrap {
+
+    position: relative;
+
+    width: 125px;
+
+    height: 125px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+
+/*
+ * Thin masking layer.
+ * Gives the logo a clean reveal instead
+ * of simply fading in.
+ */
+
+.portfolio-logo-wrap::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: #070908;
+
+    transform-origin: right center;
+
+    transform: scaleX(1);
+
+    animation:
+        introLogoReveal
+        1.1s
+        cubic-bezier(0.77, 0, 0.18, 1)
+        0.15s
+        forwards;
+}
+
+
+/* ==================================================
+   LOGO
+================================================== */
+
+.portfolio-intro-logo {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    opacity: 0;
+
+    transform:
+        scale(0.88);
+
+    animation:
+        introLogoSettle
+        1.15s
+        cubic-bezier(0.16, 1, 0.3, 1)
+        0.05s
+        forwards;
+}
+
+
+/* ==================================================
+   LOGO REVEAL
+================================================== */
+
+@keyframes introLogoReveal {
+
+    0% {
+
+        transform:
+            scaleX(1);
+    }
+
+    100% {
+
+        transform:
+            scaleX(0);
+    }
+
+}
+
+
+/* ==================================================
+   LOGO SETTLE
+================================================== */
+
+@keyframes introLogoSettle {
+
+    0% {
+
+        opacity: 0;
+
+        transform:
+            scale(0.88);
+    }
+
+    45% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.025);
+    }
+
+    72% {
+
+        transform:
+            scale(0.985);
+    }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+            scale(1);
+    }
+
+}
+
+
+/* ==================================================
+   LINE
+================================================== */
+
+.portfolio-intro-line {
+
+    width: 125px;
+
+    height: 1px;
+
+    margin-top: 25px;
+
+    overflow: hidden;
+
+    background:
+        rgba(255, 255, 255, 0.09);
+}
+
+
+/* Animated mint line */
+
+.portfolio-intro-line span {
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: #52e185;
+
+    transform:
+        translateX(-100%);
+
+    animation:
+        introLineReveal
+        0.9s
+        cubic-bezier(0.77, 0, 0.18, 1)
+        0.55s
+        forwards;
+}
+
+
+@keyframes introLineReveal {
+
+    0% {
+
+        transform:
+            translateX(-100%);
+    }
+
+    100% {
+
+        transform:
+            translateX(0);
+    }
+
+}
+
+
+/* ==================================================
+   META
+================================================== */
+
+.portfolio-intro-meta {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 13px;
+
+    color: #737d76;
+
+    font-family:
+        'Space Mono',
+        monospace;
+
+    font-size: 0.52rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+
+    opacity: 0;
+
+    transform:
+        translateY(7px);
+
+    animation:
+        introMetaReveal
+        0.7s
+        ease
+        0.8s
+        forwards;
+}
+
+
+@keyframes introMetaReveal {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(7px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+
+.portfolio-intro-dot {
+
+    width: 3px;
+
+    height: 3px;
+
+    border-radius: 50%;
+
+    background: #52e185;
+}
+
+
+/* ==================================================
+   EXIT
+================================================== */
+
+.portfolio-intro.is-exiting {
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+
+/*
+ * Slight upward movement of the whole branding
+ * while the intro leaves.
+ */
+
+.portfolio-intro.is-exiting
+.portfolio-intro-inner {
+
+    transform:
+        translateY(-18px)
+        scale(0.97);
+
+    transition:
+        transform 0.8s
+        cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .portfolio-logo-wrap {
+
+        width: 95px;
+
+        height: 95px;
+    }
+
+
+    .portfolio-intro-line {
+
+        width: 95px;
+
+        margin-top: 20px;
+    }
+
+
+    .portfolio-intro-meta {
+
+        font-size: 0.44rem;
+
+        letter-spacing: 0.12em;
+    }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .portfolio-intro,
+    .portfolio-intro-logo,
+    .portfolio-logo-wrap::after,
+    .portfolio-intro-line span,
+    .portfolio-intro-meta {
+
+        animation: none !important;
+
+        transition: none !important;
+    }
+
+
+    .portfolio-logo-wrap::after {
+
+        transform: scaleX(0);
+    }
+
+
+    .portfolio-intro-logo,
+    .portfolio-intro-meta {
+
+        opacity: 1;
+
+        transform: none;
+    }
+
+}
