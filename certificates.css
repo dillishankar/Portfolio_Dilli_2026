@@ -1,0 +1,654 @@
+/* ==================================================
+   CERTIFICATES SECTION
+   SCROLL CONTROLLED SHOWCASE
+================================================== */
+
+.certificates-section {
+    position: relative;
+
+    height: 500vh;
+
+    background: #070908;
+
+    overflow: clip;
+}
+
+
+/* ==================================================
+   STICKY AREA
+================================================== */
+
+.certificates-sticky {
+
+    position: sticky;
+
+    top: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    min-height: 680px;
+
+    overflow: hidden;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.certificates-header {
+
+    position: relative;
+
+    z-index: 10;
+
+    width: min(1400px, 90%);
+
+    margin: 0 auto;
+}
+
+
+.certificates-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+
+    color: #9ba49e;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.certificates-number {
+
+    color: #52e185;
+}
+
+
+.certificates-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: rgba(82, 225, 133, 0.5);
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.certificates-heading-row {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+.certificates-title {
+
+    margin: 0;
+
+    color: #f0f4f1;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    font-size: clamp(3.5rem, 6.5vw, 6.5rem);
+
+    font-weight: 800;
+
+    line-height: 0.88;
+
+    letter-spacing: -0.06em;
+}
+
+
+.certificates-title em {
+
+    color: #52e185;
+
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+}
+
+
+.certificates-description {
+
+    max-width: 390px;
+
+    margin: 0 0 5px;
+
+    color: #9ba49e;
+
+    font-size: 0.9rem;
+
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   CERTIFICATE VIEWPORT
+================================================== */
+
+.certificates-viewport {
+
+    position: relative;
+
+    width: 100%;
+
+    height: 480px;
+
+    margin-top: 30px;
+}
+
+
+/* ==================================================
+   CERTIFICATE CARD
+================================================== */
+
+.certificate-card {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: min(760px, 68vw);
+
+    background: rgba(13, 17, 15, 0.72);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+
+    transform-origin: center center;
+
+    will-change: transform;
+
+    pointer-events: none;
+
+    /*
+       IMPORTANT:
+       No opacity.
+       No filter.
+       No border animation.
+    */
+}
+
+
+/* ==================================================
+   CERTIFICATE IMAGE
+================================================== */
+
+
+.certificate-image {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+
+.certificate-image-wrap {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    background: rgba(255, 255, 255, 0.025);
+}
+
+
+.certificate-details {
+    min-height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 24px;
+
+    background: rgba(7, 9, 8, 0.42);
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.certificate-category {
+
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #52e185;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.55rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+.certificate-details h3 {
+
+    margin: 0 0 4px;
+
+    color: #f0f4f1;
+
+    font-size: 1.15rem;
+
+    font-weight: 700;
+
+    letter-spacing: -0.03em;
+}
+
+
+.certificate-details p {
+
+    margin: 0;
+
+    color: #9ba49e;
+
+    font-size: 0.7rem;
+}
+
+
+.certificate-number {
+
+    flex-shrink: 0;
+
+    color: #52e185;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   SCROLL INDICATOR
+================================================== */
+
+.certificates-scroll-indicator {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 28px;
+
+    transform: translateX(-50%);
+
+    width: min(500px, 70%);
+
+    z-index: 20;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+.certificates-progress-track {
+
+    flex: 1;
+
+    height: 2px;
+
+    background: rgba(255, 255, 255, 0.08);
+
+    overflow: hidden;
+}
+
+
+.certificates-progress-bar {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #52e185;
+
+    transform-origin: left center;
+}
+
+
+.certificates-counter {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #9ba49e;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.6rem;
+}
+
+
+.certificates-counter span:first-child {
+
+    color: #52e185;
+
+    font-weight: 700;
+}
+
+
+.counter-divider {
+
+    width: 22px;
+
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 991px) {
+
+    .certificates-section {
+
+        height: 500vh;
+    }
+
+
+    .certificates-sticky {
+
+        min-height: 620px;
+    }
+
+
+    .certificates-header {
+
+        width: calc(100% - 36px);
+    }
+
+
+    .certificates-heading-row {
+
+        display: block;
+    }
+
+
+    .certificates-title {
+
+        font-size: clamp(3.2rem, 12vw, 5rem);
+    }
+
+
+    .certificates-description {
+
+        max-width: 100%;
+
+        margin-top: 22px;
+    }
+
+
+    .certificates-viewport {
+
+        height: 430px;
+
+        margin-top: 20px;
+    }
+
+
+    .certificate-card {
+
+        width: calc(100% - 40px);
+
+        max-width: 680px;
+
+        border-radius: 18px;
+    }
+
+
+    .certificate-details {
+
+        padding: 16px 20px;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .certificates-section {
+
+        height: 500vh;
+    }
+
+
+    .certificates-sticky {
+
+        min-height: 620px;
+
+        justify-content: center;
+    }
+
+
+    .certificates-header {
+
+        width: calc(100% - 28px);
+    }
+
+
+    .certificates-label {
+
+        gap: 9px;
+
+        margin-bottom: 17px;
+
+        font-size: 0.58rem;
+    }
+
+
+    .certificates-line {
+
+        width: 28px;
+    }
+
+
+    .certificates-heading-row {
+
+        display: block;
+    }
+
+
+    .certificates-title {
+
+        font-size: clamp(2.8rem, 15vw, 4.5rem);
+
+        line-height: 0.9;
+    }
+
+
+    .certificates-description {
+
+        margin-top: 20px;
+
+        font-size: 0.76rem;
+
+        line-height: 1.65;
+    }
+
+
+    .certificates-viewport {
+
+        height: 350px;
+
+        margin-top: 25px;
+    }
+
+
+    .certificate-card {
+
+        width: calc(100% - 24px);
+
+        border-radius: 16px;
+    }
+
+
+    .certificate-image-wrap {
+
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .certificate-details {
+
+        min-height: 82px;
+
+        padding: 14px 16px;
+
+        gap: 12px;
+    }
+
+
+    .certificate-category {
+
+        font-size: 0.48rem;
+
+        margin-bottom: 4px;
+    }
+
+
+    .certificate-details h3 {
+
+        font-size: 0.95rem;
+    }
+
+
+    .certificate-details p {
+
+        font-size: 0.62rem;
+    }
+
+
+    .certificate-number {
+
+        font-size: 0.6rem;
+    }
+
+
+    .certificates-scroll-indicator {
+
+        bottom: 20px;
+
+        width: calc(100% - 40px);
+
+        gap: 10px;
+    }
+
+
+    .certificates-counter {
+
+        font-size: 0.52rem;
+    }
+
+
+    .counter-divider {
+
+        width: 15px;
+    }
+
+}
+
+
+/* ==================================================
+   VERY SMALL PHONES
+================================================== */
+
+@media (max-width: 380px) {
+
+    .certificates-title {
+
+        font-size: 2.65rem;
+    }
+
+
+    .certificates-viewport {
+
+        height: 320px;
+    }
+
+
+    .certificate-details h3 {
+
+        font-size: 0.88rem;
+    }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .certificate-card {
+
+        transition: none !important;
+    }
+
+}
