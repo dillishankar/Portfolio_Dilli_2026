@@ -1,21 +1,21 @@
 /* ==================================================
-   ABOUT BENTO SECTION COMPLETE STYLES
+   ABOUT BENTO SECTION — PERFECT MATCH ROYAL BLUE THEME
 ================================================== */
 
 .about-bento-section {
-    background-color: #070908;
+    background-color: transparent;
 }
 
 /* ==================================================
-   BASE COLORS & ICONS
+   BASE COLORS & ACCENTS
 ================================================== */
 
 .text-mint {
-    color: #52e185;
+    color: #FFFFFF;
 }
 
 .text-muted-light {
-    color: #9ba49e;
+    color: #B8D4FF;
 }
 
 .header-icon-svg {
@@ -42,10 +42,7 @@
         height: 480px;
     }
 
-    /* ----------------------------------------------
-       CENTER COLUMN
-       ---------------------------------------------- */
-
+    /* CENTER COLUMN */
     .about-bento-section .row>.col-lg-4:nth-child(2) {
         height: 480px;
         display: flex;
@@ -65,10 +62,7 @@
         min-height: 125px;
     }
 
-    /* ----------------------------------------------
-       RIGHT COLUMN
-       ---------------------------------------------- */
-
+    /* RIGHT COLUMN */
     .about-bento-section .row>.col-lg-4:nth-child(3) {
         height: 480px;
     }
@@ -79,20 +73,22 @@
 }
 
 /* ==================================================
-   BENTO CARD FRAME
+   BENTO CARD FRAME (Perfect Matched Cobalt Shade)
 ================================================== */
 
 .bento-card {
-    background: #0d110f;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #0038A8;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     border-radius: 20px;
     transition:
         border-color 0.3s ease,
-        transform 0.3s ease;
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .bento-card:hover {
-    border-color: rgba(82, 225, 133, 0.3);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
 }
 
 .bento-card.flex-grow-1 {
@@ -104,7 +100,7 @@
 ================================================== */
 
 .bento-image-card {
-    background: #121714;
+    background: #002D8C;
     min-height: 380px;
 }
 
@@ -122,15 +118,15 @@
     inset: 0;
     background:
         linear-gradient(to top,
-            rgba(7, 9, 8, 0.95) 10%,
-            rgba(7, 9, 8, 0.2) 50%,
+            rgba(0, 40, 120, 0.9) 10%,
+            rgba(0, 40, 120, 0.15) 50%,
             transparent 100%);
     z-index: 2;
 }
 
 .badge-mint-sm {
-    background: #52e185;
-    color: #000;
+    background: #FFFFFF;
+    color: #002D8C;
     font-size: 0.65rem;
     font-weight: 700;
     padding: 3px 8px;
@@ -145,7 +141,7 @@
 .bento-text {
     font-size: 0.95rem;
     line-height: 1.7;
-    color: #ffffff;
+    color: #FFFFFF;
 }
 
 /* ==================================================
@@ -153,9 +149,9 @@
 ================================================== */
 
 .btn-cv-download {
-    background: rgba(82, 225, 133, 0.1);
-    border: 1px solid rgba(82, 225, 133, 0.3);
-    color: #52e185;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #FFFFFF;
     padding: 5px 14px;
     border-radius: 100px;
     font-size: 0.8rem;
@@ -165,9 +161,9 @@
 }
 
 .btn-cv-download:hover {
-    background: #52e185;
-    color: #000;
-    box-shadow: 0 0 15px rgba(82, 225, 133, 0.4);
+    background: #FFFFFF;
+    color: #002D8C;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
 }
 
 /* ==================================================
@@ -177,15 +173,15 @@
 .social-box {
     width: 44px;
     height: 44px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
 
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
-    color: #f0f4f1;
+    color: #FFFFFF;
     font-size: 1.15rem;
     text-decoration: none;
 
@@ -193,14 +189,11 @@
 }
 
 .social-box:hover {
-    background: rgba(82, 225, 133, 0.08);
-    border-color: #52e185;
-    color: #52e185;
-
+    background: rgba(255, 255, 255, 0.22);
+    border-color: #FFFFFF;
+    color: #FFFFFF;
     transform: translateY(-2px);
-
-    box-shadow:
-        0 4px 12px rgba(82, 225, 133, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* ==================================================
@@ -238,28 +231,25 @@
     gap: 8px;
 }
 
-/* Upward animation */
 .marquee-up .vertical-track {
     animation: marqueeUp 18s linear infinite;
 }
 
-/* Downward animation */
 .marquee-down .vertical-track {
     animation: marqueeDown 18s linear infinite;
 }
 
-/* Pause when mouse is over */
 .vertical-marquee:hover .vertical-track {
     animation-play-state: paused;
 }
 
 /* ==================================================
-   TECH SKILL CARDS
+   TECH SKILL CARDS (Perfect Translucent Chips)
 ================================================== */
 
 .skill-card-v {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(0, 50, 160, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 12px;
 
     padding: 8px 12px;
@@ -268,7 +258,7 @@
     align-items: center;
     gap: 10px;
 
-    color: #f0f4f1;
+    color: #FFFFFF;
     font-size: 0.85rem;
     font-weight: 500;
 
@@ -276,8 +266,8 @@
 }
 
 .skill-card-v:hover {
-    background: rgba(255, 255, 255, 0.07);
-    border-color: rgba(82, 225, 133, 0.4);
+    background: rgba(0, 50, 160, 0.7);
+    border-color: rgba(255, 255, 255, 0.4);
 }
 
 .skill-card-v img {
@@ -295,25 +285,13 @@
 ================================================== */
 
 @keyframes marqueeUp {
-
-    0% {
-        transform: translateY(0);
-    }
-
-    100% {
-        transform: translateY(-50%);
-    }
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-50%); }
 }
 
 @keyframes marqueeDown {
-
-    0% {
-        transform: translateY(-50%);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
+    0% { transform: translateY(-50%); }
+    100% { transform: translateY(0); }
 }
 
 /* ==================================================
@@ -356,33 +334,16 @@
     }
 }
 
-/* Subtle float effect for cards or images */
 @keyframes floatY {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-8px);
-    }
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
 }
 
-/* Glow animation for accent borders or buttons */
 @keyframes borderGlow {
-
-    0%,
-    100% {
-        box-shadow: 0 0 15px rgba(82, 225, 133, 0.15);
-    }
-
-    50% {
-        box-shadow: 0 0 25px rgba(82, 225, 133, 0.35);
-    }
+    0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); }
+    50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.35); }
 }
 
-/* Application classes */
 .about-card {
     animation: floatY 6s ease-in-out infinite;
 }
@@ -391,7 +352,6 @@
     animation: borderGlow 4s ease-in-out infinite;
 }
 
-/* Initial hidden state */
 .reveal-on-scroll {
     opacity: 0;
     transform: translateY(30px);
@@ -399,24 +359,14 @@
         transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Visible active state */
 .reveal-on-scroll.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Optional staggered delays for child items */
-.delay-1 {
-    transition-delay: 0.1s;
-}
-
-.delay-2 {
-    transition-delay: 0.2s;
-}
-
-.delay-3 {
-    transition-delay: 0.3s;
-}
+.delay-1 { transition-delay: 0.1s; }
+.delay-2 { transition-delay: 0.2s; }
+.delay-3 { transition-delay: 0.3s; }
 
 /* ==================================================
    ABOUT ME — TYPEWRITER
@@ -429,22 +379,14 @@
 .typewriter-cursor {
     display: inline-block;
     margin-left: 2px;
-    color: #52e185;
+    color: #FFFFFF;
     font-weight: 400;
     animation: typewriterBlink 0.8s step-end infinite;
 }
 
 @keyframes typewriterBlink {
-
-    0%,
-    50% {
-        opacity: 1;
-    }
-
-    51%,
-    100% {
-        opacity: 0;
-    }
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
 }
 
 /* ==================================================
@@ -459,60 +401,20 @@
         transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Starting positions */
-
-.about-card-1 {
-    transform: translateX(-55px);
-}
-
-.about-card-2 {
-    transform: translateY(45px);
-}
-
-.about-card-3 {
-    transform: translateY(45px);
-}
-
-.about-card-4 {
-    transform: translateX(55px);
-}
-
-
-/* Visible state */
+.about-card-1 { transform: translateX(-55px); }
+.about-card-2 { transform: translateY(45px); }
+.about-card-3 { transform: translateY(45px); }
+.about-card-4 { transform: translateX(55px); }
 
 .about-reveal.is-visible {
     opacity: 1;
     transform: translate3d(0, 0, 0);
 }
 
-
-/* Stagger timing */
-
-.about-card-1.is-visible {
-    transition-delay: 0.05s;
-}
-
-.about-card-2.is-visible {
-    transition-delay: 0.18s;
-}
-
-.about-card-3.is-visible {
-    transition-delay: 0.31s;
-}
-
-.about-card-4.is-visible {
-    transition-delay: 0.44s;
-}
-
-
-/* Slight premium hover after entrance */
-
-.about-reveal.is-visible .bento-card {
-    transform: translateZ(0);
-}
-
-
-/* Respect reduced-motion accessibility */
+.about-card-1.is-visible { transition-delay: 0.05s; }
+.about-card-2.is-visible { transition-delay: 0.18s; }
+.about-card-3.is-visible { transition-delay: 0.31s; }
+.about-card-4.is-visible { transition-delay: 0.44s; }
 
 @media (prefers-reduced-motion: reduce) {
     .about-reveal {
@@ -522,19 +424,15 @@
     }
 }
 
-/* ==================================================
-   ABOUT SECTION HEADING — DISPLAY FONT
-================================================== */
-
 .about-bento-section .section-title {
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-weight: 800;
-
     letter-spacing: -0.055em;
     line-height: 0.95;
+    color: #FFFFFF;
 }
 
 .text-muted-light {
     font-family: 'Outfit', sans-serif;
-    color: #9ba49e;
+    color: #B8D4FF;
 }
