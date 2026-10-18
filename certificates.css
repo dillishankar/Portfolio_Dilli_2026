@@ -1,0 +1,1016 @@
+/* ==================================================
+   CERTIFICATES
+   GRID GALLERY
+================================================== */
+
+.certificates-section {
+
+    position: relative;
+
+    width: 100%;
+
+    background: #070908;
+
+    overflow: hidden;
+
+    padding: 120px 0 80px;
+}
+
+
+/* ==================================================
+   CONTAINER
+================================================== */
+
+.certificates-container {
+
+    width: min(1400px, 90%);
+
+    margin: 0 auto;
+}
+
+
+/* ==================================================
+   HEADER
+================================================== */
+
+.certificates-header {
+
+    margin-bottom: 55px;
+}
+
+
+.certificates-label {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 20px;
+
+    color: #9ba49e;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.72rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+
+.certificates-number {
+
+    color: #52e185;
+}
+
+
+.certificates-line {
+
+    width: 45px;
+
+    height: 1px;
+
+    background: rgba(82, 225, 133, 0.5);
+}
+
+
+/* ==================================================
+   HEADING
+================================================== */
+
+.certificates-heading-row {
+
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 60px;
+}
+
+
+.certificates-title {
+
+    margin: 0;
+
+    max-width: 760px;
+
+    color: #f0f4f1;
+
+    font-family: 'Plus Jakarta Sans', sans-serif;
+
+    font-size: clamp(3.5rem, 6vw, 6rem);
+
+    font-weight: 800;
+
+    line-height: 0.88;
+
+    letter-spacing: -0.06em;
+}
+
+
+.certificates-title em {
+
+    color: #52e185;
+
+    font-family: 'Playfair Display', serif;
+
+    font-weight: 400;
+
+    letter-spacing: -0.03em;
+}
+
+.certificates-description {
+    font-family: 'Outfit', sans-serif;
+    max-width: 390px;
+    color: #9ba49e;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+
+/* ==================================================
+   GRID
+================================================== */
+
+.certificates-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(12, minmax(0, 1fr));
+
+    grid-auto-rows: 190px;
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* ==================================================
+   CARD
+================================================== */
+
+.certificate-card {
+
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+
+    height: 100%;
+
+    padding: 0;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    border-radius: 20px;
+
+    overflow: hidden;
+
+    background: #0d110f;
+
+    cursor: pointer;
+
+    appearance: none;
+
+    -webkit-appearance: none;
+
+    text-align: left;
+
+    isolation: isolate;
+
+    transition:
+        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.35s ease,
+        box-shadow 0.5s ease;
+}
+
+
+/* ==================================================
+   DIFFERENT RECTANGLE SIZES
+================================================== */
+
+
+/* 01 — Large */
+
+.certificate-card-large {
+
+    grid-column: span 7;
+
+    grid-row: span 2;
+}
+
+
+/* 02 */
+
+.certificate-card:nth-child(2) {
+
+    grid-column: span 5;
+
+    grid-row: span 1;
+}
+
+
+/* 03 */
+
+.certificate-card:nth-child(3) {
+
+    grid-column: span 5;
+
+    grid-row: span 1;
+}
+
+
+/* 04 */
+
+.certificate-card-wide {
+
+    grid-column: span 6;
+
+    grid-row: span 2;
+}
+
+
+/* 05 */
+
+.certificate-card:nth-child(5) {
+
+    grid-column: span 6;
+
+    grid-row: span 2;
+}
+
+
+/* ==================================================
+   IMAGE
+================================================== */
+
+.certificate-image {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+/* ==================================================
+   DARK OVERLAY
+================================================== */
+
+.certificate-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(180deg,
+            rgba(7, 9, 8, 0.15) 0%,
+            rgba(7, 9, 8, 0.02) 45%,
+            rgba(7, 9, 8, 0.88) 100%);
+
+    pointer-events: none;
+}
+
+
+/* ==================================================
+   NUMBER
+================================================== */
+
+.certificate-card-number {
+
+    position: absolute;
+
+    top: 16px;
+
+    left: 16px;
+
+    z-index: 3;
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(7, 9, 8, 0.75);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
+    color: #52e185;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.68rem;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   VIEW LABEL
+================================================== */
+
+.certificate-view {
+
+    position: absolute;
+
+    right: 20px;
+
+    bottom: 18px;
+
+    z-index: 3;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #f0f4f1;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.62rem;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+}
+
+
+.certificate-view i {
+
+    color: #52e185;
+
+    font-size: 0.9rem;
+}
+
+
+/* ==================================================
+   HOVER
+================================================== */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .certificate-card:hover {
+
+        transform: translateY(-6px);
+
+        border-color:
+            rgba(82, 225, 133, 0.38);
+
+        box-shadow:
+            0 25px 60px rgba(0, 0, 0, 0.38);
+    }
+
+
+    .certificate-card:hover .certificate-image {
+
+        transform: scale(1.045);
+    }
+
+
+    .certificate-card:hover .certificate-view {
+
+        color: #52e185;
+    }
+
+}
+
+
+/* ==================================================
+   FOCUS
+================================================== */
+
+.certificate-card:focus-visible {
+
+    outline: 2px solid #52e185;
+
+    outline-offset: 4px;
+}
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+.certificates-footer {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 22px;
+
+    color: #6f7973;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+}
+
+
+.certificates-footer i {
+
+    margin-right: 5px;
+
+    color: #52e185;
+}
+
+
+/* ==================================================
+   MODAL
+================================================== */
+
+.certificate-modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 2000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 30px;
+
+    visibility: hidden;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:
+        opacity 0.35s ease,
+        visibility 0.35s ease;
+}
+
+
+.certificate-modal.is-open {
+
+    visibility: visible;
+
+    opacity: 1;
+
+    pointer-events: auto;
+}
+
+
+/* ==================================================
+   MODAL BACKDROP
+================================================== */
+
+.certificate-modal-backdrop {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        rgba(3, 5, 4, 0.88);
+
+    backdrop-filter: blur(14px);
+
+    -webkit-backdrop-filter: blur(14px);
+}
+
+
+/* ==================================================
+   MODAL CONTENT
+================================================== */
+
+.certificate-modal-content {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: min(1100px, 94vw);
+
+    max-height: 92vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #0d110f;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 40px 120px rgba(0, 0, 0, 0.65);
+
+    transform:
+        scale(0.88) translateY(20px);
+
+    transition:
+        transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+.certificate-modal.is-open .certificate-modal-content {
+
+    transform:
+        scale(1) translateY(0);
+}
+
+
+/* ==================================================
+   MODAL IMAGE
+================================================== */
+
+.certificate-modal-image-wrap {
+
+    width: 100%;
+
+    min-height: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #080b09;
+
+    padding: 25px;
+}
+
+
+.certificate-modal-image {
+
+    display: block;
+
+    max-width: 100%;
+
+    max-height: 76vh;
+
+    width: auto;
+
+    height: auto;
+
+    object-fit: contain;
+
+    border-radius: 8px;
+}
+
+
+/* ==================================================
+   CLOSE BUTTON
+================================================== */
+
+.certificate-modal-close {
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 15px;
+
+    z-index: 10;
+
+    width: 44px;
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    border-radius: 50%;
+
+    background: rgba(7, 9, 8, 0.75);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    color: #f0f4f1;
+
+    cursor: pointer;
+
+    transition:
+        background 0.25s ease,
+        border-color 0.25s ease,
+        color 0.25s ease;
+}
+
+
+.certificate-modal-close:hover {
+
+    background: rgba(82, 225, 133, 0.12);
+
+    border-color: #52e185;
+
+    color: #52e185;
+}
+
+
+/* ==================================================
+   MODAL FOOTER
+================================================== */
+
+.certificate-modal-footer {
+
+    min-height: 60px;
+
+    padding: 15px 22px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    background: #0d110f;
+}
+
+
+.modal-certificate-label {
+
+    color: #9ba49e;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.58rem;
+
+    letter-spacing: 0.15em;
+}
+
+
+.modal-certificate-number {
+
+    color: #52e185;
+
+    font-family: 'Space Mono', monospace;
+
+    font-size: 0.7rem;
+
+    font-weight: 700;
+}
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 991px) {
+
+    .certificates-section {
+
+        padding: 100px 0 65px;
+    }
+
+
+    .certificates-container {
+
+        width: calc(100% - 40px);
+    }
+
+
+    .certificates-heading-row {
+
+        display: block;
+    }
+
+
+    .certificates-description {
+
+        margin-top: 24px;
+
+        max-width: 600px;
+    }
+
+
+    .certificates-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-auto-rows: 220px;
+
+        gap: 14px;
+    }
+
+
+    .certificate-card-large {
+
+        grid-column: span 2;
+
+        grid-row: span 1;
+    }
+
+
+    .certificate-card:nth-child(2),
+    .certificate-card:nth-child(3) {
+
+        grid-column: span 1;
+
+        grid-row: span 1;
+    }
+
+
+    .certificate-card-wide {
+
+        grid-column: span 1;
+
+        grid-row: span 1;
+    }
+
+
+    .certificate-card:nth-child(5) {
+
+        grid-column: span 1;
+
+        grid-row: span 1;
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 600px) {
+
+    .certificates-section {
+
+        padding: 80px 0 50px;
+    }
+
+
+    .certificates-container {
+
+        width: calc(100% - 28px);
+    }
+
+
+    .certificates-header {
+
+        margin-bottom: 35px;
+    }
+
+
+    .certificates-label {
+
+        gap: 9px;
+
+        font-size: 0.58rem;
+
+        margin-bottom: 17px;
+    }
+
+
+    .certificates-line {
+
+        width: 28px;
+    }
+
+
+    .certificates-title {
+
+        font-size: clamp(2.8rem,
+                15vw,
+                4.5rem);
+
+        line-height: 0.9;
+    }
+
+
+    .certificates-description {
+
+        margin-top: 20px;
+
+        font-size: 0.75rem;
+
+        line-height: 1.65;
+    }
+
+
+    /* ==============================================
+       MOBILE GRID
+    ============================================== */
+
+    .certificates-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        grid-auto-rows: 170px;
+
+        gap: 10px;
+    }
+
+
+    .certificate-card {
+
+        border-radius: 14px;
+    }
+
+
+    /*
+       First certificate gets full width
+    */
+
+    .certificate-card-large {
+
+        grid-column: span 2;
+
+        grid-row: span 1;
+    }
+
+
+    /*
+       02 + 03 side by side
+    */
+
+    .certificate-card:nth-child(2),
+    .certificate-card:nth-child(3) {
+
+        grid-column: span 1;
+
+        grid-row: span 1;
+    }
+
+
+    /*
+       04 + 05 full width
+       gives the gallery a nice rhythm
+    */
+
+    .certificate-card-wide,
+    .certificate-card:nth-child(5) {
+
+        grid-column: span 2;
+
+        grid-row: span 1;
+    }
+
+
+    .certificate-card-number {
+
+        top: 10px;
+
+        left: 10px;
+
+        width: 34px;
+
+        height: 34px;
+
+        font-size: 0.55rem;
+    }
+
+
+    .certificate-view {
+
+        right: 12px;
+
+        bottom: 11px;
+
+        font-size: 0.5rem;
+
+        gap: 4px;
+    }
+
+
+    .certificate-view i {
+
+        font-size: 0.7rem;
+    }
+
+
+    .certificates-footer {
+
+        margin-top: 16px;
+
+        font-size: 0.48rem;
+    }
+
+
+    /* ==============================================
+       MOBILE MODAL
+    ============================================== */
+
+    .certificate-modal {
+
+        padding: 12px;
+    }
+
+
+    .certificate-modal-content {
+
+        width: 100%;
+
+        max-height: 94vh;
+
+        border-radius: 16px;
+    }
+
+
+    .certificate-modal-image-wrap {
+
+        padding: 12px;
+    }
+
+
+    .certificate-modal-image {
+
+        max-width: 100%;
+
+        max-height: 78vh;
+
+        border-radius: 5px;
+    }
+
+
+    .certificate-modal-close {
+
+        top: 9px;
+
+        right: 9px;
+
+        width: 40px;
+
+        height: 40px;
+    }
+
+
+    .certificate-modal-footer {
+
+        min-height: 50px;
+
+        padding: 12px 15px;
+    }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .certificate-card,
+    .certificate-image,
+    .certificate-modal,
+    .certificate-modal-content {
+
+        transition: none !important;
+    }
+
+}

@@ -1,0 +1,1581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Navigation</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans & Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300..800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="icon" type="image/png" href="data/icon-frame.png">
+    <link rel="apple-touch-icon" href="data/icon-frame.png">
+    <!-- Bootstrap 5 CSS & Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="certificates.css">
+    <link rel="stylesheet" href="website-transition.css">
+</head>
+
+<body class="bg-dark-theme">
+    <!-- ==================================================
+     PROFESSIONAL PORTFOLIO INTRO
+================================================== -->
+
+    <div class="portfolio-intro" id="portfolioIntro">
+
+        <div class="portfolio-intro-inner">
+
+            <div class="portfolio-logo-wrap">
+
+                <img src="Data/icon-frame.png" alt="DS" class="portfolio-intro-logo">
+
+            </div>
+
+
+            <div class="portfolio-intro-line">
+                <span></span>
+            </div>
+
+
+            <div class="portfolio-intro-meta">
+
+                <span>DILLI SHANKAR</span>
+
+                <span class="portfolio-intro-dot"></span>
+
+                <span>PORTFOLIO</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FIXED TOP HEADER WRAPPER -->
+    <header class="fixed-top-wrapper">
+
+        <!-- Floating Boxed Marquee -->
+        <div class="announcement-wrapper d-flex justify-content-center pt-3">
+            <div class="announcement-banner-boxed">
+                <div class="marquee-track">
+                    <span>AVAILABLE FOR Q3/Q4 2026 FULL-TIME ROLES & PROJECTS</span>
+                    <span class="dot">•</span>
+                    <span>AVAILABLE FOR Q3/Q4 2026 FULL-TIME ROLES & PROJECTS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- NAVBAR SECTION -->
+        <nav class="custom-navbar-wrapper" id="mainNavbar">
+            <div class="container d-flex align-items-center justify-content-between">
+
+                <!-- Left: Logo + Desktop Availability Badge -->
+                <div class="d-flex align-items-center gap-3">
+                    <a class="navbar-logo" href="#">
+                        <img src="Data/Dilli.png" alt="Logo" class="logo-img">
+                    </a>
+
+                    <div class="status-badge d-none d-lg-inline-flex align-items-center gap-2">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for work</span>
+                    </div>
+                </div>
+
+                <!-- Center: Capsule Dock Navigation (Desktop Only) -->
+                <div class="nav-dock d-none d-md-block">
+                    <ul class="nav-dock-list m-0 p-0 d-flex align-items-center list-unstyled">
+                        <li class="nav-dock-item">
+                            <a href="#about" class="nav-dock-link">
+                                <i class="bi bi-lightning-charge"></i>
+                                <span>Skills</span>
+                            </a>
+                        </li>
+                        <li class="nav-dock-item">
+                            <a href="#projects" class="nav-dock-link">
+                                <i class="bi bi-folder2-open"></i>
+                                <span>Projects</span>
+                            </a>
+                        </li>
+                        <li class="nav-dock-item">
+                            <a href="#experience" class="nav-dock-link">
+                                <i class="bi bi-briefcase"></i>
+                                <span>Experience</span>
+                            </a>
+                        </li>
+                        <li class="nav-dock-item">
+                            <a href="#certificates" class="nav-dock-link">
+                                <i class="bi bi-award"></i>
+                                <span>Certificate</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Desktop Right Actions -->
+                <div class="nav-actions d-none d-md-flex align-items-center gap-2">
+                    <a href="Data/Dillishankar.k-DA-Resume.pdf" download class="btn-outline-glass"
+                        title="Download Resume">
+                        <i class="bi bi-file-earmark-arrow-down"></i>
+                        <span>CV</span>
+                    </a>
+
+                    <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-sm">
+                        Let's Connect
+                    </a>
+
+                    <a href="#admin" class="btn-admin-icon" title="Admin Login" aria-label="Admin Login">
+                        <i class="bi bi-lock-fill"></i>
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="mobile-toggle-btn d-md-none" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+
+            </div>
+
+            <!-- Seamless Mobile Glass Drawer -->
+            <div class="collapse d-md-none" id="mobileNavMenu">
+                <div class="container mt-2">
+                    <div class="glass-mobile-card">
+
+                        <!-- Header Bar -->
+                        <div class="d-flex align-items-center justify-content-between mb-2">
+                            <div class="status-badge d-inline-flex align-items-center gap-2">
+                                <span class="status-dot"></span>
+                                <span class="status-text">Available for work</span>
+                            </div>
+                            <a href="#admin" class="btn-admin-icon-sm" title="Admin Login">
+                                <i class="bi bi-lock-fill"></i>
+                            </a>
+                        </div>
+
+                        <!-- Navigation Links -->
+                        <ul class="mobile-nav-list m-0 p-0 list-unstyled d-flex flex-column gap-1">
+                            <li>
+                                <a href="#skills" class="mobile-nav-link">
+                                    <i class="bi bi-lightning-charge"></i>
+                                    <span>Skills</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#projects" class="mobile-nav-link">
+                                    <i class="bi bi-folder2-open"></i>
+                                    <span>Projects</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#experience" class="mobile-nav-link">
+                                    <i class="bi bi-briefcase"></i>
+                                    <span>Experience</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#certificates" class="mobile-nav-link">
+                                    <i class="bi bi-award"></i>
+                                    <span>Certificate</span>
+                                </a>
+                            </li>
+                        </ul>
+
+                        <!-- Action Buttons -->
+                        <div class="mobile-drawer-actions d-flex flex-column gap-2 mt-3">
+                            <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-mobile text-center">
+                                Let's Connect
+                            </a>
+                            <a href="Data/Resume.pdf" download class="btn-outline-mobile text-center">
+                                <i class="bi bi-file-earmark-arrow-down me-2"></i>Download CV
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <main>
+        <section class="hero-section text-center">
+            <!-- Background Grid Overlay -->
+            <div class="hero-grid-bg"></div>
+
+            <div class="container position-relative z-2">
+
+                <!-- Main Headline -->
+                <h1 class="hero-title display-2 fw-bold mb-4">
+                    Every Person has a story, <br>
+
+                    <!-- Mint Glass Selection Box -->
+                    <span class="selection-box-wrapper d-inline-block position-relative mt-2">
+                        <span class="box-node top-left"></span>
+                        <span class="box-node top-right"></span>
+                        <span class="box-node bottom-left"></span>
+                        <span class="box-node bottom-right"></span>
+
+                        <div class="me-cursor-chip">
+                            <svg class="pointer-arrow" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 3l7 18 3-7 7-3L3 3z" />
+                            </svg>
+                            <span class="me-label">Me</span>
+                        </div>
+
+                        <span class="highlight-text">here's mine!</span>
+                    </span>
+                </h1>
+
+                <!-- Subtitle -->
+                <p class="hero-subtitle mx-auto mt-3">
+                    Transforming ideas into reality • Crafting modern web apps & UI/UX experiences
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================================================
+     ABOUT BENTO SECTION
+================================================== -->
+
+    <section class="about-bento-section py-5" id="about">
+        <div class="projects-header">
+
+            <div class="projects-label">
+                <span class="projects-number">02</span>
+                <span class="projects-line"></span>
+                <span>ABOUT ME</span>
+            </div>
+
+            <div class="projects-heading-row">
+
+                <h2 class="projects-title">
+                    What
+                    <span>Powers Me.</span>
+                    <br>
+                </h2>
+
+                <p class="projects-description">
+                    A snapshot of the skills and tools I use to build seamless,
+                    scalable and user-friendly digital experiences.
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ==================================================
+             BENTO GRID
+        ================================================== -->
+        <br>
+        <br>
+        <div class="row g-3 align-items-stretch">
+
+
+            <!-- ==================================================
+                 1. LEFT COLUMN — PROFILE IMAGE CARD
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 about-reveal about-card-1">
+
+                <div class="bento-card bento-image-card position-relative overflow-hidden h-100">
+
+                    <!-- Profile Image -->
+                    <img src="Data/pic-of-mee1.png" alt="Dillibabu Portrait" class="bento-profile-img">
+
+
+                    <!-- Image Overlay -->
+                    <div class="bento-img-overlay p-3 p-xl-4
+                                d-flex flex-column justify-content-end">
+
+                        <!-- Signature -->
+                        <img src="Data/signature.png" alt="Dillibabu Signature" style="
+                                width: 150px;
+                                height: auto;
+                                display: block;
+                                margin-bottom: 6px;
+                             ">
+
+
+                        <!-- Description -->
+                        <p class="text-muted-light small m-0">
+                            Crafting high-performance digital products &
+                            intuitive interfaces.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 2. CENTER COLUMN — ABOUT + CONNECT
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-6 d-flex flex-column h-100 gap-3">
+
+
+                <!-- ==================================================
+                     ABOUT ME CARD
+                ================================================== -->
+
+                <div class="bento-card p-3 p-xl-4 flex-grow-1
+                            d-flex flex-column justify-content-start
+                            about-reveal about-card-2">
+
+
+                    <!-- Card Header -->
+                    <div class="d-flex align-items-center gap-2 mb-3">
+
+                        <!-- Person Icon -->
+                        <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
+                            </path>
+
+                            <circle cx="12" cy="7" r="4">
+                            </circle>
+
+                        </svg>
+
+
+                        <h3 class="h4 fw-bold text-white m-0">
+                            About Me
+                        </h3>
+
+                    </div>
+
+
+                    <!-- Typewriter Text -->
+                    <p class="bento-text typewriter-text m-0" style="color: lightgray;">
+
+                        <span id="aboutTypewriter"></span>
+
+                        <span class="typewriter-cursor">
+                            |
+                        </span>
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- ==================================================
+                     CONNECT & RESUME CARD
+                ================================================== -->
+
+                <div class="bento-card p-3 p-xl-4
+                            about-reveal about-card-3">
+
+
+                    <!-- Card Header -->
+                    <div class="d-flex align-items-center
+                                justify-content-between mb-3">
+
+                        <span class="small fw-semibold text-uppercase
+                                     tracking-wider text-muted">
+
+                            Connect & Resume
+
+                        </span>
+
+
+                        <!-- CV Button -->
+                        <a href="Data/Dillishankar.k-DA-Resume.pdf" download class="btn-cv-download">
+
+                            <i class="bi bi-file-earmark-arrow-down-fill me-1">
+                            </i>
+
+                            CV
+
+                        </a>
+
+                    </div>
+
+
+
+                    <!-- Social Icons -->
+                    <div class="social-icon-grid d-flex
+                                align-items-center
+                                justify-content-between
+                                gap-2">
+
+
+                        <!-- GitHub -->
+                        <a href="https://github.com" target="_blank" class="social-box" title="GitHub">
+
+                            <i class="bi bi-github"></i>
+
+                        </a>
+
+
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com" target="_blank" class="social-box" title="LinkedIn">
+
+                            <i class="bi bi-linkedin"></i>
+
+                        </a>
+
+
+                        <!-- Email -->
+                        <a href="mailto:ramyarams5143@gmail.com" class="social-box" title="Email">
+
+                            <i class="bi bi-envelope-fill"></i>
+
+                        </a>
+
+
+                        <!-- Portfolio -->
+                        <a href="#" class="social-box" title="Portfolio">
+
+                            <i class="bi bi-globe"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 3. RIGHT COLUMN — CORE TECH STACK
+            ================================================== -->
+
+            <div class="col-lg-4 col-md-12">
+
+                <div class="bento-card bento-skills-card p-3 p-xl-4
+                            h-100 d-flex flex-column
+                            justify-content-between overflow-hidden
+                            about-reveal about-card-4">
+
+
+                    <!-- Card Header -->
+                    <div>
+
+                        <div class="d-flex align-items-center gap-2 mb-1">
+
+
+                            <!-- Stack Icon -->
+                            <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+
+                                <polygon points="12 2 2 7 12 12 22 7 12 2">
+                                </polygon>
+
+                                <polyline points="2 17 12 22 22 17">
+                                </polyline>
+
+                                <polyline points="2 12 12 17 22 12">
+                                </polyline>
+
+                            </svg>
+
+
+                            <h3 class="h4 fw-bold text-white m-0">
+                                Core Tech Stack
+                            </h3>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ==================================================
+                         DUAL COLUMN VERTICAL SCROLL
+                    ================================================== -->
+
+                    <div class="vertical-marquee-wrapper d-flex gap-2 my-2">
+
+
+                        <!-- ==================================================
+                             LEFT COLUMN — UPWARD
+                        ================================================== -->
+
+                        <div class="vertical-marquee marquee-up">
+
+                            <div class="vertical-track">
+
+
+                                <!-- React -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                        alt="React">
+
+                                    <span>
+                                        React
+                                    </span>
+
+                                </div>
+
+
+                                <!-- JavaScript -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                        alt="JavaScript">
+
+                                    <span>
+                                        JavaScript
+                                    </span>
+
+                                </div>
+
+
+                                <!-- HTML -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                        alt="HTML5">
+
+                                    <span>
+                                        HTML5
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Figma -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                        alt="Figma">
+
+                                    <span>
+                                        Figma
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Python -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                        alt="Python">
+
+                                    <span>
+                                        Python
+                                    </span>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     LOOP DUPLICATES
+                                ================================================== -->
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+                                        alt="React">
+
+                                    <span>
+                                        React
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                                        alt="JavaScript">
+
+                                    <span>
+                                        JavaScript
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"
+                                        alt="HTML5">
+
+                                    <span>
+                                        HTML5
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"
+                                        alt="Figma">
+
+                                    <span>
+                                        Figma
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+                                        alt="Python">
+
+                                    <span>
+                                        Python
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- ==================================================
+                             RIGHT COLUMN — DOWNWARD
+                        ================================================== -->
+
+                        <div class="vertical-marquee marquee-down">
+
+                            <div class="vertical-track">
+
+
+                                <!-- Django -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                                        alt="Django" class="invert-icon">
+
+                                    <span>
+                                        Django
+                                    </span>
+
+                                </div>
+
+
+                                <!-- MySQL -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                        alt="MySQL">
+
+                                    <span>
+                                        MySQL
+                                    </span>
+
+                                </div>
+
+
+                                <!-- CSS -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                        alt="CSS3">
+
+                                    <span>
+                                        CSS3
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Git -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                        alt="Git">
+
+                                    <span>
+                                        Git
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Bootstrap -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                        alt="Bootstrap">
+
+                                    <span>
+                                        Bootstrap
+                                    </span>
+
+                                </div>
+
+
+
+                                <!-- ==================================================
+                                     LOOP DUPLICATES
+                                ================================================== -->
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg"
+                                        alt="Django" class="invert-icon">
+
+                                    <span>
+                                        Django
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                                        alt="MySQL">
+
+                                    <span>
+                                        MySQL
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"
+                                        alt="CSS3">
+
+                                    <span>
+                                        CSS3
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+                                        alt="Git">
+
+                                    <span>
+                                        Git
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg"
+                                        alt="Bootstrap">
+
+                                    <span>
+                                        Bootstrap
+                                    </span>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Bottom Description -->
+                    <div class="mt-2">
+
+                        <p class="text-muted-light small mb-0">
+                            A modern toolkit for building scalable,
+                            intuitive and high-performance digital experiences.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        </div>
+
+    </section>
+    <!-- ==================================================
+     PROJECTS SECTION
+     Horizontal Scroll Showcase
+================================================== -->
+
+    <section class="projects-section" id="projects">
+
+        <div class="projects-sticky">
+
+            <!-- ==================================================
+             PROJECT HEADER
+        ================================================== -->
+
+            <div class="projects-header">
+
+                <div class="projects-label">
+                    <span class="projects-number">03</span>
+                    <span class="projects-line"></span>
+                    <span>FEATURED WORK</span>
+                </div>
+
+                <div class="projects-heading-row">
+
+                    <h2 class="projects-title">
+                        Selected
+                        <span>projects.</span>
+                        <br>
+                        Built to
+                        <em>create.</em>
+                    </h2>
+
+                    <p class="projects-description">
+                        A collection of digital experiences, applications
+                        and interfaces built with technology, creativity
+                        and problem-solving in mind.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+             HORIZONTAL PROJECT TRACK
+        ================================================== -->
+
+            <div class="projects-viewport">
+
+                <div class="projects-track" id="projectsTrack">
+
+
+                    <!-- ==================================================
+                     PROJECT 01
+                ================================================== -->
+
+                    <article class="project-card project-card-01">
+
+                        <div class="project-image-wrap">
+
+                            <img src="Data/projects/elt-project.png" alt="Project 01" class="project-image">
+
+                            <div class="project-number">
+                                01
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-meta">
+                                <span>PYTHON</span>
+                                <span>YOLO</span>
+                                <span>OPENCV</span>
+                            </div>
+
+                            <h3>
+                                Object Detection
+                            </h3>
+
+                            <p>
+                                Computer vision project focused on detecting
+                                objects from images and video using modern
+                                deep learning techniques.
+                            </p>
+
+                            <a href="https://elt-pipeline.netlify.app/" class="project-link">
+                                View Project
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                     PROJECT 02
+                ================================================== -->
+
+                    <article class="project-card project-card-02">
+
+                        <div class="project-image-wrap">
+
+                            <img src="Data/projects/project1.jpeg" alt="Project 02" class="project-image">
+
+                            <div class="project-number">
+                                02
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-meta">
+                                <span>PYTHON</span>
+                                <span>FLASK</span>
+                                <span>WEB</span>
+                            </div>
+
+                            <h3>
+                                Calorie Checker
+                            </h3>
+
+                            <p>
+                                A simple web experience designed to help users
+                                check and understand calorie information
+                                through an intuitive interface.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                View Project
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                     PROJECT 03
+                ================================================== -->
+
+                    <article class="project-card project-card-03">
+
+                        <div class="project-image-wrap">
+
+                            <img src="Data/projects/project2.png" alt="Project 03" class="project-image">
+
+                            <div class="project-number">
+                                03
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-meta">
+                                <span>UI/UX</span>
+                                <span>FIGMA</span>
+                                <span>RESEARCH</span>
+                            </div>
+
+                            <h3>
+                                SheCare
+                            </h3>
+
+                            <p>
+                                A user-focused mobile experience designed
+                                around accessibility, usability and
+                                thoughtful interaction design.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                View Case Study
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                     PROJECT 04
+                ================================================== -->
+
+                    <article class="project-card project-card-04">
+
+                        <div class="project-image-wrap">
+
+                            <img src="Data/projects/project2.png" alt="Project 04" class="project-image">
+
+                            <div class="project-number">
+                                04
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-meta">
+                                <span>UI/UX</span>
+                                <span>FIGMA</span>
+                                <span>PROTOTYPE</span>
+                            </div>
+
+                            <h3>
+                                Adaptive Workspace
+                            </h3>
+
+                            <p>
+                                A modern workspace concept focused on creating
+                                flexible and intuitive digital experiences.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                View Project
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                     PROJECT 05
+                ================================================== -->
+
+                    <article class="project-card project-card-05">
+
+                        <div class="project-image-wrap">
+
+                            <img src="Data/projects/project3.png" alt="Project 05" class="project-image">
+
+                            <div class="project-number">
+                                05
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-meta">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>BOOTSTRAP</span>
+                            </div>
+
+                            <h3>
+                                Hotel Booking
+                            </h3>
+
+                            <p>
+                                A responsive hotel booking interface focused
+                                on clean layouts, responsive design and
+                                straightforward user interaction.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                View Project
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- ==================================================
+                     PROJECT 06
+                ================================================== -->
+
+                    <article class="project-card project-card-06">
+
+                        <div class="project-image-wrap">
+
+                            <img src="Data/projects/project4.png" alt="Project 06" class="project-image">
+
+                            <div class="project-number">
+                                06
+                            </div>
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <div class="project-meta">
+                                <span>SQL</span>
+                                <span>PANDAS</span>
+                                <span>POWER BI</span>
+                            </div>
+
+                            <h3>
+                                Data Analytics
+                            </h3>
+
+                            <p>
+                                An analytics project focused on transforming
+                                raw information into useful insights,
+                                visualizations and business decisions.
+                            </p>
+
+                            <a href="#" class="project-link">
+                                View Dashboard
+                                <i class="bi bi-arrow-up-right"></i>
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ==================================================
+                     END CARD
+                ================================================== -->
+
+                    <div class="projects-end-card">
+
+                        <span class="projects-end-label">
+                            END OF PROJECTS
+                        </span>
+
+                        <div class="projects-end-icon">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>
+
+                        <h3>
+                            More coming soon.
+                        </h3>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================================
+             SCROLL PROGRESS
+        ================================================== -->
+
+            <div class="projects-progress">
+
+                <div class="projects-progress-track">
+                    <div class="projects-progress-bar" id="projectsProgressBar">
+                    </div>
+                </div>
+
+                <span class="projects-scroll-text">
+                    SCROLL TO EXPLORE
+                </span>
+
+            </div>
+
+        </div>
+
+    </section>
+    <br>
+
+    <!-- ==================================================
+     EXPERIENCE & WHY HIRE ME SECTIONS
+================================================== -->
+
+    <section class="exp-hire-section py-5" id="experience">
+        <div class="container">
+
+            <!-- ----------------------------------------------
+             1. WORK EXPERIENCE TIMELINE
+        ---------------------------------------------- -->
+            <div class="projects-header text-center mb-5">
+                <div class="projects-label justify-content-center">
+                    <span class="projects-number">03</span>
+                    <span class="projects-line"></span>
+                    <span>CAREER PATH</span>
+                </div>
+                <h2 class="projects-title mx-auto text-center">
+                    My Work <span>Experience.</span>
+                </h2>
+            </div>
+
+            <div class="timeline-wrapper mb-5">
+                <div class="timeline-central-line"></div>
+
+                <!-- Experience Item 01 (Real Data) -->
+                <div class="timeline-row">
+                    <div class="timeline-left">
+                        <h4 class="timeline-company">PROLYNC</h4>
+                        <p class="timeline-date">Dec 2025 – Feb 2026</p>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="timeline-node active-node"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <h4 class="timeline-role">Full Stack Developer Intern</h4>
+                        <p class="timeline-desc">
+                            Contributed to full-stack web application development, optimizing backend services, refining
+                            database workflows, and building responsive user interfaces.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 02 (Demo Data) -->
+                <div class="timeline-row">
+                    <div class="timeline-left">
+                        <h4 class="timeline-company">Dilli Web Studio</h4>
+                        <p class="timeline-date">Aug 2026 – Oct 2026</p>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="timeline-node"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <h4 class="timeline-role">Frontend & UI/UX Developer</h4>
+                        <p class="timeline-desc">
+                            Designed glassmorphic web user interfaces, custom dashboard layouts, and mobile-responsive
+                            web applications using modern web stacks.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 03 (Demo Data) -->
+                <div class="timeline-row">
+                    <div class="timeline-left">
+                        <h4 class="timeline-company">Bigspace Coworking</h4>
+                        <p class="timeline-date">Mar 2026 – May 2026</p>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="timeline-node"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <h4 class="timeline-role">Web Developer Consultant</h4>
+                        <p class="timeline-desc">
+                            Built high-converting web landing pages, booking catalogs, and structured UI components to
+                            streamline user interactions.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Experience Item 04 (Demo Data) -->
+                <div class="timeline-row">
+                    <div class="timeline-left">
+                        <h4 class="timeline-company">SLA Institute</h4>
+                        <p class="timeline-date">Jun 2025 – Nov 2025</p>
+                    </div>
+                    <div class="timeline-center">
+                        <div class="timeline-node"></div>
+                    </div>
+                    <div class="timeline-right">
+                        <h4 class="timeline-role">MERN Full Stack Developer Trainee</h4>
+                        <p class="timeline-desc">
+                            Completed intensive hands-on full-stack certification working with MongoDB, Express.js,
+                            React, Node.js, and REST APIs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- ==================================================
+     WHY HIRE ME CARD WITH ANGLED MARQUEE STRIPS
+================================================== -->
+            <div class="why-hire-card p-4 p-lg-5 position-relative overflow-hidden">
+
+                <!-- 1. BACK RIBBON (Passes BEHIND image) -->
+                <div class="angled-ribbon ribbon-back">
+                    <div class="ribbon-track">
+                        <span>FULL-STACK DEVELOPMENT</span> <span class="mint">+</span>
+                        <span>DATA ANALYTICS</span> <span class="mint">+</span>
+                        <span>UI/UX DESIGN</span> <span class="mint">+</span>
+                        <span>REACT & NODE.JS</span> <span class="mint">+</span>
+                        <!-- Duplicate for infinite loop -->
+                        <span>FULL-STACK DEVELOPMENT</span> <span class="mint">+</span>
+                        <span>DATA ANALYTICS</span> <span class="mint">+</span>
+                        <span>UI/UX DESIGN</span> <span class="mint">+</span>
+                        <span>REACT & NODE.JS</span> <span class="mint">+</span>
+                        <span>FULL-STACK DEVELOPMENT</span> <span class="mint">+</span>
+                        <span>DATA ANALYTICS</span> <span class="mint">+</span>
+                        <span>UI/UX DESIGN</span> <span class="mint">+</span>
+                        <span>REACT & NODE.JS</span> <span class="mint">+</span>
+                    </div>
+                </div>
+
+                <div class="row align-items-center g-4 position-relative z-2">
+
+                    <!-- Left Column: Image Card -->
+                    <div class="col-lg-5 text-center position-relative">
+                        <div class="hire-img-wrapper mx-auto">
+                            <img src="Data/pic-of-mee1.png" alt="Dillishankar K." class="hire-person-img">
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Content -->
+                    <div class="col-lg-7">
+                        <div class="hire-content ps-lg-3">
+                            <h2 class="hire-title mb-3">
+                                Why <span class="text-mint">Hire me?</span>
+                            </h2>
+
+                            <p class="hire-desc mb-4">
+                                I bring a strong foundation in full-stack web development and data analytics. I craft
+                                high-performance, scalable web applications with intuitive design, focused on solving
+                                real-world business problems.
+                            </p>
+
+                            <!-- Animated Counters -->
+                            <div class="row g-4 mb-4">
+                                <div class="col-6 col-sm-5">
+                                    <h3 class="counter-number mb-1">
+                                        <span class="counter-val" data-target="12">0</span>+
+                                    </h3>
+                                    <p class="counter-label m-0">Projects Completed</p>
+                                </div>
+
+                                <div class="col-6 col-sm-5">
+                                    <h3 class="counter-number mb-1">
+                                        <span class="counter-val" data-target="100">0</span>%
+                                    </h3>
+                                    <p class="counter-label m-0">Dedication & Satisfaction</p>
+                                </div>
+                            </div>
+
+                            <!-- Mail Action Button -->
+                            <a href="mailto:ramyarams5143@gmail.com?subject=Hiring%20Inquiry%20-%20Dillishankar&body=Hi%20Dillishankar,%20I%20would%20like%20to%20discuss%20an%20opportunity%20with%20you."
+                                class="btn-hire-me">
+                                Hire me
+                                <i class="bi bi-arrow-right-short fs-5 ms-1"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ==================================================
+     CERTIFICATES SECTION
+     GRID GALLERY
+================================================== -->
+
+    <section class="certificates-section" id="certificates">
+
+        <div class="certificates-container">
+
+            <!-- HEADER -->
+            <div class="certificates-header">
+
+                <div class="certificates-label">
+
+                    <span class="certificates-number">
+                        04
+                    </span>
+
+                    <span class="certificates-line"></span>
+
+                    <span>
+                        CERTIFICATES
+                    </span>
+
+                </div>
+
+
+                <div class="certificates-heading-row">
+
+                    <h2 class="certificates-title">
+
+                        Learning,
+                        <br>
+
+                        <em>verified.</em>
+
+                    </h2>
+
+
+                    <p class="certificates-description">
+
+                        A collection of certifications that reflect
+                        my continuous learning, technical growth
+                        and commitment to improving my skills.
+
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==========================================
+             CERTIFICATE GRID
+        =========================================== -->
+
+            <div class="certificates-grid">
+
+
+                <!-- CERTIFICATE 01 -->
+
+                <button class="certificate-card certificate-card-large" type="button"
+                    data-certificate="Data/certificate/certificate1.jpeg" aria-label="View Certificate 01">
+
+                    <img src="Data/certificate/certificate1.jpeg" alt="Certificate 01" class="certificate-image">
+
+                    <span class="certificate-overlay"></span>
+
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- CERTIFICATE 02 -->
+
+                <button class="certificate-card" type="button" data-certificate="Data/certificate/certificate2.jpeg"
+                    aria-label="View Certificate 02">
+
+                    <img src="Data/certificate/certificate2.jpeg" alt="Certificate 02" class="certificate-image">
+
+                    <span class="certificate-overlay"></span>
+
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- CERTIFICATE 03 -->
+
+                <button class="certificate-card" type="button" data-certificate="Data/certificate/certificate3.jpeg"
+                    aria-label="View Certificate 03">
+
+                    <img src="Data/certificate/certificate3.jpeg" alt="Certificate 03" class="certificate-image">
+
+                    <span class="certificate-overlay"></span>
+
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- CERTIFICATE 04 -->
+
+                <button class="certificate-card certificate-card-wide" type="button"
+                    data-certificate="Data/certificate/certificate4.jpg" aria-label="View Certificate 04">
+
+                    <img src="Data/certificate/certificate4.jpg" alt="Certificate 04" class="certificate-image">
+
+                    <span class="certificate-overlay"></span>
+
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+
+                </button>
+
+
+
+                <!-- CERTIFICATE 05 -->
+
+                <button class="certificate-card certificate-card-wide" type="button"
+                    data-certificate="Data/certificate/certificate1.jpeg" aria-label="View Certificate 05">
+
+                    <img src="Data/certificate/certificate1.jpeg" alt="Certificate 05" class="certificate-image">
+
+                    <span class="certificate-overlay"></span>
+
+                    <span class="certificate-view">
+                        VIEW
+                        <i class="bi bi-arrow-up-right"></i>
+                    </span>
+
+                </button>
+
+            </div>
+
+
+            <!-- SMALL FOOTER NOTE -->
+
+            <div class="certificates-footer">
+
+                <span>
+                    <i class="bi bi-cursor"></i>
+                    Click a certificate to view
+                </span>
+
+                <span>
+                    CERTIFICATES
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <!-- ==================================================
+         CERTIFICATE ZOOM MODAL
+    ================================================== -->
+
+        <div class="certificate-modal" id="certificateModal" aria-hidden="true">
+
+            <div class="certificate-modal-backdrop"></div>
+
+
+            <div class="certificate-modal-content" role="dialog" aria-modal="true" aria-label="Certificate preview">
+
+                <button type="button" class="certificate-modal-close" id="certificateModalClose"
+                    aria-label="Close certificate">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+
+
+                <div class="certificate-modal-image-wrap">
+
+                    <img src="" alt="Certificate preview" id="certificateModalImage" class="certificate-modal-image">
+
+                </div>
+
+
+                <div class="certificate-modal-footer">
+
+                    <span class="modal-certificate-label">
+                        CERTIFICATE
+                    </span>
+
+                    <span id="certificateModalNumber" class="modal-certificate-number">
+                        01
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="projects.js"></script>
+    <script src="certificates.js"></script>
+    <script src="website-transition.js"></script>
+
+</body>
+
+</html>
