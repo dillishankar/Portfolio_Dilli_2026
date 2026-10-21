@@ -5,9 +5,6 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const certificateCards =
-        document.querySelectorAll(".certificate-card");
-
     const modal =
         document.getElementById("certificateModal");
 
@@ -31,7 +28,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ================================================== */
 
     if (
-        !certificateCards.length ||
         !modal ||
         !modalImage ||
         !modalClose
@@ -146,16 +142,13 @@ document.addEventListener("DOMContentLoaded", () => {
        CARD CLICK
     ================================================== */
 
-    certificateCards.forEach((card) => {
+    /* One listener for the whole page, so certificates added from the
+       Admin Panel (after the page loads) open the viewer too. */
+    document.addEventListener("click", (event) => {
 
-        card.addEventListener(
-            "click",
-            () => {
+        const card = event.target.closest(".certificate-card");
 
-                openCertificate(card);
-
-            }
-        );
+        if (card) openCertificate(card);
 
     });
 

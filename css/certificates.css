@@ -250,6 +250,15 @@
 }
 
 
+/* 06+ — certificates added from the Admin Panel */
+@media (min-width: 992px) {
+
+    .certificate-card:nth-child(n+6) {
+        grid-column: span 4;
+        grid-row: span 1;
+    }
+}
+
 /* ==================================================
    IMAGE
 ================================================== */

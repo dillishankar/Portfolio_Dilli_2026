@@ -33,6 +33,23 @@ body.bg-dark-theme {
     overflow-x: hidden;
 }
 
+/* iOS Safari ignores `background-attachment: fixed` and would stretch the gradient across the whole
+   page height. Re-create the same fixed gradient with a fixed layer, on iOS only. */
+@supports (-webkit-touch-callout: none) {
+    body.bg-dark-theme {
+        background: none;
+    }
+
+    body.bg-dark-theme::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+        background: linear-gradient(180deg, #002B80 0%, #0052FF 45%, #6BA3FF 80%, #E3EFFF 100%);
+    }
+}
+
 /* ==================================================
    FIXED HEADER WRAPPER — SEAMLESS GLASS BLEND
 ================================================== */
@@ -169,6 +186,12 @@ body.bg-dark-theme {
     animation: statusPulse 1.8s infinite ease-in-out;
 }
 
+/* Admin Panel: "not available" state (amber dot instead of white) */
+.status-badge.is-unavailable .status-dot,
+.status-badge.is-unavailable .status-dot::after {
+    background-color: #FFB020;
+}
+
 @keyframes statusPulse {
     0% {
         transform: scale(0.8);
@@ -296,6 +319,10 @@ body.bg-dark-theme {
 }
 
 .glass-mobile-card {
+    max-height: calc(100vh - 150px);
+    max-height: calc(100dvh - 150px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
     background: rgba(0, 43, 128, 0.95);
     border: 1px solid var(--border-color);
     backdrop-filter: blur(24px);
@@ -1114,7 +1141,36 @@ body.bg-dark-theme {
     }
 }
 
+/* Small laptops / tablets in landscape: the full desktop nav needs ~990px but only 936px is available,
+   so the groups touched and the "Available for work" badge wrapped onto two lines.
+   Same elements, slightly tighter spacing. */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .custom-navbar-wrapper .status-badge {
+        white-space: nowrap;
+    }
+
+    .nav-dock-link {
+        padding: 7px 11px;
+        gap: 6px;
+    }
+
+    .btn-outline-glass {
+        padding: 7px 13px;
+    }
+
+    .btn-mint-sm {
+        padding: 8px 15px;
+    }
+}
+
 @media (max-width: 991px) {
+
+    /* Tapping a nav link scrolls the section's top edge to the screen top - under the ~128px fixed header.
+       Reserve that space so the section label/heading stays visible after navigating. */
+    html {
+        scroll-padding-top: 96px;
+    }
+
     .timeline-central-line {
         left: 20px;
     }
@@ -1133,7 +1189,7 @@ body.bg-dark-theme {
 
     .timeline-center {
         position: absolute;
-        left: 0;
+        left: 10px;
         top: 0;
         width: 20px;
     }

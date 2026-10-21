@@ -1,0 +1,102 @@
+/* ==================================================
+   CUSTOM CURSOR — DOT + TRAILING RING
+   Only active on devices with a mouse (see js/cursor.js).
+   Touch devices keep their normal behaviour.
+================================================== */
+
+/* Hide the native cursor only when the custom one is running */
+html.has-custom-cursor,
+html.has-custom-cursor * {
+    cursor: none !important;
+}
+
+/* Keep the normal text cursor inside form fields */
+html.has-custom-cursor input,
+html.has-custom-cursor textarea,
+html.has-custom-cursor select {
+    cursor: text !important;
+}
+
+.cursor-dot,
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    pointer-events: none;
+    border-radius: 50%;
+    opacity: 0;
+    will-change: transform;
+    transition: opacity 0.25s ease;
+}
+
+/* Small solid dot — follows the mouse exactly */
+.cursor-dot {
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+    background: #FFFFFF;
+    box-shadow: 0 0 0 1px rgba(0, 34, 102, 0.45);
+}
+
+/* Soft ring — follows with a smooth delay */
+.cursor-ring {
+    width: 38px;
+    height: 38px;
+    margin: -19px 0 0 -19px;
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    box-shadow:
+        0 0 0 1px rgba(0, 34, 102, 0.25),
+        0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+/* Inner wrapper scales so the JS transform (position) is never overwritten */
+.cursor-ring-inner {
+    position: absolute;
+    inset: -1.5px;
+    border-radius: 50%;
+    background: transparent;
+    transition:
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        background 0.3s ease;
+}
+
+.cursor-dot.is-active,
+.cursor-ring.is-active {
+    opacity: 1;
+}
+
+/* Hovering a link / button */
+.cursor-ring.is-hover .cursor-ring-inner {
+    transform: scale(1.55);
+    background: rgba(255, 255, 255, 0.18);
+}
+
+.cursor-dot.is-hover {
+    opacity: 0;
+}
+
+/* Mouse pressed */
+.cursor-ring.is-down .cursor-ring-inner {
+    transform: scale(0.8);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.cursor-ring.is-hover.is-down .cursor-ring-inner {
+    transform: scale(1.25);
+}
+
+/* Over text fields or when the mouse leaves the window */
+.cursor-dot.is-hidden,
+.cursor-ring.is-hidden {
+    opacity: 0;
+}
+
+/* Never show on touch / no-hover devices, even if JS were to run */
+@media (hover: none), (pointer: coarse) {
+
+    .cursor-dot,
+    .cursor-ring {
+        display: none !important;
+    }
+}

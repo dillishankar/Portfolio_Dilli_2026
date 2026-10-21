@@ -4,6 +4,8 @@
 
 .about-bento-section {
     background-color: transparent;
+    padding: 60px 0;
+    overflow-x: clip;
 }
 
 /* ==================================================
@@ -232,11 +234,11 @@
 }
 
 .marquee-up .vertical-track {
-    animation: marqueeUp 18s linear infinite;
+    animation: marqueeUp 25s linear infinite;
 }
 
 .marquee-down .vertical-track {
-    animation: marqueeDown 18s linear infinite;
+    animation: marqueeDown 22s linear infinite;
 }
 
 .vertical-marquee:hover .vertical-track {
@@ -280,159 +282,279 @@
     filter: invert(1);
 }
 
+.white-icon {
+    filter: brightness(0) invert(1);
+}
+
+/* ==================================================
+   ABOUT — SCROLL ANIMATIONS
+   Applies to the About section only. script.js adds
+   .about-anim, then adds .is-visible as each element
+   scrolls into view. Animations use fill-mode
+   "backwards" so hover effects keep working afterwards.
+================================================== */
+
+.about-bento-section {
+    --about-ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Hidden until it scrolls into view */
+.about-anim .about-reveal:not(.is-visible) {
+    opacity: 0;
+}
+
+/* Delays */
+.about-anim .about-delay-1 {
+    --about-delay: 0.1s;
+}
+
+.about-anim .about-delay-2 {
+    --about-delay: 0.2s;
+}
+
+.about-anim .about-card-2 {
+    --about-delay: 0.12s;
+}
+
+.about-anim .about-card-3 {
+    --about-delay: 0.24s;
+}
+
+.about-anim .about-card-4 {
+    --about-delay: 0.18s;
+}
+
+/* Main slide-ins: left → right and right → left */
+.about-anim .about-from-left.is-visible {
+    animation: aboutSlideLeft 0.9s var(--about-ease) var(--about-delay, 0s) backwards;
+}
+
+.about-anim .about-from-right.is-visible {
+    animation: aboutSlideRight 0.9s var(--about-ease) var(--about-delay, 0s) backwards;
+}
+
+/* Card 1 — portrait zooms out gently, signature + text slide in */
+.about-anim .about-card-1.is-visible .bento-profile-img {
+    animation: aboutZoomOut 1.6s var(--about-ease) backwards;
+}
+
+.about-anim .about-card-1.is-visible .bento-img-overlay img {
+    animation: aboutSlideLeft 0.8s var(--about-ease) 0.45s backwards;
+}
+
+.about-anim .about-card-1.is-visible .bento-img-overlay p {
+    animation: aboutSlideRight 0.8s var(--about-ease) 0.6s backwards;
+}
+
+/* Header icons pop in, titles slide in */
+.about-anim .about-card-2.is-visible .header-icon-svg,
+.about-anim .about-card-4.is-visible .header-icon-svg {
+    animation: aboutPop 0.7s var(--about-ease) 0.4s backwards;
+}
+
+.about-anim .about-card-2.is-visible h3,
+.about-anim .about-card-4.is-visible h3 {
+    animation: aboutSlideLeft 0.7s var(--about-ease) 0.5s backwards;
+}
+
+/* Card 2 — About text */
+.about-anim .about-card-2.is-visible .typewriter-text {
+    animation: aboutFade 0.9s ease 0.6s backwards;
+}
+
+/* Card 3 — Connect & Resume */
+.about-anim .about-card-3.is-visible .btn-cv-download {
+    animation: aboutSlideRight 0.7s var(--about-ease) 0.5s backwards;
+}
+
+.about-anim .about-card-3.is-visible .social-box {
+    animation: aboutRise 0.6s var(--about-ease) backwards;
+}
+
+.about-anim .about-card-3.is-visible .social-box:nth-child(1) {
+    animation-delay: 0.55s;
+}
+
+.about-anim .about-card-3.is-visible .social-box:nth-child(2) {
+    animation-delay: 0.65s;
+}
+
+.about-anim .about-card-3.is-visible .social-box:nth-child(3) {
+    animation-delay: 0.75s;
+}
+
+.about-anim .about-card-3.is-visible .social-box:nth-child(4) {
+    animation-delay: 0.85s;
+}
+
+/* Card 4 — Tech stack columns come from opposite sides */
+.about-anim .about-card-4.is-visible .vertical-marquee.marquee-up {
+    animation: aboutSlideLeft 0.9s var(--about-ease) 0.55s backwards;
+}
+
+.about-anim .about-card-4.is-visible .vertical-marquee.marquee-down {
+    animation: aboutSlideRight 0.9s var(--about-ease) 0.7s backwards;
+}
+
+.about-anim .about-card-4.is-visible>p {
+    animation: aboutFade 0.9s ease 0.9s backwards;
+}
+
+@keyframes aboutSlideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-48px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aboutSlideRight {
+    from {
+        opacity: 0;
+        transform: translateX(48px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes aboutRise {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes aboutPop {
+    from {
+        opacity: 0;
+        transform: scale(0.4) rotate(-25deg);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(0);
+    }
+}
+
+@keyframes aboutZoomOut {
+    from {
+        transform: scale(1.12);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes aboutFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 /* ==================================================
    MARQUEE ANIMATIONS
 ================================================== */
 
 @keyframes marqueeUp {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-50%); }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-50%);
+    }
 }
 
 @keyframes marqueeDown {
-    0% { transform: translateY(-50%); }
-    100% { transform: translateY(0); }
+    0% {
+        transform: translateY(-50%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 /* ==================================================
-   MOBILE & TABLET
+   MOBILE & TABLET RESPONSIVE OVERRIDES
 ================================================== */
 
 @media (max-width: 991px) {
+    .about-bento-section {
+        padding: 40px 0;
+    }
+
+    /* Row sits directly in the section (no .container): Bootstrap's negative row margin made it wider
+       than the screen. Replace it with 18px side space - same as .projects-header at this size. */
+    .about-bento-section .row {
+        margin-left: calc(18px - var(--bs-gutter-x) * .5);
+        margin-right: calc(18px - var(--bs-gutter-x) * .5);
+    }
 
     .about-bento-section .row>[class*='col-'] {
         height: auto !important;
+        margin-bottom: 16px;
     }
 
     .about-bento-section .row>.col-lg-4:nth-child(2) {
         height: auto !important;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 16px;
     }
 
     .about-bento-section .row>.col-lg-4:nth-child(2)>.bento-card:first-child {
         flex: none;
-        min-height: 0;
+        min-height: 240px;
     }
 
     .about-bento-section .row>.col-lg-4:nth-child(2)>.bento-card:last-child {
         flex: none;
-        min-height: 0;
+        min-height: auto;
     }
 
     .bento-image-card {
-        min-height: 360px;
+        min-height: 340px;
     }
 
     .bento-skills-card {
-        min-height: 400px;
+        min-height: 385px;
     }
 
     .vertical-marquee-wrapper {
-        height: 300px;
+        height: 250px;
     }
 }
 
-@keyframes floatY {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-8px); }
-}
-
-@keyframes borderGlow {
-    0%, 100% { box-shadow: 0 0 15px rgba(255, 255, 255, 0.15); }
-    50% { box-shadow: 0 0 25px rgba(255, 255, 255, 0.35); }
-}
-
-.about-card {
-    animation: floatY 6s ease-in-out infinite;
-}
-
-.about-highlight-card {
-    animation: borderGlow 4s ease-in-out infinite;
-}
-
-.reveal-on-scroll {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-on-scroll.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-
-/* ==================================================
-   ABOUT ME — TYPEWRITER
-================================================== */
-
-.typewriter-text {
-    min-height: 220px;
-}
-
-.typewriter-cursor {
-    display: inline-block;
-    margin-left: 2px;
-    color: #FFFFFF;
-    font-weight: 400;
-    animation: typewriterBlink 0.8s step-end infinite;
-}
-
-@keyframes typewriterBlink {
-    0%, 50% { opacity: 1; }
-    51%, 100% { opacity: 0; }
-}
-
-/* ==================================================
-   ABOUT SECTION — PROFESSIONAL SCROLL REVEAL
-================================================== */
-
-.about-reveal {
-    opacity: 0;
-    will-change: transform, opacity;
-    transition:
-        opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
-        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.about-card-1 { transform: translateX(-55px); }
-.about-card-2 { transform: translateY(45px); }
-.about-card-3 { transform: translateY(45px); }
-.about-card-4 { transform: translateX(55px); }
-
-.about-reveal.is-visible {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-}
-
-.about-card-1.is-visible { transition-delay: 0.05s; }
-.about-card-2.is-visible { transition-delay: 0.18s; }
-.about-card-3.is-visible { transition-delay: 0.31s; }
-.about-card-4.is-visible { transition-delay: 0.44s; }
-
-@media (prefers-reduced-motion: reduce) {
-    .about-reveal {
-        opacity: 1;
-        transform: none;
-        transition: none;
+@media (max-width: 576px) {
+    .bento-image-card {
+        min-height: 300px;
     }
-}
 
-.about-bento-section .section-title {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-weight: 800;
-    letter-spacing: -0.055em;
-    line-height: 0.95;
-    color: #FFFFFF;
-}
+    .social-icon-grid {
+        justify-content: space-around !important;
+    }
 
-.text-muted-light {
-    font-family: 'Outfit', sans-serif;
-    color: #B8D4FF;
+    .social-box {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
 }

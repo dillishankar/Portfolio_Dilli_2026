@@ -13,18 +13,19 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300..800&family=Space+Mono:wght@400;700&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/png" href="data/icon-frame.png">
-    <link rel="apple-touch-icon" href="data/icon-frame.png">
+    <link rel="icon" type="image/png" href="assets/images/icon-frame.png">
+    <link rel="apple-touch-icon" href="assets/images/icon-frame.png">
     <!-- Bootstrap 5 CSS & Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="about.css">
-    <link rel="stylesheet" href="projects.css">
-    <link rel="stylesheet" href="certificates.css">
-    <link rel="stylesheet" href="website-transition.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="css/certificates.css">
+    <link rel="stylesheet" href="css/website-transition.css">
+    <link rel="stylesheet" href="css/cursor.css">
 </head>
 
 <body class="bg-dark-theme">
@@ -38,7 +39,7 @@
 
             <div class="portfolio-logo-wrap">
 
-                <img src="Data/icon-frame.png" alt="DS" class="portfolio-intro-logo">
+                <img src="assets/images/icon-frame.png" alt="DS" class="portfolio-intro-logo">
 
             </div>
 
@@ -83,7 +84,7 @@
                 <!-- Left: Logo + Desktop Availability Badge -->
                 <div class="d-flex align-items-center gap-3">
                     <a class="navbar-logo" href="#">
-                        <img src="Data/Dilli.png" alt="Logo" class="logo-img">
+                        <img src="assets/images/Dilli.png" alt="Logo" class="logo-img">
                     </a>
 
                     <div class="status-badge d-none d-lg-inline-flex align-items-center gap-2">
@@ -93,7 +94,7 @@
                 </div>
 
                 <!-- Center: Capsule Dock Navigation (Desktop Only) -->
-                <div class="nav-dock d-none d-md-block">
+                <div class="nav-dock d-none d-lg-block">
                     <ul class="nav-dock-list m-0 p-0 d-flex align-items-center list-unstyled">
                         <li class="nav-dock-item">
                             <a href="#about" class="nav-dock-link">
@@ -123,24 +124,24 @@
                 </div>
 
                 <!-- Desktop Right Actions -->
-                <div class="nav-actions d-none d-md-flex align-items-center gap-2">
-                    <a href="Data/Dillishankar.k-DA-Resume.pdf" download class="btn-outline-glass"
+                <div class="nav-actions d-none d-lg-flex align-items-center gap-2">
+                    <a href="assets/Dillishankar.k-DA-Resume.pdf" download class="btn-outline-glass"
                         title="Download Resume">
                         <i class="bi bi-file-earmark-arrow-down"></i>
                         <span>CV</span>
                     </a>
 
-                    <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-sm">
+                    <a href="mailto:dillishankar.k30@gmail.com" class="btn-mint-sm">
                         Let's Connect
                     </a>
 
-                    <a href="#admin" class="btn-admin-icon" title="Admin Login" aria-label="Admin Login">
+                    <a href="admin/index.html" class="btn-admin-icon" title="Admin Login" aria-label="Admin Login">
                         <i class="bi bi-lock-fill"></i>
                     </a>
                 </div>
 
                 <!-- Mobile Hamburger Toggle -->
-                <button class="mobile-toggle-btn d-md-none" type="button" data-bs-toggle="collapse"
+                <button class="mobile-toggle-btn d-lg-none" type="button" data-bs-toggle="collapse"
                     data-bs-target="#mobileNavMenu" aria-controls="mobileNavMenu" aria-expanded="false"
                     aria-label="Toggle navigation">
                     <i class="bi bi-list"></i>
@@ -149,7 +150,7 @@
             </div>
 
             <!-- Seamless Mobile Glass Drawer -->
-            <div class="collapse d-md-none" id="mobileNavMenu">
+            <div class="collapse d-lg-none" id="mobileNavMenu">
                 <div class="container mt-2">
                     <div class="glass-mobile-card">
 
@@ -159,7 +160,7 @@
                                 <span class="status-dot"></span>
                                 <span class="status-text">Available for work</span>
                             </div>
-                            <a href="#admin" class="btn-admin-icon-sm" title="Admin Login">
+                            <a href="admin/index.html" class="btn-admin-icon-sm" title="Admin Login">
                                 <i class="bi bi-lock-fill"></i>
                             </a>
                         </div>
@@ -194,10 +195,10 @@
 
                         <!-- Action Buttons -->
                         <div class="mobile-drawer-actions d-flex flex-column gap-2 mt-3">
-                            <a href="mailto:ramyarams5143@gmail.com" class="btn-mint-mobile text-center">
+                            <a href="mailto:dillishankar.k30@gmail.com" class="btn-mint-mobile text-center">
                                 Let's Connect
                             </a>
-                            <a href="Data/Resume.pdf" download class="btn-outline-mobile text-center">
+                            <a href="assets/Dillishankar.k-DA-Resume.pdf" download class="btn-outline-mobile text-center">
                                 <i class="bi bi-file-earmark-arrow-down me-2"></i>Download CV
                             </a>
                         </div>
@@ -253,7 +254,7 @@
     <section class="about-bento-section py-5" id="about">
         <div class="projects-header">
 
-            <div class="projects-label">
+            <div class="projects-label about-reveal about-from-left">
                 <span class="projects-number">02</span>
                 <span class="projects-line"></span>
                 <span>ABOUT ME</span>
@@ -261,13 +262,13 @@
 
             <div class="projects-heading-row">
 
-                <h2 class="projects-title">
+                <h2 class="projects-title about-reveal about-from-left about-delay-1">
                     What
                     <span>Powers Me.</span>
                     <br>
                 </h2>
 
-                <p class="projects-description">
+                <p class="projects-description about-reveal about-from-right about-delay-2">
                     A snapshot of the skills and tools I use to build seamless,
                     scalable and user-friendly digital experiences.
                 </p>
@@ -288,12 +289,12 @@
                  1. LEFT COLUMN — PROFILE IMAGE CARD
             ================================================== -->
 
-            <div class="col-lg-4 col-md-6 about-reveal about-card-1">
+            <div class="col-lg-4 col-md-6 about-reveal about-from-left about-card-1">
 
                 <div class="bento-card bento-image-card position-relative overflow-hidden h-100">
 
                     <!-- Profile Image -->
-                    <img src="Data/pic-of-mee1.png" alt="Dillibabu Portrait" class="bento-profile-img">
+                    <img src="assets/images/pic-of-mee1.png" alt="Dillibabu Portrait" class="bento-profile-img">
 
 
                     <!-- Image Overlay -->
@@ -301,7 +302,7 @@
                                 d-flex flex-column justify-content-end">
 
                         <!-- Signature -->
-                        <img src="Data/signature.png" alt="Dillibabu Signature" style="
+                        <img src="assets/images/signature.png" alt="Dillibabu Signature" style="
                                 width: 150px;
                                 height: auto;
                                 display: block;
@@ -336,14 +337,14 @@
 
                 <div class="bento-card p-3 p-xl-4 flex-grow-1
                             d-flex flex-column justify-content-start
-                            about-reveal about-card-2">
+                            about-reveal about-from-right about-card-2">
 
 
                     <!-- Card Header -->
                     <div class="d-flex align-items-center gap-2 mb-3">
 
                         <!-- Person Icon -->
-                        <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185" stroke-width="2"
+                        <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2"
                             stroke-linecap="round" stroke-linejoin="round">
 
                             <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2">
@@ -382,7 +383,7 @@
                 ================================================== -->
 
                 <div class="bento-card p-3 p-xl-4
-                            about-reveal about-card-3">
+                            about-reveal about-from-left about-card-3">
 
 
                     <!-- Card Header -->
@@ -398,7 +399,7 @@
 
 
                         <!-- CV Button -->
-                        <a href="Data/Dillishankar.k-DA-Resume.pdf" download class="btn-cv-download">
+                        <a href="assets/Dillishankar.k-DA-Resume.pdf" download class="btn-cv-download">
 
                             <i class="bi bi-file-earmark-arrow-down-fill me-1">
                             </i>
@@ -435,17 +436,18 @@
 
 
                         <!-- Email -->
-                        <a href="mailto:ramyarams5143@gmail.com" class="social-box" title="Email">
+                        <a href="mailto:dillishankar.k30@gmail.com" class="social-box" title="Email">
 
                             <i class="bi bi-envelope-fill"></i>
 
                         </a>
 
 
-                        <!-- Portfolio -->
-                        <a href="#" class="social-box" title="Portfolio">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/918825858292" target="_blank" rel="noopener noreferrer"
+                            class="social-box" title="WhatsApp" aria-label="Chat on WhatsApp">
 
-                            <i class="bi bi-globe"></i>
+                            <i class="bi bi-whatsapp"></i>
 
                         </a>
 
@@ -466,7 +468,7 @@
                 <div class="bento-card bento-skills-card p-3 p-xl-4
                             h-100 d-flex flex-column
                             justify-content-between overflow-hidden
-                            about-reveal about-card-4">
+                            about-reveal about-from-right about-card-4">
 
 
                     <!-- Card Header -->
@@ -476,7 +478,7 @@
 
 
                             <!-- Stack Icon -->
-                            <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#52e185"
+                            <svg class="header-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
 
                                 <polygon points="12 2 2 7 12 12 22 7 12 2">
@@ -582,6 +584,32 @@
                                 </div>
 
 
+                                <!-- Excel -->
+                                <div class="skill-card-v">
+
+                                    <img src="assets/icons/excel.svg"
+                                        alt="Excel">
+
+                                    <span>
+                                        Excel
+                                    </span>
+
+                                </div>
+
+
+                                <!-- Power BI -->
+                                <div class="skill-card-v">
+
+                                    <img src="assets/icons/powerbi.svg"
+                                        alt="Power BI">
+
+                                    <span>
+                                        Power BI
+                                    </span>
+
+                                </div>
+
+
 
                                 <!-- ==================================================
                                      LOOP DUPLICATES
@@ -646,6 +674,30 @@
 
                                 </div>
 
+
+                                <div class="skill-card-v">
+
+                                    <img src="assets/icons/excel.svg"
+                                        alt="Excel">
+
+                                    <span>
+                                        Excel
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="assets/icons/powerbi.svg"
+                                        alt="Power BI">
+
+                                    <span>
+                                        Power BI
+                                    </span>
+
+                                </div>
+
                             </div>
 
                         </div>
@@ -678,7 +730,7 @@
                                 <div class="skill-card-v">
 
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                        alt="MySQL">
+                                        alt="MySQL" class="white-icon">
 
                                     <span>
                                         MySQL
@@ -726,6 +778,19 @@
                                 </div>
 
 
+                                <!-- AWS -->
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                                        alt="AWS" class="invert-icon">
+
+                                    <span>
+                                        AWS
+                                    </span>
+
+                                </div>
+
+
 
                                 <!-- ==================================================
                                      LOOP DUPLICATES
@@ -746,7 +811,7 @@
                                 <div class="skill-card-v">
 
                                     <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
-                                        alt="MySQL">
+                                        alt="MySQL" class="white-icon">
 
                                     <span>
                                         MySQL
@@ -786,6 +851,18 @@
 
                                     <span>
                                         Bootstrap
+                                    </span>
+
+                                </div>
+
+
+                                <div class="skill-card-v">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg"
+                                        alt="AWS" class="invert-icon">
+
+                                    <span>
+                                        AWS
                                     </span>
 
                                 </div>
@@ -875,7 +952,7 @@
 
                         <div class="project-image-wrap">
 
-                            <img src="Data/projects/elt-project.png" alt="Project 01" class="project-image">
+                            <img src="assets/images/projects/elt-project.png" alt="Project 01" class="project-image">
 
                             <div class="project-number">
                                 01
@@ -920,7 +997,7 @@
 
                         <div class="project-image-wrap">
 
-                            <img src="Data/projects/project1.jpeg" alt="Project 02" class="project-image">
+                            <img src="assets/images/projects/project1.jpeg" alt="Project 02" class="project-image">
 
                             <div class="project-number">
                                 02
@@ -965,7 +1042,7 @@
 
                         <div class="project-image-wrap">
 
-                            <img src="Data/projects/project2.png" alt="Project 03" class="project-image">
+                            <img src="assets/images/projects/project2.png" alt="Project 03" class="project-image">
 
                             <div class="project-number">
                                 03
@@ -1010,7 +1087,7 @@
 
                         <div class="project-image-wrap">
 
-                            <img src="Data/projects/project2.png" alt="Project 04" class="project-image">
+                            <img src="assets/images/projects/project2.png" alt="Project 04" class="project-image">
 
                             <div class="project-number">
                                 04
@@ -1054,7 +1131,7 @@
 
                         <div class="project-image-wrap">
 
-                            <img src="Data/projects/project3.png" alt="Project 05" class="project-image">
+                            <img src="assets/images/projects/project3.png" alt="Project 05" class="project-image">
 
                             <div class="project-number">
                                 05
@@ -1099,7 +1176,7 @@
 
                         <div class="project-image-wrap">
 
-                            <img src="Data/projects/project4.png" alt="Project 06" class="project-image">
+                            <img src="assets/images/projects/project4.png" alt="Project 06" class="project-image">
 
                             <div class="project-number">
                                 06
@@ -1310,7 +1387,7 @@
                     <!-- Left Column: Image Card -->
                     <div class="col-lg-5 text-center position-relative">
                         <div class="hire-img-wrapper mx-auto">
-                            <img src="Data/pic-of-mee1.png" alt="Dillishankar K." class="hire-person-img">
+                            <img src="assets/images/pic-of-mee1.png" alt="Dillishankar K." class="hire-person-img">
                         </div>
                     </div>
 
@@ -1345,7 +1422,7 @@
                             </div>
 
                             <!-- Mail Action Button -->
-                            <a href="mailto:ramyarams5143@gmail.com?subject=Hiring%20Inquiry%20-%20Dillishankar&body=Hi%20Dillishankar,%20I%20would%20like%20to%20discuss%20an%20opportunity%20with%20you."
+                            <a href="mailto:dillishankar.k30@gmail.com?subject=Hiring%20Inquiry%20-%20Dillishankar&body=Hi%20Dillishankar,%20I%20would%20like%20to%20discuss%20an%20opportunity%20with%20you."
                                 class="btn-hire-me">
                                 Hire me
                                 <i class="bi bi-arrow-right-short fs-5 ms-1"></i>
@@ -1422,9 +1499,9 @@
                 <!-- CERTIFICATE 01 -->
 
                 <button class="certificate-card certificate-card-large" type="button"
-                    data-certificate="Data/certificate/certificate1.jpeg" aria-label="View Certificate 01">
+                    data-certificate="assets/images/certificate/certificate1.jpeg" aria-label="View Certificate 01">
 
-                    <img src="Data/certificate/certificate1.jpeg" alt="Certificate 01" class="certificate-image">
+                    <img src="assets/images/certificate/certificate1.jpeg" alt="Certificate 01" class="certificate-image">
 
                     <span class="certificate-overlay"></span>
 
@@ -1439,10 +1516,10 @@
 
                 <!-- CERTIFICATE 02 -->
 
-                <button class="certificate-card" type="button" data-certificate="Data/certificate/certificate2.jpeg"
+                <button class="certificate-card" type="button" data-certificate="assets/images/certificate/certificate2.jpeg"
                     aria-label="View Certificate 02">
 
-                    <img src="Data/certificate/certificate2.jpeg" alt="Certificate 02" class="certificate-image">
+                    <img src="assets/images/certificate/certificate2.jpeg" alt="Certificate 02" class="certificate-image">
 
                     <span class="certificate-overlay"></span>
 
@@ -1457,10 +1534,10 @@
 
                 <!-- CERTIFICATE 03 -->
 
-                <button class="certificate-card" type="button" data-certificate="Data/certificate/certificate3.jpeg"
+                <button class="certificate-card" type="button" data-certificate="assets/images/certificate/certificate3.jpeg"
                     aria-label="View Certificate 03">
 
-                    <img src="Data/certificate/certificate3.jpeg" alt="Certificate 03" class="certificate-image">
+                    <img src="assets/images/certificate/certificate3.jpeg" alt="Certificate 03" class="certificate-image">
 
                     <span class="certificate-overlay"></span>
 
@@ -1476,9 +1553,9 @@
                 <!-- CERTIFICATE 04 -->
 
                 <button class="certificate-card certificate-card-wide" type="button"
-                    data-certificate="Data/certificate/certificate4.jpg" aria-label="View Certificate 04">
+                    data-certificate="assets/images/certificate/certificate4.jpg" aria-label="View Certificate 04">
 
-                    <img src="Data/certificate/certificate4.jpg" alt="Certificate 04" class="certificate-image">
+                    <img src="assets/images/certificate/certificate4.jpg" alt="Certificate 04" class="certificate-image">
 
                     <span class="certificate-overlay"></span>
 
@@ -1494,9 +1571,9 @@
                 <!-- CERTIFICATE 05 -->
 
                 <button class="certificate-card certificate-card-wide" type="button"
-                    data-certificate="Data/certificate/certificate1.jpeg" aria-label="View Certificate 05">
+                    data-certificate="assets/images/certificate/certificate1.jpeg" aria-label="View Certificate 05">
 
-                    <img src="Data/certificate/certificate1.jpeg" alt="Certificate 05" class="certificate-image">
+                    <img src="assets/images/certificate/certificate1.jpeg" alt="Certificate 05" class="certificate-image">
 
                     <span class="certificate-overlay"></span>
 
@@ -1585,7 +1662,7 @@
                         Have a project in mind, a full-time role, or just want to connect? Let’s turn your ideas into
                         high-performance digital reality.
                     </p>
-                    <a href="mailto:ramyarams5143@gmail.com" class="btn-footer-cta">
+                    <a href="mailto:dillishankar.k30@gmail.com" class="btn-footer-cta">
                         <span>Let's Connect</span>
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -1599,7 +1676,7 @@
                     <!-- Column 1: Brand & Bio -->
                     <div class="col-lg-4 col-md-6">
                         <div class="footer-brand-wrap mb-3">
-                            <img src="Data/Dilli.png" alt="Logo" class="footer-logo-img">
+                            <img src="assets/images/Dilli.png" alt="Logo" class="footer-logo-img">
                         </div>
                         <p class="footer-bio-text mb-4">
                             Crafting modern, scalable web applications, interactive UI/UX experiences, and structured
@@ -1610,9 +1687,11 @@
                                     class="bi bi-github"></i></a>
                             <a href="https://linkedin.com" target="_blank" class="footer-social-icon"
                                 title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a href="mailto:ramyarams5143@gmail.com" class="footer-social-icon" title="Email"><i
+                            <a href="mailto:dillishankar.k30@gmail.com" class="footer-social-icon" title="Email"><i
                                     class="bi bi-envelope-fill"></i></a>
-                            <a href="#" class="footer-social-icon" title="Globe"><i class="bi bi-globe"></i></a>
+                            <a href="https://wa.me/918825858292" target="_blank" rel="noopener noreferrer"
+                                class="footer-social-icon" title="WhatsApp" aria-label="Chat on WhatsApp"><i
+                                    class="bi bi-whatsapp"></i></a>
                         </div>
                     </div>
 
@@ -1631,9 +1710,9 @@
                     <div class="col-lg-2 col-md-3 col-6">
                         <h5 class="footer-col-title">Resources</h5>
                         <ul class="footer-links-list list-unstyled m-0 p-0">
-                            <li><a href="Data/Dillishankar.k-DA-Resume.pdf" download>Download CV</a></li>
-                            <li><a href="mailto:ramyarams5143@gmail.com">Hire Me</a></li>
-                            <li><a href="#admin">Admin Portal</a></li>
+                            <li><a href="assets/Dillishankar.k-DA-Resume.pdf" download>Download CV</a></li>
+                            <li><a href="mailto:dillishankar.k30@gmail.com">Hire Me</a></li>
+                            <li><a href="admin/index.html">Admin Portal</a></li>
                         </ul>
                     </div>
 
@@ -1643,9 +1722,11 @@
                         <p class="footer-newsletter-desc mb-3">
                             Get updates on my latest projects, technical articles, and available timelines.
                         </p>
-                        <form class="footer-newsletter-form d-flex gap-2"
-                            onsubmit="event.preventDefault(); alert('Thank you for Connecting!');">
-                            <input type="email" class="footer-email-input" placeholder="Enter your email" required>
+                        <form class="footer-newsletter-form d-flex gap-2">
+                            <input type="text" name="website" class="visually-hidden" tabindex="-1" autocomplete="off"
+                                aria-hidden="true">
+                            <input type="email" class="footer-email-input" placeholder="Enter your email" required
+                                maxlength="254">
                             <button type="submit" class="btn-footer-subscribe">Connect</button>
                         </form>
                     </div>
@@ -1669,10 +1750,13 @@
 
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-    <script src="projects.js"></script>
-    <script src="certificates.js"></script>
-    <script src="website-transition.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/certificates.js"></script>
+    <script src="js/website-transition.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/supabase-config.js"></script>
+    <script src="js/dynamic.js"></script>
 
 </body>
 

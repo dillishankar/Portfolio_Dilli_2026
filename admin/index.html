@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <!-- Private page: keep it out of search engines -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="referrer" content="no-referrer">
+
+    <!-- Only allow code and connections this page actually needs -->
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' data: https://cdn.jsdelivr.net https://fonts.gstatic.com; img-src 'self' data: blob: https:; connect-src 'self' https://*.supabase.co wss://*.supabase.co; object-src 'none'; base-uri 'self'; form-action 'self'">
+
+    <link rel="icon" type="image/png" href="../assets/images/icon-frame.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300..800&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body class="adm-body">
+
+    <!-- ==================================================
+         LOGIN
+    ================================================== -->
+    <div id="login" class="adm-login" hidden>
+
+        <div class="adm-login-card">
+
+            <img src="../assets/images/Dilli.png" alt="Logo" class="adm-login-logo">
+
+            <h1>Admin Panel</h1>
+            <p id="loginIntro">Sign in to manage your portfolio content.</p>
+
+            <form id="loginForm" novalidate>
+
+                <div class="adm-field">
+                    <label for="loginEmail">Email</label>
+                    <input id="loginEmail" class="adm-input" type="email" autocomplete="username" required>
+                </div>
+
+                <div class="adm-field">
+                    <label for="loginPassword">Password</label>
+                    <input id="loginPassword" class="adm-input" type="password" autocomplete="current-password"
+                        required>
+                </div>
+
+                <p id="loginError" class="adm-error" role="alert"></p>
+
+                <button id="loginBtn" class="adm-btn adm-btn-full" type="submit">
+                    <i class="bi bi-lock-fill"></i> Sign in
+                </button>
+
+            </form>
+
+            <a href="../index.html" class="adm-back"><i class="bi bi-arrow-left"></i> Back to portfolio</a>
+
+        </div>
+
+    </div>
+
+    <!-- ==================================================
+         APP
+    ================================================== -->
+    <div id="app" class="adm-shell" hidden>
+
+        <header class="adm-topbar">
+            <div class="adm-brand">
+                <img src="../assets/images/Dilli.png" alt="Logo">
+                <span>Admin</span>
+            </div>
+            <button id="menuBtn" class="adm-menu-btn" type="button" aria-label="Open menu" aria-expanded="false"
+                aria-controls="sidebar">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+
+        <aside id="sidebar" class="adm-sidebar">
+
+            <div class="adm-brand">
+                <img src="../assets/images/Dilli.png" alt="Logo">
+                <span>Admin</span>
+            </div>
+
+            <nav id="nav" class="adm-nav" aria-label="Admin sections"></nav>
+
+            <div class="adm-sidebar-foot">
+                <div id="userEmail" class="adm-user"></div>
+                <a class="adm-btn adm-btn--ghost adm-btn--sm" href="../index.html" target="_blank" rel="noopener">
+                    <i class="bi bi-box-arrow-up-right"></i> View portfolio
+                </a>
+                <button id="signOutBtn" class="adm-btn adm-btn--danger adm-btn--sm" type="button">
+                    <i class="bi bi-box-arrow-right"></i> Sign out
+                </button>
+            </div>
+
+        </aside>
+
+        <main class="adm-main">
+            <div id="view" class="adm-main-inner"></div>
+        </main>
+
+    </div>
+
+    <div id="modalRoot"></div>
+    <div id="toast" class="adm-toast" role="status" aria-live="polite"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+    <script src="../js/supabase-config.js"></script>
+    <script src="../js/admin.js"></script>
+
+</body>
+
+</html>

@@ -8,6 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!aboutCards.length) return;
 
+    /* Enable the About scroll animations (CSS hides the elements until they scroll in).
+       Skipped for users who prefer reduced motion, so nothing stays hidden. */
+    const aboutSection = document.getElementById("about");
+
+    if (aboutSection && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        aboutSection.classList.add("about-anim");
+    }
+
     const aboutObserver = new IntersectionObserver(
         (entries, observer) => {
 
@@ -45,12 +53,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
     if (!typewriter) return;
 
-    const texts = [
+    /* Default text. The Admin Panel can replace it (see js/dynamic.js). */
+    const defaultTexts = [
         "I am a motivated and enthusiastic Data Analyst with a strong foundation in data processing, SQL, and analytical thinking.",
         "I build structured data solutions and turn raw information into meaningful insights.",
         "I also have experience in Digital Marketing, with a strong understanding of online strategies and user engagement.",
         "I enjoy leveraging data and technology to support impactful business decisions."
     ];
+
+    const getTexts = () =>
+        (window.portfolioAboutTexts && window.portfolioAboutTexts.length)
+            ? window.portfolioAboutTexts
+            : defaultTexts;
 
     let textIndex = 0;
     let charIndex = 0;
@@ -63,6 +77,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function typeEffect() {
 
+        const texts = getTexts();
+
+        if (textIndex >= texts.length) textIndex = 0;
+
         const currentText = texts[textIndex];
 
         if (!isDeleting) {
@@ -70,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
             typewriter.textContent = currentText.substring(0, charIndex + 1);
             charIndex++;
 
-            if (charIndex === currentText.length) {
+            if (charIndex >= currentText.length) {
                 isDeleting = true;
 
                 setTimeout(typeEffect, pauseAfterTyping);
@@ -193,4 +211,30 @@ document.addEventListener("DOMContentLoaded", () => {
     }, { threshold: 0.35 });
 
     hireObserver.observe(hireCard);
+});
+
+
+/* ==================================================
+   MOBILE NAV — CLOSE THE DRAWER AFTER A LINK IS TAPPED
+================================================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const mobileNavMenu = document.getElementById("mobileNavMenu");
+
+    /* Bootstrap bundle is loaded from the CDN before this file */
+    if (!mobileNavMenu || typeof bootstrap === "undefined") return;
+
+    mobileNavMenu.querySelectorAll("a").forEach((link) => {
+
+        link.addEventListener("click", () => {
+
+            bootstrap.Collapse
+                .getOrCreateInstance(mobileNavMenu, { toggle: false })
+                .hide();
+
+        });
+
+    });
+
 });
